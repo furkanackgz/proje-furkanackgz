@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Request authorization for the location data
         LocationManager.shared.requestAuthorization()
         
+        // Request authorization for displaying local notifications
+        NotificationManager.shared.requestAuthorization()
+        
         return true
     }
 
