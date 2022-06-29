@@ -16,6 +16,8 @@ import UIKit
  */
 struct Theme {
     static var color = Color()
+    static var fontName = FontName()
+    static var fontSize = FontSize()
 }
 
 /*
@@ -45,4 +47,47 @@ struct Color {
     var subtitle = UIColor(named: "Subtitle Color")
     var tableViewInset = UIColor(named: "Table View Inset Color")
     var title = UIColor(named: "Title Color")
+}
+
+/*
+ If you want to change the specific Font in FontName struct
+ with Swift's built-in Fonts, then find the name of Font and
+ replace it with the value assigned to variables under FontName
+ struct.
+ However, If you want to change it with custom Font, then add
+ the specified Font to somewhere under this Resources folder
+ with drag and drop. After that open a new row as
+ "Fonts provided by application" in Information property list,
+ add the name of Font to items section appeared after clicking
+ drop down menu and you are good to go.
+ */
+struct FontName {
+    var body = "System"
+    var cellBody = "System"
+    var cellSubtitle = "Title 2"
+    var cellTitle = "Title 1"
+    var navigationTitle = "Title 1"
+    var placeholder = "System"
+    var primaryButtonTitle = "Title 1"
+    var secondaryButtonTitle = "Title 2"
+    var subtitle = "Title 2"
+    var title = "Title 1"
+}
+
+/*
+ Whenever you want to change the size of any Font specified under
+ FontSize struct, just assign the new value to the corresponding
+ varibales and you are good to go.
+ */
+struct FontSize {
+    var body = 18.0
+    var cellBody = 16.0
+    var cellSubtitle = 16.0
+    var cellTitle = 22.0
+    var navigationTitle = 22.0
+    var placeholder = 14.0
+    var primaryButtonTitle = 20.0
+    var secondaryButtonTitle = 18.0
+    var subtitle = 16.0
+    var title = 18.0
 }
