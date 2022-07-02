@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,20 +23,20 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cNi-X3-inf" userLabel="Background Image">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-eZ-P8m" userLabel="Logo and Name Stack">
-                                        <rect key="frame" x="160" y="338" width="94" height="142"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-eZ-P8m" userLabel="Logo and Name Stack">
+                                        <rect key="frame" x="101.5" y="315" width="211.5" height="132"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Aq-Zo-9g4" userLabel="Logo Image">
-                                                <rect key="frame" x="17" y="0.0" width="60" height="60"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Launch Screen" translatesAutoresizingMaskIntoConstraints="NO" id="5Aq-Zo-9g4" userLabel="Logo Image">
+                                                <rect key="frame" x="80.5" y="0.0" width="50" height="50"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="Aj7-yj-cdt"/>
-                                                    <constraint firstAttribute="width" constant="60" id="CHe-c2-PBH"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Aj7-yj-cdt"/>
+                                                    <constraint firstAttribute="width" constant="50" id="CHe-c2-PBH"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4C-UM-TYr" userLabel="Name Label">
-                                                <rect key="frame" x="0.0" y="94" width="94" height="48"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4C-UM-TYr" userLabel="Name Label">
+                                                <rect key="frame" x="0.0" y="58" width="211.5" height="74"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="62"/>
+                                                <color key="textColor" name="Title Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -45,7 +46,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="cNi-X3-inf" secondAttribute="trailing" id="9RT-Fc-saG"/>
                                     <constraint firstItem="cNi-X3-inf" firstAttribute="top" secondItem="egp-VV-hqb" secondAttribute="top" id="Mks-iN-BuW"/>
-                                    <constraint firstItem="cPR-eZ-P8m" firstAttribute="centerY" secondItem="egp-VV-hqb" secondAttribute="centerY" id="XAK-jL-Pci"/>
+                                    <constraint firstItem="cPR-eZ-P8m" firstAttribute="centerY" secondItem="egp-VV-hqb" secondAttribute="centerY" constant="-28" id="XAK-jL-Pci"/>
                                     <constraint firstAttribute="bottom" secondItem="cNi-X3-inf" secondAttribute="bottom" id="YlP-ZR-bhY"/>
                                     <constraint firstItem="cPR-eZ-P8m" firstAttribute="centerX" secondItem="egp-VV-hqb" secondAttribute="centerX" id="ZEE-re-TXQ"/>
                                     <constraint firstItem="cNi-X3-inf" firstAttribute="leading" secondItem="egp-VV-hqb" secondAttribute="leading" id="f7a-ja-Dbk"/>
@@ -53,7 +54,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Background Color"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="egp-VV-hqb" secondAttribute="bottom" id="LCg-zn-BvA"/>
                             <constraint firstItem="egp-VV-hqb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ois-Au-9qQ"/>
@@ -68,6 +69,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo Launch Screen" width="45" height="45"/>
+        <namedColor name="Background Color">
+            <color red="0.2627450980392157" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Title Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
