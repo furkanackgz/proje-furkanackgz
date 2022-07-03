@@ -15,9 +15,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ty9-ly-FLt" userLabel="Container View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OzJ-Pj-fEv" userLabel="Label Stack">
+                                        <rect key="frame" x="186.5" y="125" width="41.5" height="121"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="999" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reL-3D-xvF" userLabel="Welcome Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="999" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfx-Wi-fRP" userLabel="Requirement Label">
+                                                <rect key="frame" x="0.0" y="50.5" width="41.5" height="70.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="isF-nK-Y6h" userLabel="E-mail Text Field">
+                                        <rect key="frame" x="16" y="371" width="382" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="amg-KT-Y7F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcP-qI-3bb">
+                                        <rect key="frame" x="173.5" y="668" width="67" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="5qN-XG-iCs"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="didPressGirisYapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ew-nz-ZEj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="isF-nK-Y6h" secondAttribute="trailing" constant="16" id="16X-dG-61B"/>
+                                    <constraint firstAttribute="bottom" secondItem="UcP-qI-3bb" secondAttribute="bottom" constant="100" id="3BF-bD-xNn"/>
+                                    <constraint firstItem="UcP-qI-3bb" firstAttribute="top" relation="lessThanOrEqual" secondItem="isF-nK-Y6h" secondAttribute="bottom" constant="250" id="3PC-qp-BUD"/>
+                                    <constraint firstItem="isF-nK-Y6h" firstAttribute="leading" secondItem="ty9-ly-FLt" secondAttribute="leading" constant="16" id="CBg-V4-vfk"/>
+                                    <constraint firstItem="UcP-qI-3bb" firstAttribute="centerX" secondItem="ty9-ly-FLt" secondAttribute="centerX" id="WNh-lc-x1T"/>
+                                    <constraint firstItem="OzJ-Pj-fEv" firstAttribute="top" secondItem="ty9-ly-FLt" secondAttribute="top" constant="125" id="doc-GM-wOJ"/>
+                                    <constraint firstItem="isF-nK-Y6h" firstAttribute="top" secondItem="OzJ-Pj-fEv" secondAttribute="bottom" constant="125" id="fdW-xh-TvJ"/>
+                                    <constraint firstItem="OzJ-Pj-fEv" firstAttribute="centerX" secondItem="ty9-ly-FLt" secondAttribute="centerX" id="pOF-uL-DPJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ty9-ly-FLt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CYg-Mi-C29"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ty9-ly-FLt" secondAttribute="trailing" id="F1E-p0-W0V"/>
+                            <constraint firstItem="ty9-ly-FLt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I2Y-28-LHl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ty9-ly-FLt" secondAttribute="bottom" id="ZPH-h2-fjh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="ty9-ly-FLt" id="G4E-xO-Lvb"/>
+                        <outlet property="emailTextField" destination="isF-nK-Y6h" id="633-8C-6tQ"/>
+                        <outlet property="girisYapButton" destination="UcP-qI-3bb" id="ZYk-Bm-FMg"/>
+                        <outlet property="requirementLabel" destination="Qfx-Wi-fRP" id="tWe-3P-5ue"/>
+                        <outlet property="welcomeLabel" destination="reL-3D-xvF" id="GSj-0p-gOp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
