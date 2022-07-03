@@ -7,13 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class LoginView: UIViewController, LoginContract.loginView {
+    
+    var loginPresenter: LoginContract.loginPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
 
 }
 
