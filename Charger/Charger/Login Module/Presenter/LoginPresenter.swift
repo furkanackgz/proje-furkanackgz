@@ -20,7 +20,7 @@ class LoginPresenter: LoginContract.loginPresenter {
 // MARK: - VIEW RELATED METHODS
 extension LoginPresenter {
     
-    func didUserPressGirisYapButton(with email: String) {
+    func didUserPressGirisYapButton(with email: String, and deviceUDID: String) {
         return
     }
     

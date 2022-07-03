@@ -26,7 +26,10 @@ class LoginView: UIViewController, LoginContract.loginView {
 
     @IBAction func didPressGirisYapButton(_ sender: Any) {
         if let email = emailTextField.text, email != "" {
-            loginPresenter.didUserPressGirisYapButton(with: email)
+            // Get device identifier and assign it as deviceUDID
+            if let deviceUDID = UIDevice.current.identifierForVendor?.uuidString {
+                loginPresenter.didUserPressGirisYapButton(with: email, and: deviceUDID)
+            }
         }
     }
 }
@@ -162,6 +165,20 @@ extension LoginView {
         girisYapButton.titleLabel?.isHidden = true
         girisYapButton.configuration = .plain()
         girisYapButton.setImage(ThemeManager.image.buttonGirisYap, for: .normal)
+    }
+}
+
+// MARK: - showAlert
+// Show alert button on top of login view
+extension LoginView {
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .default) { _ in
+            self.dismiss(animated: true)
+        }
+        alert.addAction(okButton)
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

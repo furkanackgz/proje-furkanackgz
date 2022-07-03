@@ -18,6 +18,9 @@ struct LoginContract {
 
 // MARK: - LOGIN VIEW PROTOCOL
 protocol LoginViewProtocol: AnyObject {
+    // Self Related
+    func showAlert(title: String, message: String)
+    
     // Presenter Related
     var loginPresenter: LoginContract.loginPresenter! { get set }
 }
@@ -41,7 +44,7 @@ protocol LoginInteractorProtocol: AnyObject {
 protocol LoginPresenterProtocol: AnyObject {
     // View Related
     var loginView: LoginContract.loginView? { get set }
-    func didUserPressGirisYapButton(with email: String)
+    func didUserPressGirisYapButton(with email: String, and deviceUDID: String)
     
     // Interactor Related
     var loginInteractor: LoginContract.loginInteractor? { get set }
