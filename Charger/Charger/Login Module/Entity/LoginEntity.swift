@@ -37,7 +37,16 @@ extension LoginEntity {
     }
     
     func decodeLoginResponse(_ data: Data) {
-        return
+        
+        // Decode response data to login response object
+        do {
+            decodedLoginResponse = try JSONDecoder().decode(LoginResponse.self, from: data)
+            
+            // If there is no error occured while decoding, call interactor
+            loginInteractor?.didDecodeLoginResponse()
+        } catch let error {
+            print(error)
+        }
     }
     
 }
