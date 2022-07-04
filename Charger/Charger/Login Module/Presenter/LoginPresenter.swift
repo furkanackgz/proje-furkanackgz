@@ -39,8 +39,46 @@ extension LoginPresenter {
 // MARK: - INTERACTOR RELATED METHODS
 extension LoginPresenter {
     
+    /**
+     Save the received response data to user defaults for
+     accessing easily any where we need in the project.
+     And move into homepage of the application.
+     
+     parameter loginResponse: Received response from server.
+     returns: none
+     */
     func didLoginResponseReceived(_ loginResponse: LoginResponse) {
-        return
+        // Set response data to defaults for later access
+        setLoginResponseToDefaults(loginResponse)
+        
+        // Go to homepage with login router layer
     }
     
+}
+
+// MARK: - SELF RELATED METHODS
+extension LoginPresenter {
+    
+    private func setLoginResponseToDefaults(_ loginResponse: LoginResponse) {
+        // Helper
+        let defaults = UserDefaults.standard
+        
+        // Set e-mail if it is not already set
+        if let email = loginResponse.email,
+           defaults.object(forKey: "email") == nil {
+            defaults.set(email, forKey: "email")
+        }
+        
+        // Set token if it is not already set
+        if let token = loginResponse.token,
+           defaults.object(forKey: "token") == nil {
+            defaults.set(token, forKey: "token")
+        }
+        
+        // Set userId if it is not already set
+        if let userID = loginResponse.userID,
+           defaults.object(forKey: "userID") == nil {
+            defaults.set(userID, forKey: "userID")
+        }
+    }
 }

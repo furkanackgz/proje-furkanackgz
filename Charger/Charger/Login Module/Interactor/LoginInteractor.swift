@@ -26,14 +26,6 @@ extension LoginInteractor {
         loginEntity.encodeLoginRequest(email, deviceUDID)
     }
     
-    /**
-     Send succesfully encoded data to service layer for
-     interacting with the server.
-     */
-    func fetchLoginResponse() {
-        
-    }
-    
 }
 
 // MARK: - ENTITY RELATED METHODS

@@ -29,7 +29,6 @@ protocol LoginViewProtocol: AnyObject {
 protocol LoginInteractorProtocol: AnyObject {
     // Self Related
     func sendLoginRequest(_ email: String, _ deviceUDID: String)
-    func fetchLoginResponse()
     
     // Presenter Related
     var loginPresenter: LoginContract.loginPresenter! { get set }
