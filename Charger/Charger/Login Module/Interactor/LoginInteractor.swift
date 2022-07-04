@@ -17,13 +17,21 @@ class LoginInteractor: LoginContract.loginInteractor {
 
 // MARK: - SELF RELATED METHODS
 extension LoginInteractor {
-    
+    /**
+     Send email and deviceUDID information to entity layer
+     for encoding them into loginRequest struct.
+    */
     func sendLoginRequest(_ email: String, _ deviceUDID: String) {
-        return
+        
+        loginEntity.encodeLoginRequest(email, deviceUDID)
     }
     
+    /**
+     Send succesfully encoded data to service layer for
+     interacting with the server.
+     */
     func fetchLoginResponse() {
-        return
+        
     }
     
 }

@@ -9,7 +9,7 @@ import Foundation
 
 class LoginEntity: LoginContract.loginEntity {
     
-    var encodedLoginRequest: LoginRequest?
+    var encodedLoginRequest: Data?
     
     var decodedLoginResponse: LoginResponse?
 
@@ -21,7 +21,19 @@ class LoginEntity: LoginContract.loginEntity {
 extension LoginEntity {
     
     func encodeLoginRequest(_ email: String, _ deviceUDID: String) {
-        return
+        
+        let loginRequest = LoginRequest(email: email,
+                                        deviceUDID: deviceUDID)
+        
+        // Encode login request to data object
+        do {
+            encodedLoginRequest = try JSONEncoder().encode(loginRequest)
+            
+            // If there is no error occured while encoding, call interactor
+            loginInteractor?.didEncodeLoginRequest()
+        } catch let error {
+            print(error)
+        }
     }
     
     func decodeLoginResponse(_ data: Data) {

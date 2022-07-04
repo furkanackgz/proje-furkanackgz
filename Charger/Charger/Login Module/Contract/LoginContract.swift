@@ -57,7 +57,7 @@ protocol LoginPresenterProtocol: AnyObject {
 // MARK: - LOGIN ENTITY PROTOCOL
 protocol LoginEntityProtocol: AnyObject {
     // Self Related
-    var encodedLoginRequest: LoginRequest? { get }
+    var encodedLoginRequest: Data? { get }
     var decodedLoginResponse: LoginResponse? { get }
     func encodeLoginRequest(_ email: String, _ deviceUDID: String)
     func decodeLoginResponse(_ data: Data)
