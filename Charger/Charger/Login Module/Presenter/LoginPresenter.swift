@@ -21,7 +21,17 @@ class LoginPresenter: LoginContract.loginPresenter {
 extension LoginPresenter {
     
     func didUserPressGirisYapButton(with email: String, and deviceUDID: String) {
-        return
+        /*
+         If email address is valid, send login request with email
+         and deviceUDID received. Otherwise, show alert to the user
+         notifying that email address format is not valid.
+        */
+        if email.isValidEmail() {
+            loginInteractor?.sendLoginRequest(email, deviceUDID)
+        } else {
+            loginView?.showAlert(title: "Hata",
+                                 message: "Lütfen geçerli bir e-posta adresi giriniz")
+        }
     }
     
 }

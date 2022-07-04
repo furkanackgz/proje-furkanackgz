@@ -14,6 +14,7 @@
 		0B58C99428715D68006E5F7C /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58C99328715D68006E5F7C /* LoginEntity.swift */; };
 		0B58C99628715D81006E5F7C /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58C99528715D81006E5F7C /* LoginRouter.swift */; };
 		0B58C9992871619E006E5F7C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58C9982871619E006E5F7C /* LoginService.swift */; };
+		0B58C9B1287325FC006E5F7C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58C9B0287325FC006E5F7C /* String+Extension.swift */; };
 		0B6C548028709C610058051F /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C547F28709C610058051F /* LoginContract.swift */; };
 		0B6C548328709D590058051F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C548228709D590058051F /* LoginRequest.swift */; };
 		0B6C548528709D810058051F /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C548428709D810058051F /* LoginResponse.swift */; };
@@ -36,6 +37,7 @@
 		0B58C99328715D68006E5F7C /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		0B58C99528715D81006E5F7C /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		0B58C9982871619E006E5F7C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		0B58C9B0287325FC006E5F7C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		0B6C547F28709C610058051F /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
 		0B6C548228709D590058051F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		0B6C548428709D810058051F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -69,6 +71,22 @@
 				0B9A35C0286ADFEF00EB07F0 /* Login.storyboard */,
 			);
 			path = "Login Storyboard";
+			sourceTree = "<group>";
+		};
+		0B58C9AE287325D1006E5F7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B58C9AF287325DE006E5F7C /* String+Extension */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0B58C9AF287325DE006E5F7C /* String+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0B58C9B0287325FC006E5F7C /* String+Extension.swift */,
+			);
+			path = "String+Extension";
 			sourceTree = "<group>";
 		};
 		0B6C547728709B260058051F /* Login Module */ = {
@@ -180,6 +198,7 @@
 		0B9A35B9286ADFEF00EB07F0 /* Charger */ = {
 			isa = PBXGroup;
 			children = (
+				0B58C9AE287325D1006E5F7C /* Extensions */,
 				0BC21727286C6EEB00DEB1EA /* Resources */,
 				0B9A35CE286B00D800EB07F0 /* Manager */,
 				0B6C547728709B260058051F /* Login Module */,
@@ -290,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B58C9B1287325FC006E5F7C /* String+Extension.swift in Sources */,
 				0B9A35D0286B011100EB07F0 /* LocationManager.swift in Sources */,
 				0B9A35BF286ADFEF00EB07F0 /* LoginView.swift in Sources */,
 				0B6C548528709D810058051F /* LoginResponse.swift in Sources */,
