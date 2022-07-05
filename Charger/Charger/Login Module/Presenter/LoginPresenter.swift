@@ -52,6 +52,9 @@ extension LoginPresenter {
         setLoginResponseToDefaults(loginResponse)
         
         // Go to homepage with login router layer
+        DispatchQueue.main.async { [unowned self] in
+            loginRouter?.navigateToHomePage(loginView as! LoginView)
+        }
     }
     
 }

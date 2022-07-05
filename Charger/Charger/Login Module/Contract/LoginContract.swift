@@ -68,7 +68,7 @@ protocol LoginEntityProtocol: AnyObject {
 // MARK: - LOGIN ROUTER PROTOCOL
 protocol LoginRouterProtocol: AnyObject {
     // Self Related
-    func navigateToAppointmentsPage()
+    func navigateToHomePage(_ loginView: LoginView)
     
     // View Related
     var loginView: LoginContract.loginView! { get set }

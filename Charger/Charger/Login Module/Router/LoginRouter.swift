@@ -18,8 +18,9 @@ class LoginRouter: LoginContract.loginRouter {
 // MARK: - SELF RELATED METHODS
 extension LoginRouter {
     
-    func navigateToAppointmentsPage() {
-        return
+    func navigateToHomePage(_ loginView: LoginView) {
+        // Present home view modally
+        
     }
     
 }
