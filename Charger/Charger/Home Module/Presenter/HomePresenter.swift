@@ -29,7 +29,19 @@ extension HomePresenter {
 // MARK: - VIEW RELATED METHODS
 extension HomePresenter {
     
+    func viewDidLoad() {
+        return
+    }
+    
     func viewWillAppear() {
+        return
+    }
+    
+    func didPressProfileBarButton() {
+        return
+    }
+    
+    func didPressRandevuOlusturButton() {
         return
     }
     

@@ -5,7 +5,7 @@
 //  Created by Furkan Açıkgöz on 3.07.2022.
 //
 
-import Foundation
+import UIKit
 
 class LoginRouter: LoginContract.loginRouter {
     
@@ -19,7 +19,16 @@ class LoginRouter: LoginContract.loginRouter {
 extension LoginRouter {
     
     func navigateToHomePage(_ loginView: LoginView) {
-        // Present home view modally
+        
+        // Instantiate home view
+        guard let homeView = HomeContract.instantiateHomeModule() else { return }
+        
+        // Create navigation controller for home view
+        let nvc = UINavigationController(rootViewController: homeView)
+        
+        // Present navigation controller modally
+        nvc.modalPresentationStyle = .overFullScreen
+        loginView.present(nvc, animated: true)
         
     }
     

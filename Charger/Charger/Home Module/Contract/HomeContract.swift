@@ -52,7 +52,10 @@ protocol HomePresenterProtocol: AnyObject {
     
     // View related
     var homeView: HomeContract.homeView! { get set }
+    func viewDidLoad()
     func viewWillAppear()
+    func didPressRandevuOlusturButton()
+    func didPressProfileBarButton()
     func displayPlaceholderOrTableView()
     func deleteAppointment(with appointmentID: Int,
                            in appointments: [AppointmentType])
