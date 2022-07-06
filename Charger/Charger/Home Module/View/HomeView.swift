@@ -13,6 +13,8 @@ class HomeView: UIViewController, HomeContract.homeView {
     @IBOutlet weak var appointmentsTableView: UITableView!
     @IBOutlet weak var randevuOlusturButton: UIButton!
     
+    private var appointmentsTableViewHelper: AppointmentsTableViewHelper!
+    
     var isAppointmentsEmpty: Bool?
     
     var homePresenter: HomeContract.homePresenter?
@@ -23,6 +25,10 @@ class HomeView: UIViewController, HomeContract.homeView {
         
         // Call setupUI method to prepare UI components
         setupUI()
+        
+        // Assign Table View Helper
+        appointmentsTableViewHelper = .init(appointmentsTableView,
+                                            homePresenter!)
         
         // Call viewDidLoad method of presenter to fetch data
         homePresenter?.viewDidLoad()
