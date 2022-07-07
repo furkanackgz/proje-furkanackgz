@@ -37,11 +37,9 @@ class HomeView: UIViewController, HomeContract.homeView {
         // Assign Table View Helper
         appointmentsTableViewHelper = .init(appointmentsTableView,
                                             homePresenter!)
-        
-        // Call viewDidLoad method of presenter to fetch data
-        homePresenter?.viewDidLoad()
     }
     
+    // Call viewWillAppear method of presenter to fetch data
     override func viewWillAppear(_ animated: Bool) {
         homePresenter?.viewWillAppear()
     }
@@ -64,7 +62,8 @@ extension HomeView {
     }
     
     func updateAppointmentsTableView(with appointments: [AppointmentType]) {
-        return
+        // Send it to table view helper to display them in table view
+        appointmentsTableViewHelper.set(appointments: appointments)
     }
     
 }

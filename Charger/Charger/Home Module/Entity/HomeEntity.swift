@@ -19,7 +19,17 @@ class HomeEntity: HomeContract.homeEntity {
 extension HomeEntity {
     
     func decodeAppointments(response: Data) {
-        return
+        
+        // Decode response data to appointments response object
+        do {
+            decodedAppointmentsResponse = try JSONDecoder().decode([Appointment].self, from: response)
+            
+            // If there is no error occured while decoding, call interactor
+            homeInteractor?.didDecodeAppointmentsResponse()
+        } catch let error {
+            print(error)
+        }
+        
     }
     
 }
