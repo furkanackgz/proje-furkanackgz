@@ -19,7 +19,7 @@ struct HomeContract {
 // MARK: - HOME VIEW PROTOCOL
 protocol HomeViewProtocol: AnyObject {
     // Self related
-    var isAppointmentsEmpty: Bool? { get set }
+    var isAppointmentsEmpty: Bool { get }
     func displayPlaceholderView()
     func displayTableView()
     func updateAppointmentsTableView(with appointments: [AppointmentType])
@@ -48,7 +48,7 @@ protocol HomeInteractorProtocol: AnyObject {
 protocol HomePresenterProtocol: AnyObject {
     // Self related
     func prepareAppointmentsTableViewData(_ appointmentsResponse:
-                                          [Appointment]) -> [Appointment]
+                                          [Appointment]) -> [AppointmentType]
     
     // View related
     var homeView: HomeContract.homeView! { get set }

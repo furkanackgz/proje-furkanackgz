@@ -15,6 +15,16 @@ class AppointmentsTableViewHelper: NSObject {
     
     var homePresenter: HomeContract.homePresenter!
     
+    // IsAppointmentsEmpty variable lets home view
+    // know whether the appointments array empty and
+    // home view pass this info to presenter layer
+    // for displaying either placeholder or table view.
+    var isAppointmentsEmpty: Bool {
+        get{
+            appointments.isEmpty
+        }
+    }
+    
     init(_ appointmentsTableView: UITableView,
          _ homePresenter: HomeContract.homePresenter) {
         
@@ -89,8 +99,9 @@ extension AppointmentsTableViewHelper {
     }
     
     // MARK: - setAppointments
-    func setAppointments(data: [AppointmentType]) {
-        appointments.append(contentsOf: data)
+    func set(appointments: [AppointmentType]) {
+        self.appointments.append(contentsOf: appointments)
+        appointmentsTableView?.reloadData()
     }
     
 }
@@ -134,7 +145,7 @@ extension AppointmentsTableViewHelper: UITableViewDataSource {
              Decide which type of table view cell will be initialized
              depending on cell's hasPassed value.
              */
-            if hasPassed {
+            if !hasPassed {
                 // Dequeue current appointment cell
                 let currentAppointmentCell = dequeueCurrentAppointmentCell(tableView,
                                                                            indexPath)

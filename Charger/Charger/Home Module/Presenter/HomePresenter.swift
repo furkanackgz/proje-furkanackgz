@@ -20,8 +20,8 @@ class HomePresenter: HomeContract.homePresenter {
 // MARK: - SELF RELATED METHODS
 extension HomePresenter {
     
-    func prepareAppointmentsTableViewData(_ appointmentsResponse: [Appointment]) -> [Appointment] {
-        return [Appointment]()
+    func prepareAppointmentsTableViewData(_ appointmentsResponse: [Appointment]) -> [AppointmentType] {
+        return [AppointmentType]()
     }
     
 }

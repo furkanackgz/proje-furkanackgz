@@ -15,7 +15,15 @@ class HomeView: UIViewController, HomeContract.homeView {
     
     private var appointmentsTableViewHelper: AppointmentsTableViewHelper!
     
-    var isAppointmentsEmpty: Bool?
+    // IsAppointmentsEmpty variable checks appointments
+    // array which feed the appointment table view for
+    // notifying presenter to display either placeholder
+    // or table view according to emptiness of the array
+    var isAppointmentsEmpty: Bool {
+        get{
+            appointmentsTableViewHelper.isAppointmentsEmpty
+        }
+    }
     
     var homePresenter: HomeContract.homePresenter?
     
@@ -119,7 +127,7 @@ extension HomeView {
     // MARK: - setViews
     private func setViews() {
         // Set super view's background color
-        view.backgroundColor = ThemeManager.color.background
+        view.backgroundColor = ThemeManager.color.navigationBackground
         
         // Set super view's background color
         containerView.backgroundColor = ThemeManager.color.background

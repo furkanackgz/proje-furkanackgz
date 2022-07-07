@@ -51,8 +51,11 @@ extension CurrentAppointmentCell {
     
     private func setupUI() {
         
+        // Set
+        contentView.backgroundColor = ThemeManager.color.background
+        
         // Set container view
-        containerView.backgroundColor = ThemeManager.color.background
+        containerView.backgroundColor = ThemeManager.color.accent
         containerView.clipsToBounds = true
         containerView.layer.masksToBounds = true
         containerView.layer.cornerRadius = 8
@@ -60,21 +63,6 @@ extension CurrentAppointmentCell {
         
         // AC DC image view
         ACDCImageView.contentMode = .scaleAspectFit
-        
-        // Set station name label
-        stationNameLabel.backgroundColor = ThemeManager.color.background
-        
-        // Set date and time label
-        dateAndTimeLabel.backgroundColor = ThemeManager.color.background
-        
-        // Set kWh label
-        kWhLabel.backgroundColor = ThemeManager.color.background
-        
-        // Set socket number label
-        socketNumberLabel.backgroundColor = ThemeManager.color.background
-        
-        // Set socket type label
-        socketTypeLabel.backgroundColor = ThemeManager.color.background
         
     }
     
