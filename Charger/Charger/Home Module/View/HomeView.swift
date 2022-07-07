@@ -54,16 +54,22 @@ class HomeView: UIViewController, HomeContract.homeView {
 extension HomeView {
     
     func displayPlaceholderView() {
-        return
+        // Hide table view
+        appointmentsTableView.isHidden = true
     }
     
     func displayTableView() {
-        return
+        // Expose table view
+        appointmentsTableView.isHidden = false
     }
     
     func updateAppointmentsTableView(with appointments: [AppointmentType]) {
         // Send it to table view helper to display them in table view
         appointmentsTableViewHelper.set(appointments: appointments)
+        
+        // Call display placeholder or tableView method for
+        // picking either placeholder or table view to display
+        homePresenter?.displayPlaceholderOrTableView()
     }
     
 }

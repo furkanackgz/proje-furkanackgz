@@ -16,12 +16,23 @@ class AppointmentsTableViewHelper: NSObject {
     var homePresenter: HomeContract.homePresenter!
     
     // IsAppointmentsEmpty variable lets home view
-    // know whether the appointments array empty and
-    // home view pass this info to presenter layer
+    // know whether the appointments arrays empty in
+    // each one of current and previous arrays, also
+    // home view passes this info to presenter layer
     // for displaying either placeholder or table view.
     var isAppointmentsEmpty: Bool {
-        get{
-            appointments.isEmpty
+        get {
+            // Check if current appointments are empty
+            let isCurrentEmpty =
+            appointments.first?.appointments.isEmpty
+            
+            // Check if previous appointments are empty
+            let isPreviousEmpty =
+            appointments.last?.appointments.isEmpty
+            
+            // If both of the arrays are empty return
+            // true, otherwise return false
+            return isCurrentEmpty! && isPreviousEmpty!
         }
     }
     

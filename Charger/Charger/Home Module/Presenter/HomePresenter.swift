@@ -74,7 +74,15 @@ extension HomePresenter {
     }
     
     func displayPlaceholderOrTableView() {
-        return
+        
+        // Check if Appointments array empty
+        if homeView.isAppointmentsEmpty {
+            // Appointments array is empty
+            homeView.displayPlaceholderView()
+        } else {
+            // Appointments array is not empty
+            homeView.displayTableView()
+        }
     }
     
     func deleteAppointment(with appointmentID: Int, in appointments: [AppointmentType]) {
