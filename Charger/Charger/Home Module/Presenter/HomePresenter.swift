@@ -46,10 +46,63 @@ extension HomePresenter {
             
         }
         
+        // Sort current appointments depending on their dates and times
+        let currentAppointments = appointments.first?.appointments
+        appointments.first?.appointments = sort(currentAppointments!)
+        
+        // Sort previous appointments depending on their dates and times
+        let previousAppointments = appointments.last?.appointments
+        appointments.last?.appointments = sort(previousAppointments!)
+        
         // return prepared array
         return appointments
     }
     
+    /**
+     Sort function sorts appointments array given as the
+     parameter and in its body it sorts the array by only
+     appointments date value and then it sends sorted by
+     date appointments to the sortByTime method and takes
+     its return value and sends this sorted by both date
+     and time appointments array back to where it's called.
+     
+     -parameter appointments: Appointments typed array.
+     -returns: Sorted by date and time Appointments typed array.
+     */
+    private func sort(_ appointments: [Appointment]) -> [Appointment] {
+        
+        // Sort appointments by date
+        let sortedByDate = appointments.sorted(by: {
+            $0.date!.compare($1.date!) == .orderedAscending
+        })
+        
+        // Send sorted by date appointments to sortByTime method
+        let sortedByDateAndTime = sortByTime(sortedByDate)
+        
+        // Return sorted appointments by both date and time array
+        return sortedByDateAndTime
+        
+    }
+    
+    /**
+     SortByTime function sorts appointments array given as the
+     parameter and in its body it sorts the array by appointment
+     time value and sends it back to where it's called.
+     
+     -parameter sortedByDate: Appointments type array which is
+     already sorted by their date values.
+     -returns: Sorted by date and time Appointments typed array.
+     */
+    private func sortByTime(_ sortedByDate: [Appointment]) -> [Appointment] {
+        
+        // Sort appointments by time
+        let sortedByDateAndTime = sortedByDate.sorted(by: {
+            $0.time!.compare($1.time!) == .orderedAscending
+        })
+        
+        // Return sorted appointments by both date and time array
+        return sortedByDateAndTime
+    }
 }
 
 // MARK: - VIEW RELATED METHODS
