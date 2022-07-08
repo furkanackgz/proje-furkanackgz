@@ -83,7 +83,7 @@ extension PreviousAppointmentCellHelper {
         let date = convertNumeric(dateType)
         
         let dateAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 18, weight: .regular),
+            .font: UIFont.systemFont(ofSize: 16, weight: .regular),
             .foregroundColor: ThemeManager.color.title!
         ]
         let datePart = NSMutableAttributedString(string: "\(date), ", attributes: dateAttributes)
@@ -92,7 +92,7 @@ extension PreviousAppointmentCellHelper {
         guard let time = appointments[indexPath.section].appointments[indexPath.row].time else { return }
         
         let timeAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 18, weight: .regular),
+            .font: UIFont.systemFont(ofSize: 16, weight: .regular),
             .foregroundColor: ThemeManager.color.title!
         ]
         let timePart = NSAttributedString(string: time, attributes: timeAttributes)
@@ -157,7 +157,7 @@ extension PreviousAppointmentCellHelper {
         }
         
         // Return it in appropriate format
-        return day + (convertedMonth ?? "") + year
+        return "\(day) " + (convertedMonth ?? "") + " \(year)"
     }
     
     // MARK: - setKWhLabelForPrevious
@@ -186,7 +186,7 @@ extension PreviousAppointmentCellHelper {
         }
         
         // Assign power and powerUnit to the kWhLabel in the cell
-        appointmentCell.kWhLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        appointmentCell.kWhLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         appointmentCell.kWhLabel.text = "\(power ?? 0) \(powerUnit ?? "")"
         appointmentCell.kWhLabel.textColor = ThemeManager.color.title
         
@@ -216,7 +216,7 @@ extension PreviousAppointmentCellHelper {
         }
         
         // Assign socketNumber to the socketNumberLabel in the cell
-        appointmentCell.socketNumberLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        appointmentCell.socketNumberLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         appointmentCell.socketNumberLabel.text = "Soket numarası: \(socketNumber ?? 0)"
         appointmentCell.socketNumberLabel.textColor = ThemeManager.color.title
         
@@ -248,7 +248,7 @@ extension PreviousAppointmentCellHelper {
         }
         
         // Assign chargeType and socketType to the socketTypeLabel in the cell
-        appointmentCell.socketTypeLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        appointmentCell.socketTypeLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         appointmentCell.socketTypeLabel.text = (chargeType ?? "") + " • " + (socketType ?? "")
         appointmentCell.socketTypeLabel.textColor = ThemeManager.color.title
     }
