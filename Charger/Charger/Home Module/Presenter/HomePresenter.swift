@@ -61,47 +61,47 @@ extension HomePresenter {
     /**
      Sort function sorts appointments array given as the
      parameter and in its body it sorts the array by only
-     appointments date value and then it sends sorted by
-     date appointments to the sortByTime method and takes
-     its return value and sends this sorted by both date
-     and time appointments array back to where it's called.
+     appointment's time value and then it sends sorted by
+     time appointments to the sortByDate method and takes
+     its return value and sends this sorted by both time
+     and date appointments array back to where it's called.
      
-     -parameter appointments: Appointments typed array.
-     -returns: Sorted by date and time Appointments typed array.
+     -parameter appointments: Appointment typed array.
+     -returns: Sorted by time and date Appointment typed array.
      */
     private func sort(_ appointments: [Appointment]) -> [Appointment] {
         
-        // Sort appointments by date
-        let sortedByDate = appointments.sorted(by: {
-            $0.date!.compare($1.date!) == .orderedAscending
+        // Sort appointments by time
+        let sortedByTime = appointments.sorted(by: {
+            $0.time!.compare($1.time!) == .orderedAscending
         })
         
-        // Send sorted by date appointments to sortByTime method
-        let sortedByDateAndTime = sortByTime(sortedByDate)
+        // Send sorted by time appointments to sortByDate method
+        let sortedByTimeAndDate = sortByDate(sortedByTime)
         
-        // Return sorted appointments by both date and time array
-        return sortedByDateAndTime
+        // Return sorted appointments by both time and date array
+        return sortedByTimeAndDate
         
     }
     
     /**
-     SortByTime function sorts appointments array given as the
-     parameter and in its body it sorts the array by appointment
-     time value and sends it back to where it's called.
+     SortByDate function sorts appointments array given as the
+     parameter and in its body it sorts the array by appointment's
+     date value and sends it back to where it's called.
      
-     -parameter sortedByDate: Appointments type array which is
-     already sorted by their date values.
-     -returns: Sorted by date and time Appointments typed array.
+     -parameter sortedByTime: Appointments type array which is
+     already sorted by their time values.
+     -returns: Sorted by time and date Appointment typed array.
      */
-    private func sortByTime(_ sortedByDate: [Appointment]) -> [Appointment] {
+    private func sortByDate(_ sortedByTime: [Appointment]) -> [Appointment] {
         
-        // Sort appointments by time
-        let sortedByDateAndTime = sortedByDate.sorted(by: {
-            $0.time!.compare($1.time!) == .orderedAscending
+        // Sort appointments by date
+        let sortedByTimeAndDate = sortedByTime.sorted(by: {
+            $0.date!.compare($1.date!) == .orderedAscending
         })
         
-        // Return sorted appointments by both date and time array
-        return sortedByDateAndTime
+        // Return sorted appointments by both time and date array
+        return sortedByTimeAndDate
     }
 }
 

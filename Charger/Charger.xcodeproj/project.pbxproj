@@ -34,6 +34,7 @@
 		0B58CA032875DBE5006E5F7C /* CurrentAppointmentCellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58CA022875DBE5006E5F7C /* CurrentAppointmentCellHelper.swift */; };
 		0B58CA062875E803006E5F7C /* PreviousAppointmentCellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58CA052875E803006E5F7C /* PreviousAppointmentCellHelper.swift */; };
 		0B58CA0928760096006E5F7C /* AppointmentsTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58CA0828760096006E5F7C /* AppointmentsTableViewHeader.swift */; };
+		0B59064128780A91006D7E21 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B59064028780A91006D7E21 /* PlaceholderView.swift */; };
 		0B6C548028709C610058051F /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C547F28709C610058051F /* LoginContract.swift */; };
 		0B6C548328709D590058051F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C548228709D590058051F /* LoginRequest.swift */; };
 		0B6C548528709D810058051F /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C548428709D810058051F /* LoginResponse.swift */; };
@@ -76,6 +77,7 @@
 		0B58CA022875DBE5006E5F7C /* CurrentAppointmentCellHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAppointmentCellHelper.swift; sourceTree = "<group>"; };
 		0B58CA052875E803006E5F7C /* PreviousAppointmentCellHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousAppointmentCellHelper.swift; sourceTree = "<group>"; };
 		0B58CA0828760096006E5F7C /* AppointmentsTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsTableViewHeader.swift; sourceTree = "<group>"; };
+		0B59064028780A91006D7E21 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		0B6C547F28709C610058051F /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
 		0B6C548228709D590058051F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		0B6C548428709D810058051F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		0B58C9F228755A3B006E5F7C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0B59064228782AD5006D7E21 /* Placeholder View Helper */,
 				0B58C9F328755A42006E5F7C /* Table View Helper */,
 			);
 			path = Helpers;
@@ -287,6 +290,14 @@
 				0B58CA0828760096006E5F7C /* AppointmentsTableViewHeader.swift */,
 			);
 			path = "Table View Header";
+			sourceTree = "<group>";
+		};
+		0B59064228782AD5006D7E21 /* Placeholder View Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0B59064028780A91006D7E21 /* PlaceholderView.swift */,
+			);
+			path = "Placeholder View Helper";
 			sourceTree = "<group>";
 		};
 		0B6C547728709B260058051F /* Login Module */ = {
@@ -533,6 +544,7 @@
 				0B58C9EC2874B605006E5F7C /* HomeService.swift in Sources */,
 				0B58C9992871619E006E5F7C /* LoginService.swift in Sources */,
 				0B6C548028709C610058051F /* LoginContract.swift in Sources */,
+				0B59064128780A91006D7E21 /* PlaceholderView.swift in Sources */,
 				0B58C9E22874B268006E5F7C /* HomeView.swift in Sources */,
 				0B58C9FB28756087006E5F7C /* PreviousAppointmentCell.swift in Sources */,
 				0B58C99628715D81006E5F7C /* LoginRouter.swift in Sources */,

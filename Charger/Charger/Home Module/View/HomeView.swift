@@ -14,6 +14,7 @@ class HomeView: UIViewController, HomeContract.homeView {
     @IBOutlet weak var randevuOlusturButton: UIButton!
     
     private var appointmentsTableViewHelper: AppointmentsTableViewHelper!
+    private var placeholderView: PlaceholderView?
     
     // IsAppointmentsEmpty variable checks appointments
     // array which feed the appointment table view for
@@ -27,23 +28,23 @@ class HomeView: UIViewController, HomeContract.homeView {
     
     var homePresenter: HomeContract.homePresenter?
     
-
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Call setupUI method to prepare UI components
         setupUI()
         
-        // Assign Table View Helper
-        appointmentsTableViewHelper = .init(appointmentsTableView,
-                                            homePresenter!)
     }
     
-    // Call viewWillAppear method of presenter to fetch data
+    // MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
+        
+        // Call viewWillAppear method of presenter to fetch data
         homePresenter?.viewWillAppear()
     }
     
+    // MARK: - didPressRandevuOlusturButton
     @IBAction func didPressRandevuOlusturButton(_ sender: Any) {
         homePresenter?.didPressRandevuOlusturButton()
     }
@@ -53,16 +54,25 @@ class HomeView: UIViewController, HomeContract.homeView {
 // MARK: - SELF RELATED METHODS
 extension HomeView {
     
+    // MARK: - displayPlaceholderView
     func displayPlaceholderView() {
+        // Expose placeholder view
+        placeholderView?.isHidden = false
+        
         // Hide table view
         appointmentsTableView.isHidden = true
     }
     
+    // MARK: - displayTableView
     func displayTableView() {
         // Expose table view
         appointmentsTableView.isHidden = false
+        
+        // Hide placeholder view
+        placeholderView?.isHidden = true
     }
     
+    // MARK: - updateAppointmentsTableView
     func updateAppointmentsTableView(with appointments: [AppointmentType]) {
         // Send it to table view helper to display them in table view
         appointmentsTableViewHelper.set(appointments: appointments)
@@ -97,6 +107,14 @@ extension HomeView {
         
         // Set randevu olustur button's forground
         setRandevuOlusturButton()
+        
+        // Assign Table View Helper
+        appointmentsTableViewHelper = .init(appointmentsTableView,
+                                            homePresenter!)
+        
+        // Assign placeholder view
+        placeholderView = .init(containerView,
+                                randevuOlusturButton)
     }
     
     // MARK: - setNavigationBar
