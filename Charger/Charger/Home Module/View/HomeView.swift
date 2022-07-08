@@ -128,12 +128,23 @@ extension HomeView {
     
     // MARK: - setNavigationTitle
     private func setNavigationTitle() {
-        // Set navigation title as attributed string
+        
+        // Create navigation title's attributes
         let attributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 20, weight: .bold),
             .foregroundColor: ThemeManager.color.title!
         ]
-        navigationController?.navigationBar.titleTextAttributes = attributes
+        
+        // Create navigation bar's appearance
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = ThemeManager.color.navigationBackground
+        appearance.titleTextAttributes = attributes
+        
+        // Set navigation bar appearance
+        navigationController?.navigationBar.standardAppearance = appearance
+        
+        // Set navigation bar title
         title = "Randevular"
     }
     
