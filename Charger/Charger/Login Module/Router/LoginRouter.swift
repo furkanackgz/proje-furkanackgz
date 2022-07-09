@@ -5,7 +5,7 @@
 //  Created by Furkan Açıkgöz on 3.07.2022.
 //
 
-import Foundation
+import UIKit
 
 class LoginRouter: LoginContract.loginRouter {
     
@@ -18,8 +18,18 @@ class LoginRouter: LoginContract.loginRouter {
 // MARK: - SELF RELATED METHODS
 extension LoginRouter {
     
-    func navigateToAppointmentsPage() {
-        return
+    func navigateToHomePage(_ loginView: LoginView) {
+        
+        // Instantiate home view
+        guard let homeView = HomeContract.instantiateHomeModule() else { return }
+        
+        // Create navigation controller for home view
+        let nvc = UINavigationController(rootViewController: homeView)
+        
+        // Present navigation controller modally
+        nvc.modalPresentationStyle = .overFullScreen
+        loginView.present(nvc, animated: true)
+        
     }
     
 }

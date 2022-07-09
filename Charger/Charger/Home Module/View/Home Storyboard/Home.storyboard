@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeView" id="Y6W-OH-hqX" customClass="HomeView" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kL1-Bl-7Eg" userLabel="Container View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ivV-GR-d9T">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8i-6q-Fta">
+                                        <rect key="frame" x="172" y="728" width="70" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="5Rb-g7-HzU"/>
+                                            <constraint firstAttribute="width" constant="70" id="Z53-b4-FYA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="didPressRandevuOlusturButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6fA-MS-SRm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ivV-GR-d9T" firstAttribute="top" secondItem="kL1-Bl-7Eg" secondAttribute="top" id="1Kr-Bk-bPS"/>
+                                    <constraint firstAttribute="bottom" secondItem="p8i-6q-Fta" secondAttribute="bottom" constant="40" id="4tZ-CP-2B5"/>
+                                    <constraint firstItem="p8i-6q-Fta" firstAttribute="centerX" secondItem="kL1-Bl-7Eg" secondAttribute="centerX" id="C2W-x2-9Ot"/>
+                                    <constraint firstAttribute="trailing" secondItem="ivV-GR-d9T" secondAttribute="trailing" id="Ctk-8D-PLJ"/>
+                                    <constraint firstItem="p8i-6q-Fta" firstAttribute="top" secondItem="ivV-GR-d9T" secondAttribute="bottom" constant="40" id="N9T-8l-OSc"/>
+                                    <constraint firstItem="ivV-GR-d9T" firstAttribute="leading" secondItem="kL1-Bl-7Eg" secondAttribute="leading" id="dJu-aw-uv1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kL1-Bl-7Eg" secondAttribute="trailing" id="ANM-4d-EtJ"/>
+                            <constraint firstItem="kL1-Bl-7Eg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Sut-d8-PuB"/>
+                            <constraint firstItem="kL1-Bl-7Eg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="f3I-L8-28q"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="kL1-Bl-7Eg" secondAttribute="bottom" id="jXj-Tc-agM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appointmentsTableView" destination="ivV-GR-d9T" id="l5i-MU-7wC"/>
+                        <outlet property="containerView" destination="kL1-Bl-7Eg" id="ivk-5W-9Ts"/>
+                        <outlet property="randevuOlusturButton" destination="p8i-6q-Fta" id="K31-wY-Xec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

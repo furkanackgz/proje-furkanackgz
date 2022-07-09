@@ -79,7 +79,7 @@ extension LoginView {
     // MARK: - setViews
     private func setViews() {
         // Set super view's background color
-        view.backgroundColor = ThemeManager.color.background
+        view.backgroundColor = ThemeManager.color.navigationBackground
         
         // Set super view's background color
         containerView.backgroundColor = ThemeManager.color.background
