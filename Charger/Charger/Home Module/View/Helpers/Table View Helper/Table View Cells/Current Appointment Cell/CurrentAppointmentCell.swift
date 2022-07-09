@@ -121,9 +121,9 @@ extension CurrentAppointmentCell {
             let partsOfDate = date.components(separatedBy: " ")
             
             // Assign the parts
-            let year = partsOfDate[0]
+            let day = partsOfDate[0]
             let month = partsOfDate[1]
-            let day = partsOfDate[2]
+            let year = partsOfDate[2]
             
             let convertedMonth: String?
             
@@ -184,9 +184,13 @@ extension CurrentAppointmentCell {
        
         // Create randevuyu iptal et alert action and add it to the alert
         let randevuyuIptalEt = UIAlertAction(title: "Randevuyu İptal Et",
-                                             style: .default) { _ in
+                                             style: .default) { [weak self] _ in
             
-           // Call didPressTrashButton method in helper
+            // Call didPressTrashButton method in helper
+            if let appointmentID = self?.appointmentID {
+                self?.helper?.didPressTrashButton(appointmentID)
+            }
+            
             
         }
         alert.addAction(randevuyuIptalEt)

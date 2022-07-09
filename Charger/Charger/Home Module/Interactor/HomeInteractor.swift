@@ -49,8 +49,29 @@ extension HomeInteractor {
         homePresenter?.didFetchAppointmentsResponse()
     }
     
-    func updateAppointments(_ updatedAppointments: [Appointment]) {
-        return
+    func deleteAppointment(with appointmentID: Int) {
+        
+        /**
+         Send delete appointment request to the home service with
+         the received appointment id and return succeed information
+         with the completion handler about whether appointment could
+         be deleted.
+         
+         parameter appointmentID: Appointment id of the particular
+         cell that wished to be deleted by the user.
+         returns: none
+         */
+        HomeService.run.sendDeleteAppointmentRequest(with: appointmentID) { [weak self] succeed in
+            
+            if succeed {
+                self?.homePresenter?.didDeleteAppointment()
+            } else {
+                // Show alert to notify user that appointment
+                // cannot be deleted
+            }
+            
+        }
+        
     }
     
 }

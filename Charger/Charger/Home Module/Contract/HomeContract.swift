@@ -37,7 +37,7 @@ protocol HomeInteractorProtocol: AnyObject {
     // Presenter related
     var homePresenter: HomeContract.homePresenter? { get set }
     func didDecodeAppointmentsResponse()
-    func updateAppointments(_ updatedAppointments: [Appointment])
+    func deleteAppointment(with appointmentID: Int)
     
     // Entity related
     var homeEntity: HomeContract.homeEntity! { get set }
@@ -57,12 +57,11 @@ protocol HomePresenterProtocol: AnyObject {
     func didPressRandevuOlusturButton()
     func didPressProfileBarButton()
     func displayPlaceholderOrTableView()
-    func deleteAppointment(with appointmentID: Int,
-                           in appointments: [AppointmentType])
+    func deleteAppointment(with appointmentID: Int)
     // Interactor related
     var homeInteractor: HomeContract.homeInteractor! { get set }
     func didFetchAppointmentsResponse()
-    func didUpdateAppointments()
+    func didDeleteAppointment()
     
     // Router related
     var homeRouter: HomeContract.homeRouter! { get set }

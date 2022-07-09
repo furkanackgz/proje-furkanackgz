@@ -56,20 +56,32 @@ extension HomeView {
     
     // MARK: - displayPlaceholderView
     func displayPlaceholderView() {
-        // Expose placeholder view
-        placeholderView?.isHidden = false
         
-        // Hide table view
-        appointmentsTableView.isHidden = true
+        // Animate displaying placeholder view for
+        // better user experience
+        UIView.animate(withDuration: 1, delay: 1) { [weak self] in
+            // Expose placeholder view
+            self?.placeholderView?.isHidden = false
+            
+            // Hide table view
+            self?.appointmentsTableView.isHidden = true
+        }
+        
     }
     
     // MARK: - displayTableView
     func displayTableView() {
-        // Expose table view
-        appointmentsTableView.isHidden = false
         
-        // Hide placeholder view
-        placeholderView?.isHidden = true
+        // Animate displaying table view for
+        // better user experience
+        UIView.animate(withDuration: 1, delay: 1) { [weak self] in
+            // Expose table view
+            self?.appointmentsTableView.isHidden = false
+            
+            // Hide placeholder view
+            self?.placeholderView?.isHidden = true
+        }
+        
     }
     
     // MARK: - updateAppointmentsTableView

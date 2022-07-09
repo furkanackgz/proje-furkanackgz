@@ -109,14 +109,19 @@ extension AppointmentsTableViewHelper {
      */
     // MARK: - didPressTrashButton
     func didPressTrashButton(_ appointmentID: Int) {
-        homePresenter.deleteAppointment(with: appointmentID,
-                                        in: appointments)
+        homePresenter.deleteAppointment(with: appointmentID)
     }
     
     // MARK: - setAppointments
     func set(appointments: [AppointmentType]) {
-        self.appointments.append(contentsOf: appointments)
-        appointmentsTableView?.reloadData()
+        self.appointments = appointments
+        
+        // Animate reloding table view for better
+        // user experience
+        UIView.animate(withDuration: 0.375, delay: 0.5) { [weak self] in
+            self?.appointmentsTableView?.reloadData()
+        }
+        
     }
     
 }
@@ -192,6 +197,12 @@ extension AppointmentsTableViewHelper {
             
             // Set home view
             appointmentCell.homeView = homeView
+            
+            // Set table view helper
+            appointmentCell.helper = self
+            
+            // Set appointment id
+            appointmentCell.appointmentID = appointments[indexPath.section].appointments[indexPath.row].appointmentID
             
             // Initialize current appointment cell helper
             let currentAppointmentCellHelper = CurrentAppointmentCellHelper(appointments)

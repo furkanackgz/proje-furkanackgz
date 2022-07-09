@@ -20,6 +20,7 @@ class HomePresenter: HomeContract.homePresenter {
 // MARK: - SELF RELATED METHODS
 extension HomePresenter {
     
+    // MARK: - prepareAppointmentsTableViewData
     func prepareAppointmentsTableViewData(_ appointmentsResponse: [Appointment]) -> [AppointmentType] {
         
         // Create the array which will be shown in appointments table view
@@ -47,61 +48,102 @@ extension HomePresenter {
         }
         
         // Sort current appointments depending on their dates and times
+        // in ascending order
         let currentAppointments = appointments.first?.appointments
-        appointments.first?.appointments = sort(currentAppointments!)
+        appointments.first?.appointments = sort(currentAppointments!, in: "Ascending Order")
         
         // Sort previous appointments depending on their dates and times
+        // in descending order
         let previousAppointments = appointments.last?.appointments
-        appointments.last?.appointments = sort(previousAppointments!)
+        appointments.last?.appointments = sort(previousAppointments!, in: "Descending Order")
         
         // return prepared array
         return appointments
     }
     
+    // MARK: - sort
     /**
      Sort function sorts appointments array given as the
-     parameter and in its body it sorts the array by only
-     appointment's time value and then it sends sorted by
-     time appointments to the sortByDate method and takes
-     its return value and sends this sorted by both time
-     and date appointments array back to where it's called.
+     parameter in order which is also given as a parameter,
+     in its body it sorts the array by only appointment's
+     time value and then it sends sorted by time appointments
+     to the sortByDate method and takes its return value and
+     sends this sorted by both time and date appointments array
+     back to where it's called.
      
      -parameter appointments: Appointment typed array.
-     -returns: Sorted by time and date Appointment typed array.
+     -parameter order: Ascending or Descending Order in string.
+     -returns: Sorted by time and date Appointment typed array
+     in particular order.
      */
-    private func sort(_ appointments: [Appointment]) -> [Appointment] {
+    private func sort(_ appointments: [Appointment],
+                      in order: String) -> [Appointment] {
+        
+        var sortedByTimeAndDate: [Appointment]?
         
         // Sort appointments by time
-        let sortedByTime = appointments.sorted(by: {
-            $0.time!.compare($1.time!) == .orderedAscending
-        })
-        
-        // Send sorted by time appointments to sortByDate method
-        let sortedByTimeAndDate = sortByDate(sortedByTime)
+        if order == "Ascending Order" {
+            
+            // In ascending order
+            let sortedByTime = appointments.sorted(by: {
+                $0.time!.compare($1.time!) == .orderedAscending
+            })
+            
+            // Send sorted by time in ascending order appointments
+            // to sortByDate method
+            sortedByTimeAndDate = sortByDate(sortedByTime, in: "Ascending Order")
+            
+        } else if order == "Descending Order" {
+            
+            // In descending order
+            let sortedByTime = appointments.sorted(by: {
+                $0.time!.compare($1.time!) == .orderedDescending
+            })
+            
+            // Send sorted by time in descending order appointments
+            // to sortByDate method
+            sortedByTimeAndDate = sortByDate(sortedByTime, in: "Descending Order")
+            
+        }
         
         // Return sorted appointments by both time and date array
-        return sortedByTimeAndDate
+        return sortedByTimeAndDate!
         
     }
     
+    // MARK: - sortByDate
     /**
      SortByDate function sorts appointments array given as the
-     parameter and in its body it sorts the array by appointment's
-     date value and sends it back to where it's called.
+     parameter in order which is also given as a parameter and
+     in its body it sorts the array by appointment's date value
+     and sends it back to where it's called.
      
      -parameter sortedByTime: Appointments type array which is
      already sorted by their time values.
-     -returns: Sorted by time and date Appointment typed array.
+     -parameter order: Ascending or Descending Order in string.
+     -returns: Sorted by time and date Appointment typed array
+     in particular order.
      */
-    private func sortByDate(_ sortedByTime: [Appointment]) -> [Appointment] {
+    private func sortByDate(_ sortedByTime: [Appointment],
+                            in order: String) -> [Appointment] {
+        
+        var sortedByTimeAndDate: [Appointment]?
         
         // Sort appointments by date
-        let sortedByTimeAndDate = sortedByTime.sorted(by: {
-            $0.date!.compare($1.date!) == .orderedAscending
-        })
+        if order == "Ascending Order" {
+            // In ascending order
+            sortedByTimeAndDate = sortedByTime.sorted(by: {
+                $0.date!.compare($1.date!) == .orderedAscending
+            })
+        } else if order == "Descending Order" {
+            // In descending order
+            sortedByTimeAndDate = sortedByTime.sorted(by: {
+                $0.date!.compare($1.date!) == .orderedDescending
+            })
+        }
         
         // Return sorted appointments by both time and date array
-        return sortedByTimeAndDate
+        return sortedByTimeAndDate!
     }
 }
 
@@ -138,8 +180,8 @@ extension HomePresenter {
         }
     }
     
-    func deleteAppointment(with appointmentID: Int, in appointments: [AppointmentType]) {
-        return
+    func deleteAppointment(with appointmentID: Int) {
+        homeInteractor.deleteAppointment(with: appointmentID)
     }
     
 }
@@ -162,8 +204,8 @@ extension HomePresenter {
        
     }
     
-    func didUpdateAppointments() {
-        return
+    func didDeleteAppointment() {
+        homeInteractor.fetchAppointmentsResponse()
     }
     
 }
