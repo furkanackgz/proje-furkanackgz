@@ -110,7 +110,8 @@ extension HomeView {
         
         // Assign Table View Helper
         appointmentsTableViewHelper = .init(appointmentsTableView,
-                                            homePresenter!)
+                                            homePresenter!,
+                                            self)
         
         // Assign placeholder view
         placeholderView = .init(containerView,

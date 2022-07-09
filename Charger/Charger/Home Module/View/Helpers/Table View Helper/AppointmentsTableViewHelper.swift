@@ -15,6 +15,8 @@ class AppointmentsTableViewHelper: NSObject {
     
     var homePresenter: HomeContract.homePresenter!
     
+    var homeView: HomeContract.homeView?
+    
     // IsAppointmentsEmpty variable lets home view
     // know whether the appointments arrays empty in
     // each one of current and previous arrays, also
@@ -37,13 +39,15 @@ class AppointmentsTableViewHelper: NSObject {
     }
     
     init(_ appointmentsTableView: UITableView,
-         _ homePresenter: HomeContract.homePresenter) {
+         _ homePresenter: HomeContract.homePresenter,
+         _ homeView: HomeContract.homeView) {
         
         super.init()
         
         // Assign properties came from home view
         self.appointmentsTableView = appointmentsTableView
         self.homePresenter = homePresenter
+        self.homeView = homeView
         
         // Assign self as delegate and data soruce of table view
         self.appointmentsTableView?.delegate = self
@@ -185,6 +189,9 @@ extension AppointmentsTableViewHelper {
         var currentAppointmentCell: CurrentAppointmentCell?
         
         if let appointmentCell = tableView.dequeueReusableCell(withIdentifier: "CurrentAppointmentCell") as? CurrentAppointmentCell {
+            
+            // Set home view
+            appointmentCell.homeView = homeView
             
             // Initialize current appointment cell helper
             let currentAppointmentCellHelper = CurrentAppointmentCellHelper(appointments)
