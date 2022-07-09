@@ -160,8 +160,8 @@ extension HomePresenter {
         homeInteractor.fetchAppointmentsResponse()
     }
     
-    func didPressProfileBarButton() {
-        return
+    func didPressProfileBarButton(_ homeView: HomeView) {
+        homeRouter.navigateToProfilePage(homeView)
     }
     
     func didPressRandevuOlusturButton() {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B24DAFC2879CE000053552B /* ProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B24DAFB2879CE000053552B /* ProfileContract.swift */; };
+		0B24DAFF2879DA450053552B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B24DAFE2879DA450053552B /* Profile.storyboard */; };
+		0B24DB012879DA820053552B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B24DB002879DA820053552B /* ProfileView.swift */; };
 		0B3638EA286B72E900931B23 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3638E9286B72E900931B23 /* NotificationManager.swift */; };
 		0B58C98C28715CBC006E5F7C /* LoginContractHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58C98B28715CBC006E5F7C /* LoginContractHelper.swift */; };
 		0B58C99028715D2F006E5F7C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58C98F28715D2F006E5F7C /* LoginInteractor.swift */; };
@@ -50,6 +53,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B24DAFB2879CE000053552B /* ProfileContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContract.swift; sourceTree = "<group>"; };
+		0B24DAFE2879DA450053552B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		0B24DB002879DA820053552B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0B3638E9286B72E900931B23 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		0B58C98B28715CBC006E5F7C /* LoginContractHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContractHelper.swift; sourceTree = "<group>"; };
 		0B58C98F28715D2F006E5F7C /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -105,6 +111,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B24DAF32879BEEE0053552B /* Profile Module */ = {
+			isa = PBXGroup;
+			children = (
+				0B24DAFA2879BF960053552B /* Service */,
+				0B24DAF92879BF300053552B /* Contract */,
+				0B24DAF82879BF2B0053552B /* View */,
+				0B24DAF72879BF250053552B /* Interactor */,
+				0B24DAF62879BF1C0053552B /* Presenter */,
+				0B24DAF42879BF090053552B /* Router */,
+			);
+			path = "Profile Module";
+			sourceTree = "<group>";
+		};
+		0B24DAF42879BF090053552B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0B24DAF62879BF1C0053552B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0B24DAF72879BF250053552B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0B24DAF82879BF2B0053552B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B24DAFD2879D9FC0053552B /* Profile Storyboard */,
+				0B24DB002879DA820053552B /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B24DAF92879BF300053552B /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				0B24DAFB2879CE000053552B /* ProfileContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		0B24DAFA2879BF960053552B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0B24DAFD2879D9FC0053552B /* Profile Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0B24DAFE2879DA450053552B /* Profile.storyboard */,
+			);
+			path = "Profile Storyboard";
+			sourceTree = "<group>";
+		};
 		0B58C99728715DF1006E5F7C /* Login Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +486,7 @@
 				0B9A35CE286B00D800EB07F0 /* Manager */,
 				0B6C547728709B260058051F /* Login Module */,
 				0B58C9BA28743DD4006E5F7C /* Home Module */,
+				0B24DAF32879BEEE0053552B /* Profile Module */,
 				0B9A35BA286ADFEF00EB07F0 /* AppDelegate.swift */,
 				0B9A35BC286ADFEF00EB07F0 /* SceneDelegate.swift */,
 				0B9A35C5286ADFF100EB07F0 /* LaunchScreen.storyboard */,
@@ -509,6 +582,7 @@
 			files = (
 				0B58C9FC28756087006E5F7C /* PreviousAppointmentCell.xib in Resources */,
 				0B9A35C7286ADFF100EB07F0 /* LaunchScreen.storyboard in Resources */,
+				0B24DAFF2879DA450053552B /* Profile.storyboard in Resources */,
 				0B58C9E02874B250006E5F7C /* Home.storyboard in Resources */,
 				0BC2172A286C6F4600DEB1EA /* Colors.xcassets in Resources */,
 				0B9A35C4286ADFF100EB07F0 /* Images.xcassets in Resources */,
@@ -531,10 +605,12 @@
 				0B9A35BF286ADFEF00EB07F0 /* LoginView.swift in Sources */,
 				0B58C9C628744A93006E5F7C /* AppointmentType.swift in Sources */,
 				0B6C548528709D810058051F /* LoginResponse.swift in Sources */,
+				0B24DAFC2879CE000053552B /* ProfileContract.swift in Sources */,
 				0B58C9E42874B50F006E5F7C /* HomeInteractor.swift in Sources */,
 				0B3638EA286B72E900931B23 /* NotificationManager.swift in Sources */,
 				0B58C9FF28756751006E5F7C /* CurrentAppointmentCell.swift in Sources */,
 				0BC21730286C9B2000DEB1EA /* ThemeManager.swift in Sources */,
+				0B24DB012879DA820053552B /* ProfileView.swift in Sources */,
 				0B9A35BB286ADFEF00EB07F0 /* AppDelegate.swift in Sources */,
 				0B58C9F528755A94006E5F7C /* AppointmentsTableViewHelper.swift in Sources */,
 				0B9A35BD286ADFEF00EB07F0 /* SceneDelegate.swift in Sources */,

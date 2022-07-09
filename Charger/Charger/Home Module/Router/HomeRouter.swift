@@ -9,8 +9,6 @@ import UIKit
 
 class HomeRouter: HomeContract.homeRouter {
     
-    var homeView: HomeContract.homeView!
-    
 }
 
 // MARK: - SELF RELATED METHODS

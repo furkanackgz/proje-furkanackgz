@@ -27,7 +27,13 @@ extension LoginPresenter {
          notifying that email address format is not valid.
         */
         if email.isValidEmail() {
+            
+            // Set response data to defaults for later access
+            setDeviceIDToDefaults(deviceUDID)
+            
+            // Call send login request method in interactor
             loginInteractor?.sendLoginRequest(email, deviceUDID)
+            
         } else {
             loginView?.showAlert(title: "Hata",
                                  message: "Lütfen geçerli bir e-posta adresi giriniz")
@@ -66,22 +72,27 @@ extension LoginPresenter {
         // Helper
         let defaults = UserDefaults.standard
         
-        // Set e-mail if it is not already set
-        if let email = loginResponse.email,
-           defaults.object(forKey: "email") == nil {
+        // Set e-mail to user defaults
+        if let email = loginResponse.email {
             defaults.set(email, forKey: "email")
         }
         
-        // Set token if it is not already set
-        if let token = loginResponse.token,
-           defaults.object(forKey: "token") == nil {
+        // Set token to user defaults
+        if let token = loginResponse.token {
             defaults.set(token, forKey: "token")
         }
         
-        // Set userId if it is not already set
-        if let userID = loginResponse.userID,
-           defaults.object(forKey: "userID") == nil {
+        // Set userId to user defaults
+        if let userID = loginResponse.userID {
             defaults.set(userID, forKey: "userID")
         }
+    }
+    
+    private func setDeviceIDToDefaults(_ deviceUDID: String) {
+        // Helper
+        let defaults = UserDefaults.standard
+        
+        // Set deviceID to user defaults
+        defaults.set(deviceUDID, forKey: "deviceID")
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 extension HomeContract {
     
     /**
-     This is the function where we bind all layers of login module together
+     This is the function where we bind all layers of home module together
      and send it back to where it is called. Without this binding VIPER design
      pattern would not work.
     */
@@ -36,9 +36,8 @@ extension HomeContract {
             homeInteractor.homeEntity = homeEntity
             homeEntity.homeInteractor = homeInteractor
             
-            // Router - View Binding
-            homeRouter.homeView = homeView
-            
+            // Presenter - Router Binding
+            homePresenter.homeRouter = homeRouter
             
             return homeView
         }

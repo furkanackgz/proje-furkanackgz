@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ProfileView" id="Y6W-OH-hqX" customClass="ProfileView" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ri-Wc-pKN" userLabel="Container View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pkV-t3-z55">
+                                        <rect key="frame" x="124" y="80" width="166" height="165.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pkV-t3-z55" secondAttribute="height" multiplier="1:1" id="v5i-sh-1ZX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bf-kb-dZR" userLabel="Info View">
+                                        <rect key="frame" x="16" y="265.5" width="382" height="128"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GfX-sG-2OO" userLabel="Email Stack View">
+                                                <rect key="frame" x="16" y="16" width="350" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWX-6w-mT4" userLabel="Email Key Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="Ief-CL-kKK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfe-6c-mLS" userLabel="Email Value Label">
+                                                        <rect key="frame" x="80" y="0.0" width="270" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="kuy-wx-8Zw"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rmL-fk-Tt4" userLabel="DeviceID Stack View">
+                                                <rect key="frame" x="16" y="72" width="350" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y58-An-bCg" userLabel="DeviceID Key Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="beO-r4-OL1"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev0-Sr-Hsb" userLabel="DeviceID Value Label">
+                                                        <rect key="frame" x="80" y="0.0" width="270" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="lnN-Eb-6cS"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="GfX-sG-2OO" secondAttribute="trailing" constant="16" id="IjA-Oa-1vO"/>
+                                            <constraint firstItem="rmL-fk-Tt4" firstAttribute="top" secondItem="GfX-sG-2OO" secondAttribute="bottom" constant="16" id="Ioe-pj-dyy"/>
+                                            <constraint firstItem="GfX-sG-2OO" firstAttribute="top" secondItem="3Bf-kb-dZR" secondAttribute="top" constant="16" id="gTS-LT-i8G"/>
+                                            <constraint firstAttribute="trailing" secondItem="rmL-fk-Tt4" secondAttribute="trailing" constant="16" id="igg-hq-gvd"/>
+                                            <constraint firstItem="rmL-fk-Tt4" firstAttribute="leading" secondItem="3Bf-kb-dZR" secondAttribute="leading" constant="16" id="nt7-0u-PXX"/>
+                                            <constraint firstItem="GfX-sG-2OO" firstAttribute="leading" secondItem="3Bf-kb-dZR" secondAttribute="leading" constant="16" id="rpQ-QI-Acc"/>
+                                            <constraint firstAttribute="bottom" secondItem="rmL-fk-Tt4" secondAttribute="bottom" constant="16" id="sCP-Mw-3ww"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-5z-Nvr" userLabel="Cikis Yap Button">
+                                        <rect key="frame" x="157" y="728" width="100" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1FW-89-pvY"/>
+                                            <constraint firstAttribute="width" constant="100" id="gqc-Uk-16g"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="didPressCikisYapButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CEN-Au-MTW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="3Bf-kb-dZR" firstAttribute="top" secondItem="pkV-t3-z55" secondAttribute="bottom" constant="20" id="Djg-Wa-Kgf"/>
+                                    <constraint firstItem="eNd-5z-Nvr" firstAttribute="centerX" secondItem="6Ri-Wc-pKN" secondAttribute="centerX" id="Edc-VL-KM3"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Bf-kb-dZR" secondAttribute="trailing" constant="16" id="Hjd-e3-DJw"/>
+                                    <constraint firstItem="3Bf-kb-dZR" firstAttribute="leading" secondItem="6Ri-Wc-pKN" secondAttribute="leading" constant="16" id="Sq2-XI-CQk"/>
+                                    <constraint firstItem="eNd-5z-Nvr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3Bf-kb-dZR" secondAttribute="bottom" constant="100" id="WXh-VJ-Dw8"/>
+                                    <constraint firstAttribute="bottom" secondItem="eNd-5z-Nvr" secondAttribute="bottom" constant="40" id="Y1H-Wz-INN"/>
+                                    <constraint firstItem="pkV-t3-z55" firstAttribute="width" secondItem="6Ri-Wc-pKN" secondAttribute="width" multiplier="0.4" id="l0E-YH-gdD"/>
+                                    <constraint firstItem="pkV-t3-z55" firstAttribute="centerX" secondItem="6Ri-Wc-pKN" secondAttribute="centerX" id="rx1-Lv-qtf"/>
+                                    <constraint firstItem="pkV-t3-z55" firstAttribute="top" secondItem="6Ri-Wc-pKN" secondAttribute="top" constant="80" id="xIj-AG-qYN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Ri-Wc-pKN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CgQ-Tc-djE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6Ri-Wc-pKN" secondAttribute="trailing" id="X4h-dE-dNg"/>
+                            <constraint firstItem="6Ri-Wc-pKN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ZFg-MB-uMa"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6Ri-Wc-pKN" secondAttribute="bottom" id="iXB-aV-QSE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cikisYapButton" destination="eNd-5z-Nvr" id="B4s-ee-b4h"/>
+                        <outlet property="containerView" destination="6Ri-Wc-pKN" id="1e8-Rq-7Xz"/>
+                        <outlet property="deviceIDKeyLabel" destination="y58-An-bCg" id="XhO-T7-iwh"/>
+                        <outlet property="deviceIDValueLabel" destination="ev0-Sr-Hsb" id="794-Zo-Qjx"/>
+                        <outlet property="emailKeyLabel" destination="iWX-6w-mT4" id="K1y-gn-0By"/>
+                        <outlet property="emailValueLabel" destination="qfe-6c-mLS" id="bum-iB-vKx"/>
+                        <outlet property="infoView" destination="3Bf-kb-dZR" id="svV-3D-TQZ"/>
+                        <outlet property="profileLogo" destination="pkV-t3-z55" id="PMt-So-nfs"/>
+                        <outlet property="superView" destination="5EZ-qb-Rvc" id="NkX-AR-SrL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="85"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
