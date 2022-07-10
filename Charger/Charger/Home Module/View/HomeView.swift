@@ -200,7 +200,7 @@ extension HomeView {
 extension HomeView {
     
     @objc private func didPressProfileBarButton() {
-        homePresenter?.didPressProfileBarButton()
+        homePresenter?.didPressProfileBarButton(self)
     }
     
 }

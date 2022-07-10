@@ -23,12 +23,8 @@ extension LoginRouter {
         // Instantiate home view
         guard let homeView = HomeContract.instantiateHomeModule() else { return }
         
-        // Create navigation controller for home view
-        let nvc = UINavigationController(rootViewController: homeView)
-        
-        // Present navigation controller modally
-        nvc.modalPresentationStyle = .overFullScreen
-        loginView.present(nvc, animated: true)
+        // Push home view onto login view
+        loginView.navigationController?.pushViewController(homeView, animated: true)
         
     }
     
