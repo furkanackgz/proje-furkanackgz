@@ -151,7 +151,7 @@ extension ProfileView {
     private func setEmailValueLabel() {
         
         // Set email value label
-        emailValueLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        emailValueLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         emailValueLabel.textColor = ThemeManager.color.title
         emailValueLabel.text = email ?? ""
         
@@ -161,7 +161,7 @@ extension ProfileView {
     private func setDeviceIDValueLabel() {
         
         // Set deviceID value label
-        deviceIDValueLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        deviceIDValueLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         deviceIDValueLabel.textColor = ThemeManager.color.title
         deviceIDValueLabel.text = deviceID ?? ""
         

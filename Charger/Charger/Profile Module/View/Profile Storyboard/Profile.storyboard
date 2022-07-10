@@ -26,13 +26,13 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bf-kb-dZR" userLabel="Info View">
-                                        <rect key="frame" x="16" y="265.5" width="382" height="128"/>
+                                        <rect key="frame" x="16" y="265.5" width="382" height="89"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GfX-sG-2OO" userLabel="Email Stack View">
-                                                <rect key="frame" x="16" y="16" width="350" height="40"/>
+                                                <rect key="frame" x="16" y="16" width="350" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWX-6w-mT4" userLabel="Email Key Label">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="Ief-CL-kKK"/>
                                                         </constraints>
@@ -40,22 +40,19 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfe-6c-mLS" userLabel="Email Value Label">
-                                                        <rect key="frame" x="80" y="0.0" width="270" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfe-6c-mLS" userLabel="Email Value Label">
+                                                        <rect key="frame" x="80" y="0.0" width="270" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="kuy-wx-8Zw"/>
-                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rmL-fk-Tt4" userLabel="DeviceID Stack View">
-                                                <rect key="frame" x="16" y="72" width="350" height="40"/>
+                                                <rect key="frame" x="16" y="52.5" width="350" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y58-An-bCg" userLabel="DeviceID Key Label">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="beO-r4-OL1"/>
                                                         </constraints>
@@ -63,16 +60,13 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev0-Sr-Hsb" userLabel="DeviceID Value Label">
-                                                        <rect key="frame" x="80" y="0.0" width="270" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev0-Sr-Hsb" userLabel="DeviceID Value Label">
+                                                        <rect key="frame" x="80" y="0.0" width="270" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="lnN-Eb-6cS"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

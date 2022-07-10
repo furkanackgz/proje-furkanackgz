@@ -23,6 +23,13 @@ class LoginView: UIViewController, LoginContract.loginView {
         // Call setupUI method to prepare UI components
         setupUI()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        // Clear email text field for later use
+        emailTextField.text = ""
+    }
 
     @IBAction func didPressGirisYapButton(_ sender: Any) {
         if let email = emailTextField.text, email != "" {

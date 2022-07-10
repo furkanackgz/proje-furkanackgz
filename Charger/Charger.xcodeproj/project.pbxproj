@@ -10,6 +10,11 @@
 		0B24DAFC2879CE000053552B /* ProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B24DAFB2879CE000053552B /* ProfileContract.swift */; };
 		0B24DAFF2879DA450053552B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B24DAFE2879DA450053552B /* Profile.storyboard */; };
 		0B24DB012879DA820053552B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B24DB002879DA820053552B /* ProfileView.swift */; };
+		0B24DB21287AF5610053552B /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B24DB20287AF5610053552B /* ProfileService.swift */; };
+		0B24DB23287AF5920053552B /* ProfileContractHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B24DB22287AF5920053552B /* ProfileContractHelper.swift */; };
+		0B24DB25287AF5F20053552B /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B24DB24287AF5F20053552B /* ProfileInteractor.swift */; };
+		0B24DB27287AF6140053552B /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B24DB26287AF6140053552B /* ProfilePresenter.swift */; };
+		0B24DB29287AF63E0053552B /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B24DB28287AF63E0053552B /* ProfileRouter.swift */; };
 		0B3638EA286B72E900931B23 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3638E9286B72E900931B23 /* NotificationManager.swift */; };
 		0B58C98C28715CBC006E5F7C /* LoginContractHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58C98B28715CBC006E5F7C /* LoginContractHelper.swift */; };
 		0B58C99028715D2F006E5F7C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58C98F28715D2F006E5F7C /* LoginInteractor.swift */; };
@@ -56,6 +61,11 @@
 		0B24DAFB2879CE000053552B /* ProfileContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContract.swift; sourceTree = "<group>"; };
 		0B24DAFE2879DA450053552B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		0B24DB002879DA820053552B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0B24DB20287AF5610053552B /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		0B24DB22287AF5920053552B /* ProfileContractHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContractHelper.swift; sourceTree = "<group>"; };
+		0B24DB24287AF5F20053552B /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		0B24DB26287AF6140053552B /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		0B24DB28287AF63E0053552B /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		0B3638E9286B72E900931B23 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		0B58C98B28715CBC006E5F7C /* LoginContractHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContractHelper.swift; sourceTree = "<group>"; };
 		0B58C98F28715D2F006E5F7C /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -127,6 +137,7 @@
 		0B24DAF42879BF090053552B /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				0B24DB28287AF63E0053552B /* ProfileRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -134,6 +145,7 @@
 		0B24DAF62879BF1C0053552B /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				0B24DB26287AF6140053552B /* ProfilePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -141,6 +153,7 @@
 		0B24DAF72879BF250053552B /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				0B24DB24287AF5F20053552B /* ProfileInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -158,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				0B24DAFB2879CE000053552B /* ProfileContract.swift */,
+				0B24DB22287AF5920053552B /* ProfileContractHelper.swift */,
 			);
 			path = Contract;
 			sourceTree = "<group>";
@@ -165,6 +179,7 @@
 		0B24DAFA2879BF960053552B /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				0B24DB20287AF5610053552B /* ProfileService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -608,6 +623,7 @@
 				0B24DAFC2879CE000053552B /* ProfileContract.swift in Sources */,
 				0B58C9E42874B50F006E5F7C /* HomeInteractor.swift in Sources */,
 				0B3638EA286B72E900931B23 /* NotificationManager.swift in Sources */,
+				0B24DB23287AF5920053552B /* ProfileContractHelper.swift in Sources */,
 				0B58C9FF28756751006E5F7C /* CurrentAppointmentCell.swift in Sources */,
 				0BC21730286C9B2000DEB1EA /* ThemeManager.swift in Sources */,
 				0B24DB012879DA820053552B /* ProfileView.swift in Sources */,
@@ -621,18 +637,22 @@
 				0B58C9992871619E006E5F7C /* LoginService.swift in Sources */,
 				0B6C548028709C610058051F /* LoginContract.swift in Sources */,
 				0B59064128780A91006D7E21 /* PlaceholderView.swift in Sources */,
+				0B24DB29287AF63E0053552B /* ProfileRouter.swift in Sources */,
 				0B58C9E22874B268006E5F7C /* HomeView.swift in Sources */,
 				0B58C9FB28756087006E5F7C /* PreviousAppointmentCell.swift in Sources */,
 				0B58C99628715D81006E5F7C /* LoginRouter.swift in Sources */,
 				0B58CA032875DBE5006E5F7C /* CurrentAppointmentCellHelper.swift in Sources */,
+				0B24DB25287AF5F20053552B /* ProfileInteractor.swift in Sources */,
 				0B58C99228715D43006E5F7C /* LoginPresenter.swift in Sources */,
 				0B58C99028715D2F006E5F7C /* LoginInteractor.swift in Sources */,
+				0B24DB21287AF5610053552B /* ProfileService.swift in Sources */,
 				0B6C548328709D590058051F /* LoginRequest.swift in Sources */,
 				0B58C99428715D68006E5F7C /* LoginEntity.swift in Sources */,
 				0B58C98C28715CBC006E5F7C /* LoginContractHelper.swift in Sources */,
 				0B58CA062875E803006E5F7C /* PreviousAppointmentCellHelper.swift in Sources */,
 				0B58CA0928760096006E5F7C /* AppointmentsTableViewHeader.swift in Sources */,
 				0B58C9E62874B54B006E5F7C /* HomePresenter.swift in Sources */,
+				0B24DB27287AF6140053552B /* ProfilePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

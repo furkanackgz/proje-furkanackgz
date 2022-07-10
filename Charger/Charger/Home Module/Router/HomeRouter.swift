@@ -15,7 +15,13 @@ class HomeRouter: HomeContract.homeRouter {
 extension HomeRouter {
     
     func navigateToProfilePage(_ homeView: HomeView) {
-        return
+        
+        // Instantiate profile module
+        guard let profileView = ProfileContract.instantiateProfileModule() else { return }
+        
+        // Push profile view onto home view
+        homeView.navigationController?.pushViewController(profileView, animated: true)
+        
     }
     
     func navigateToCitySearchPage(_ homeView: HomeView) {
