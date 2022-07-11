@@ -84,7 +84,7 @@ extension ProvinceSearchPresenter {
             self?.provinceSearchView.updateProvincesTableView(with: provinces, and: "")
             
             // Display table view
-            self?.provinceSearchView.displayTableView()
+            self?.provinceSearchView.displayTableView("")
         }
     }
     
@@ -107,7 +107,7 @@ extension ProvinceSearchPresenter {
             provinceSearchView.updateProvincesTableView(with: filteredProvinces, and: searchText)
             
             // Display table view
-            provinceSearchView.displayTableView()
+            provinceSearchView.displayTableView(searchText)
             
         }
         

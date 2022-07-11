@@ -87,14 +87,25 @@ extension ProvinceSearchView {
         // Set self as search bar delegate
         searchBar.delegate = self
         
-        // Set search bar view background
+        // Set search bar view background color
         searchBar.barTintColor = ThemeManager.color.background
         
-        // Set search bar background
+        // Set search bar text field background color
+        searchBar.searchTextField.backgroundColor = ThemeManager.color.searchBarBackground
         
-
-        // Set search bar layer color
+        // Set search bar text field layer
+        searchBar.searchTextField.layer.borderWidth = 1
+        searchBar.searchTextField.layer.cornerRadius = 10
+        searchBar.searchTextField.layer.borderColor = ThemeManager.color.searchBarBorder?.cgColor
         
+        // Set search bar magnifying symbol color
+        searchBar.searchTextField.leftView?.tintColor = ThemeManager.color.title
+        
+        // Set search bar text field text color
+        searchBar.searchTextField.textColor = ThemeManager.color.title
+        
+        // Set search bar placeholder
+        searchBar.placeholder = "Şehir Ara"
         
     }
     
@@ -147,10 +158,13 @@ extension ProvinceSearchView: ProvinceSearchContract.provinceSearchView {
             self?.provincesTableView.isHidden = true
         }
         
+        // Set border color to red
+        searchBar.searchTextField.layer.borderColor = ThemeManager.color.searchBarBorderError?.cgColor
+        
     }
     
     // MARK: - displayTableView
-    func displayTableView() {
+    func displayTableView(_ searchText: String) {
         
         // Animate displaying table view for
         // better user experience
@@ -160,6 +174,14 @@ extension ProvinceSearchView: ProvinceSearchContract.provinceSearchView {
             
             // Hide placeholder view
             self?.provinceSearchPlaceholderView?.isHidden = true
+        }
+        
+        // If search text is empty, set border color
+        // to default, otherwise set to green
+        if searchText == "" {
+            searchBar.searchTextField.layer.borderColor = ThemeManager.color.searchBarBorder?.cgColor
+        } else {
+            searchBar.searchTextField.layer.borderColor = ThemeManager.color.searchBarBorderCorrect?.cgColor
         }
         
     }

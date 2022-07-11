@@ -20,7 +20,7 @@ protocol ProvinceSearchViewProtocol: AnyObject {
     // Self related
     func updateProvincesTableView(with provinces: [String], and searchText: String)
     func displayPlaceholderView()
-    func displayTableView()
+    func displayTableView(_ searchText: String)
     
     // Presenter related
     var provinceSearchPresenter: ProvinceSearchContract.provinceSearchPresenter? { get set }
