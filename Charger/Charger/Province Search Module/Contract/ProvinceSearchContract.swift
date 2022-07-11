@@ -61,6 +61,7 @@ protocol ProvinceSearchPresenterProtocol: AnyObject {
 // MARK: - PROVINCE SEARCH ROUTER PROTOCOL
 protocol ProvinceSearchRouterProtocol: AnyObject {
     // Self related
-    func navigateToStationSearchPage(_ provinceSearchView: ProvinceSearchView)
+    func navigateToStationSearchPage(_ provinceName: String,
+                                     _ provinceSearchView: ProvinceSearchView)
 }
 

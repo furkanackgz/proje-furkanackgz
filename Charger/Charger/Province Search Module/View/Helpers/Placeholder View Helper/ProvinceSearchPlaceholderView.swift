@@ -44,7 +44,7 @@ class ProvinceSearchPlaceholderView: NSObject {
         titleLabel.text = "Aramanız ile eşleşen bir sonuç bulunamadı."
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
-        titleLabel.font = .systemFont(ofSize: 26, weight: .bold)
+        titleLabel.font = .systemFont(ofSize: 24, weight: .bold)
         titleLabel.textColor = ThemeManager.color.title
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         placeholder.addSubview(titleLabel)
@@ -88,7 +88,20 @@ extension ProvinceSearchPlaceholderView {
         guard let provincesTableView = provincesTableView else { return }
         
         // MARK: - Set placeholder view constraint
-        placeholder.frame = provincesTableView.frame
+        NSLayoutConstraint.activate([
+            placeholder.topAnchor.constraint(
+                equalTo: provincesTableView.topAnchor
+            ),
+            placeholder.leadingAnchor.constraint(
+                equalTo: provincesTableView.leadingAnchor
+            ),
+            placeholder.trailingAnchor.constraint(
+                equalTo: provincesTableView.trailingAnchor
+            ),
+            placeholder.bottomAnchor.constraint(
+                equalTo: provincesTableView.bottomAnchor
+            )
+        ])
         
         // MARK: - Set title label constraint
         NSLayoutConstraint.activate([
@@ -97,11 +110,11 @@ extension ProvinceSearchPlaceholderView {
             ),
             titleLabel.leadingAnchor.constraint(
                 equalTo: placeholder.leadingAnchor,
-                constant: 16
+                constant: 8
             ),
             titleLabel.trailingAnchor.constraint(
                 equalTo: placeholder.trailingAnchor,
-                constant: -16
+                constant: -8
             )
         ])
         

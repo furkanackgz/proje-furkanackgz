@@ -84,6 +84,9 @@ extension ProvinceSearchView {
     // MARK: - setSearchBar
     private func setSearchBar() {
         
+        // Set self as search bar delegate
+        searchBar.delegate = self
+        
         // Set search bar view background
         searchBar.barTintColor = ThemeManager.color.background
         
@@ -106,6 +109,19 @@ extension ProvinceSearchView {
                                          provinceSearchPresenter!,
                                          self)
         
+    }
+    
+}
+
+// Search bar related methods
+extension ProvinceSearchView: UISearchBarDelegate {
+    
+    // MARK: - searchBarTextDidChange
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        // Call didEditSearchText method in presenter for notifying
+        // that search text was changed by the user
+        provinceSearchPresenter?.didEditSearchText(searchText)
     }
     
 }

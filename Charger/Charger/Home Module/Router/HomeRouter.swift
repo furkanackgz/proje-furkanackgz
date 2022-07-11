@@ -24,8 +24,14 @@ extension HomeRouter {
         
     }
     
-    func navigateToCitySearchPage(_ homeView: HomeView) {
-        return
+    func navigateToProvinceSearchPage(_ homeView: HomeView) {
+        
+        // Instantiate province search module
+        guard let provinceSearchView = ProvinceSearchContract.instantiateProvinceSearchModule() else { return }
+        
+        // Push province search view onto home view
+        homeView.navigationController?.pushViewController(provinceSearchView, animated: true)
+        
     }
     
 }

@@ -164,8 +164,8 @@ extension HomePresenter {
         homeRouter.navigateToProfilePage(homeView)
     }
     
-    func didPressRandevuOlusturButton() {
-        return
+    func didPressRandevuOlusturButton(_ homeView: HomeView) {
+        homeRouter.navigateToProvinceSearchPage(homeView)
     }
     
     func displayPlaceholderOrTableView() {
