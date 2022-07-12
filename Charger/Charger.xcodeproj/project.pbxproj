@@ -65,6 +65,10 @@
 		0B9A35D0286B011100EB07F0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A35CF286B011100EB07F0 /* LocationManager.swift */; };
 		0BC2172A286C6F4600DEB1EA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BC21729286C6F4600DEB1EA /* Colors.xcassets */; };
 		0BC21730286C9B2000DEB1EA /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC2172F286C9B2000DEB1EA /* ThemeManager.swift */; };
+		0BEEFAA5287E065300D84C8C /* StationSearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEFAA4287E065300D84C8C /* StationSearchContract.swift */; };
+		0BEEFAA8287E06A800D84C8C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEFAA7287E06A800D84C8C /* Filter.swift */; };
+		0BEEFAAB287E070000D84C8C /* StationSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEEFAAA287E070000D84C8C /* StationSearch.storyboard */; };
+		0BEEFAAD287E072700D84C8C /* StationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEFAAC287E072700D84C8C /* StationSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +132,10 @@
 		0B9A35CF286B011100EB07F0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		0BC21729286C6F4600DEB1EA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0BC2172F286C9B2000DEB1EA /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		0BEEFAA4287E065300D84C8C /* StationSearchContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchContract.swift; sourceTree = "<group>"; };
+		0BEEFAA7287E06A800D84C8C /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		0BEEFAAA287E070000D84C8C /* StationSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StationSearch.storyboard; sourceTree = "<group>"; };
+		0BEEFAAC287E072700D84C8C /* StationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -620,6 +628,7 @@
 				0B58C9BA28743DD4006E5F7C /* Home Module */,
 				0B24DAF32879BEEE0053552B /* Profile Module */,
 				0B0B8E4F287B5D4B008D39A2 /* Province Search Module */,
+				0BEEFA9A287E05B500D84C8C /* Station Search Module */,
 				0B9A35BA286ADFEF00EB07F0 /* AppDelegate.swift */,
 				0B9A35BC286ADFEF00EB07F0 /* SceneDelegate.swift */,
 				0B9A35C5286ADFF100EB07F0 /* LaunchScreen.storyboard */,
@@ -653,6 +662,89 @@
 				0BC21729286C6F4600DEB1EA /* Colors.xcassets */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		0BEEFA9A287E05B500D84C8C /* Station Search Module */ = {
+			isa = PBXGroup;
+			children = (
+				0BEEFAA1287E05F400D84C8C /* Service */,
+				0BEEFAA0287E05ED00D84C8C /* Contract */,
+				0BEEFA9F287E05E800D84C8C /* View */,
+				0BEEFA9E287E05E100D84C8C /* Interactor */,
+				0BEEFA9D287E05DA00D84C8C /* Presenter */,
+				0BEEFA9C287E05CF00D84C8C /* Entity */,
+				0BEEFA9B287E05C600D84C8C /* Router */,
+			);
+			path = "Station Search Module";
+			sourceTree = "<group>";
+		};
+		0BEEFA9B287E05C600D84C8C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0BEEFA9C287E05CF00D84C8C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				0BEEFAA6287E066D00D84C8C /* Entities */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		0BEEFA9D287E05DA00D84C8C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0BEEFA9E287E05E100D84C8C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0BEEFA9F287E05E800D84C8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0BEEFAA9287E06D300D84C8C /* Station Search Storyboard */,
+				0BEEFAAC287E072700D84C8C /* StationSearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0BEEFAA0287E05ED00D84C8C /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				0BEEFAA4287E065300D84C8C /* StationSearchContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		0BEEFAA1287E05F400D84C8C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0BEEFAA6287E066D00D84C8C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0BEEFAA7287E06A800D84C8C /* Filter.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		0BEEFAA9287E06D300D84C8C /* Station Search Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0BEEFAAA287E070000D84C8C /* StationSearch.storyboard */,
+			);
+			path = "Station Search Storyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -720,6 +812,7 @@
 				0B58C9E02874B250006E5F7C /* Home.storyboard in Resources */,
 				0BC2172A286C6F4600DEB1EA /* Colors.xcassets in Resources */,
 				0B9A35C4286ADFF100EB07F0 /* Images.xcassets in Resources */,
+				0BEEFAAB287E070000D84C8C /* StationSearch.storyboard in Resources */,
 				0B58CA0028756751006E5F7C /* CurrentAppointmentCell.xib in Resources */,
 				0B9A35C2286ADFEF00EB07F0 /* Login.storyboard in Resources */,
 			);
@@ -742,11 +835,13 @@
 				0B6C548528709D810058051F /* LoginResponse.swift in Sources */,
 				0B24DAFC2879CE000053552B /* ProfileContract.swift in Sources */,
 				0B58C9E42874B50F006E5F7C /* HomeInteractor.swift in Sources */,
+				0BEEFAA5287E065300D84C8C /* StationSearchContract.swift in Sources */,
 				0B0B8E67287C2F6A008D39A2 /* ProvinceSearchInteractor.swift in Sources */,
 				0B3638EA286B72E900931B23 /* NotificationManager.swift in Sources */,
 				0B24DB23287AF5920053552B /* ProfileContractHelper.swift in Sources */,
 				0B58C9FF28756751006E5F7C /* CurrentAppointmentCell.swift in Sources */,
 				0BC21730286C9B2000DEB1EA /* ThemeManager.swift in Sources */,
+				0BEEFAA8287E06A800D84C8C /* Filter.swift in Sources */,
 				0B0B8E6B287C32C1008D39A2 /* ProvinceSearchRouter.swift in Sources */,
 				0B24DB012879DA820053552B /* ProfileView.swift in Sources */,
 				0B9A35BB286ADFEF00EB07F0 /* AppDelegate.swift in Sources */,
@@ -775,6 +870,7 @@
 				0B6C548328709D590058051F /* LoginRequest.swift in Sources */,
 				0B0B8E63287C1C8D008D39A2 /* ProvinceSearchPlaceholderView.swift in Sources */,
 				0B58C99428715D68006E5F7C /* LoginEntity.swift in Sources */,
+				0BEEFAAD287E072700D84C8C /* StationSearchView.swift in Sources */,
 				0B0B8E57287B5DBD008D39A2 /* ProvinceSearchContract.swift in Sources */,
 				0B58C98C28715CBC006E5F7C /* LoginContractHelper.swift in Sources */,
 				0B58CA062875E803006E5F7C /* PreviousAppointmentCellHelper.swift in Sources */,
