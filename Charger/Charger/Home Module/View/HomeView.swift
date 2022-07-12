@@ -46,7 +46,7 @@ class HomeView: UIViewController, HomeContract.homeView {
     
     // MARK: - didPressRandevuOlusturButton
     @IBAction func didPressRandevuOlusturButton(_ sender: Any) {
-        homePresenter?.didPressRandevuOlusturButton()
+        homePresenter?.didPressRandevuOlusturButton(self)
     }
     
 }

@@ -54,7 +54,7 @@ protocol HomePresenterProtocol: AnyObject {
     var homeView: HomeContract.homeView! { get set }
     func viewDidLoad()
     func viewWillAppear()
-    func didPressRandevuOlusturButton()
+    func didPressRandevuOlusturButton(_ homeView: HomeView)
     func didPressProfileBarButton(_ homeView: HomeView)
     func displayPlaceholderOrTableView()
     func deleteAppointment(with appointmentID: Int)
@@ -81,5 +81,5 @@ protocol HomeEntityProtocol: AnyObject {
 protocol HomeRouterProtocol: AnyObject {
     // Self related
     func navigateToProfilePage(_ homeView: HomeView)
-    func navigateToCitySearchPage(_ homeView: HomeView)
+    func navigateToProvinceSearchPage(_ homeView: HomeView)
 }
