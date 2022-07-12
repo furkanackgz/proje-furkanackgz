@@ -69,6 +69,10 @@
 		0BEEFAA8287E06A800D84C8C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEFAA7287E06A800D84C8C /* Filter.swift */; };
 		0BEEFAAB287E070000D84C8C /* StationSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEEFAAA287E070000D84C8C /* StationSearch.storyboard */; };
 		0BEEFAAD287E072700D84C8C /* StationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEFAAC287E072700D84C8C /* StationSearchView.swift */; };
+		0BEEFAB1287E0B0B00D84C8C /* StationsTableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEFAB0287E0B0B00D84C8C /* StationsTableViewHelper.swift */; };
+		0BEEFAB5287E0C2F00D84C8C /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEFAB3287E0C2F00D84C8C /* StationCell.swift */; };
+		0BEEFAB6287E0C2F00D84C8C /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BEEFAB4287E0C2F00D84C8C /* StationCell.xib */; };
+		0BEEFAB9287E0FAC00D84C8C /* StationCellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEFAB8287E0FAC00D84C8C /* StationCellHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +140,10 @@
 		0BEEFAA7287E06A800D84C8C /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		0BEEFAAA287E070000D84C8C /* StationSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StationSearch.storyboard; sourceTree = "<group>"; };
 		0BEEFAAC287E072700D84C8C /* StationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchView.swift; sourceTree = "<group>"; };
+		0BEEFAB0287E0B0B00D84C8C /* StationsTableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsTableViewHelper.swift; sourceTree = "<group>"; };
+		0BEEFAB3287E0C2F00D84C8C /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		0BEEFAB4287E0C2F00D84C8C /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
+		0BEEFAB8287E0FAC00D84C8C /* StationCellHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCellHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -712,6 +720,7 @@
 			children = (
 				0BEEFAA9287E06D300D84C8C /* Station Search Storyboard */,
 				0BEEFAAC287E072700D84C8C /* StationSearchView.swift */,
+				0BEEFAAE287E0AC000D84C8C /* Helpers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -745,6 +754,41 @@
 				0BEEFAAA287E070000D84C8C /* StationSearch.storyboard */,
 			);
 			path = "Station Search Storyboard";
+			sourceTree = "<group>";
+		};
+		0BEEFAAE287E0AC000D84C8C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0BEEFAAF287E0ADD00D84C8C /* Table View Helper */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0BEEFAAF287E0ADD00D84C8C /* Table View Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0BEEFAB0287E0B0B00D84C8C /* StationsTableViewHelper.swift */,
+				0BEEFAB2287E0BA200D84C8C /* Table View Cell */,
+			);
+			path = "Table View Helper";
+			sourceTree = "<group>";
+		};
+		0BEEFAB2287E0BA200D84C8C /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0BEEFAB3287E0C2F00D84C8C /* StationCell.swift */,
+				0BEEFAB4287E0C2F00D84C8C /* StationCell.xib */,
+				0BEEFAB7287E0F5F00D84C8C /* Helper */,
+			);
+			path = "Table View Cell";
+			sourceTree = "<group>";
+		};
+		0BEEFAB7287E0F5F00D84C8C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0BEEFAB8287E0FAC00D84C8C /* StationCellHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -807,6 +851,7 @@
 			files = (
 				0B58C9FC28756087006E5F7C /* PreviousAppointmentCell.xib in Resources */,
 				0B9A35C7286ADFF100EB07F0 /* LaunchScreen.storyboard in Resources */,
+				0BEEFAB6287E0C2F00D84C8C /* StationCell.xib in Resources */,
 				0B24DAFF2879DA450053552B /* Profile.storyboard in Resources */,
 				0B0B8E5A287B63FD008D39A2 /* ProvinceSearch.storyboard in Resources */,
 				0B58C9E02874B250006E5F7C /* Home.storyboard in Resources */,
@@ -839,17 +884,20 @@
 				0B0B8E67287C2F6A008D39A2 /* ProvinceSearchInteractor.swift in Sources */,
 				0B3638EA286B72E900931B23 /* NotificationManager.swift in Sources */,
 				0B24DB23287AF5920053552B /* ProfileContractHelper.swift in Sources */,
+				0BEEFAB1287E0B0B00D84C8C /* StationsTableViewHelper.swift in Sources */,
 				0B58C9FF28756751006E5F7C /* CurrentAppointmentCell.swift in Sources */,
 				0BC21730286C9B2000DEB1EA /* ThemeManager.swift in Sources */,
 				0BEEFAA8287E06A800D84C8C /* Filter.swift in Sources */,
 				0B0B8E6B287C32C1008D39A2 /* ProvinceSearchRouter.swift in Sources */,
 				0B24DB012879DA820053552B /* ProfileView.swift in Sources */,
 				0B9A35BB286ADFEF00EB07F0 /* AppDelegate.swift in Sources */,
+				0BEEFAB9287E0FAC00D84C8C /* StationCellHelper.swift in Sources */,
 				0B58C9F528755A94006E5F7C /* AppointmentsTableViewHelper.swift in Sources */,
 				0B0B8E60287B6D1F008D39A2 /* ProvincesTableViewHelper.swift in Sources */,
 				0B9A35BD286ADFEF00EB07F0 /* SceneDelegate.swift in Sources */,
 				0B58C9DD2874B182006E5F7C /* Appointment.swift in Sources */,
 				0B58C9EA2874B5C7006E5F7C /* HomeRouter.swift in Sources */,
+				0BEEFAB5287E0C2F00D84C8C /* StationCell.swift in Sources */,
 				0B58C9EE2874B632006E5F7C /* HomeContractHelper.swift in Sources */,
 				0B0B8E5C287B641C008D39A2 /* ProvinceSearchView.swift in Sources */,
 				0B58C9EC2874B605006E5F7C /* HomeService.swift in Sources */,

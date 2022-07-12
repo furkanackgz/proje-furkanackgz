@@ -27,6 +27,8 @@ class StationSearchView: UIViewController {
     
     var stationSearchPresenter: StationSearchContract.stationSearchPresenter?
     
+    var stationsTableViewHelper: StationsTableViewHelper!
+    
     // Filter bar button initialized as global property
     // to be able to change it's color later on
     var filterBarButton: UIBarButtonItem?
@@ -74,6 +76,9 @@ extension StationSearchView {
         setStationsInfoLabel()
         
         // Initialize stations table view helper
+        stationsTableViewHelper = .init(stationsTableView,
+                                        stationSearchPresenter!,
+                                        self)
         
         // Initialize filters collection view helper
         
@@ -200,7 +205,7 @@ extension StationSearchView: StationSearchContract.stationSearchView {
         self.stationsInProvince = stationsInProvince
         
         // Call stations table view helper to show stations in table view
-        
+        stationsTableViewHelper.set(stationsInProvince: stationsInProvince)
     }
     
     // MARK: - displayFiltersCollectionView

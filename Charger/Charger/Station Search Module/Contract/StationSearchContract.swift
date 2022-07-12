@@ -56,6 +56,8 @@ protocol StationSearchPresenterProtocol: AnyObject {
     func viewDidLoad()
     func viewWillAppear()
     func didEditSearchText(with searchText: String)
+    func didSelectStation(_ stationSearchView: StationSearchView,
+                          with stationID: Int)
     
     // Interactor related
     var stationSearchInteractor: StationSearchContract.stationSearchInteractor! { get set }
@@ -85,5 +87,8 @@ protocol StationSearchRouterProtocol: AnyObject {
     // Self related
     func navigateToFilteringPage(_ stationSearchView: StationSearchView,
                                  with filterChoices: [Filter])
+    func navigateToStationSocketsInfoPage(_ stationSearchView: StationSearchView,
+                                          with stationID: Int,
+                                          and date: String)
 }
 
