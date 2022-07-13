@@ -68,6 +68,11 @@
 		0BD1FF9B287EC2A90020D609 /* FiltersCollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FF9A287EC2A90020D609 /* FiltersCollectionViewHelper.swift */; };
 		0BD1FFA3287ECA9C0020D609 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFA1287ECA9C0020D609 /* FilterCell.swift */; };
 		0BD1FFA4287ECA9C0020D609 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD1FFA2287ECA9C0020D609 /* FilterCell.xib */; };
+		0BD1FFAA287EF2D60020D609 /* StationSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFA9287EF2D50020D609 /* StationSearchPresenter.swift */; };
+		0BD1FFAC287EF52F0020D609 /* StationSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFAB287EF52F0020D609 /* StationSearchInteractor.swift */; };
+		0BD1FFAE287EF7A50020D609 /* StationSearchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFAD287EF7A50020D609 /* StationSearchEntity.swift */; };
+		0BD1FFB0287EF8220020D609 /* StationSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFAF287EF8220020D609 /* StationSearchRouter.swift */; };
+		0BD1FFB2287EF8C60020D609 /* StationSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFB1287EF8C60020D609 /* StationSearchService.swift */; };
 		0BEEFAA5287E065300D84C8C /* StationSearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEFAA4287E065300D84C8C /* StationSearchContract.swift */; };
 		0BEEFAA8287E06A800D84C8C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEFAA7287E06A800D84C8C /* Filter.swift */; };
 		0BEEFAAB287E070000D84C8C /* StationSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEEFAAA287E070000D84C8C /* StationSearch.storyboard */; };
@@ -142,6 +147,11 @@
 		0BD1FF9A287EC2A90020D609 /* FiltersCollectionViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCollectionViewHelper.swift; sourceTree = "<group>"; };
 		0BD1FFA1287ECA9C0020D609 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		0BD1FFA2287ECA9C0020D609 /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
+		0BD1FFA9287EF2D50020D609 /* StationSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchPresenter.swift; sourceTree = "<group>"; };
+		0BD1FFAB287EF52F0020D609 /* StationSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchInteractor.swift; sourceTree = "<group>"; };
+		0BD1FFAD287EF7A50020D609 /* StationSearchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchEntity.swift; sourceTree = "<group>"; };
+		0BD1FFAF287EF8220020D609 /* StationSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchRouter.swift; sourceTree = "<group>"; };
+		0BD1FFB1287EF8C60020D609 /* StationSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchService.swift; sourceTree = "<group>"; };
 		0BEEFAA4287E065300D84C8C /* StationSearchContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchContract.swift; sourceTree = "<group>"; };
 		0BEEFAA7287E06A800D84C8C /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		0BEEFAAA287E070000D84C8C /* StationSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StationSearch.storyboard; sourceTree = "<group>"; };
@@ -713,6 +723,7 @@
 		0BEEFA9B287E05C600D84C8C /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				0BD1FFAF287EF8220020D609 /* StationSearchRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -721,6 +732,7 @@
 			isa = PBXGroup;
 			children = (
 				0BEEFAA6287E066D00D84C8C /* Entities */,
+				0BD1FFAD287EF7A50020D609 /* StationSearchEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -728,6 +740,7 @@
 		0BEEFA9D287E05DA00D84C8C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				0BD1FFA9287EF2D50020D609 /* StationSearchPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -735,6 +748,7 @@
 		0BEEFA9E287E05E100D84C8C /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				0BD1FFAB287EF52F0020D609 /* StationSearchInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -760,6 +774,7 @@
 		0BEEFAA1287E05F400D84C8C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				0BD1FFB1287EF8C60020D609 /* StationSearchService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -901,6 +916,7 @@
 				0B58C9E82874B582006E5F7C /* HomeEntity.swift in Sources */,
 				0B9A35D0286B011100EB07F0 /* LocationManager.swift in Sources */,
 				0B0B8E69287C3001008D39A2 /* ProvinceSearchPresenter.swift in Sources */,
+				0BD1FFAA287EF2D60020D609 /* StationSearchPresenter.swift in Sources */,
 				0B9A35BF286ADFEF00EB07F0 /* LoginView.swift in Sources */,
 				0B58C9C628744A93006E5F7C /* AppointmentType.swift in Sources */,
 				0B6C548528709D810058051F /* LoginResponse.swift in Sources */,
@@ -908,6 +924,7 @@
 				0B58C9E42874B50F006E5F7C /* HomeInteractor.swift in Sources */,
 				0BEEFAA5287E065300D84C8C /* StationSearchContract.swift in Sources */,
 				0B0B8E67287C2F6A008D39A2 /* ProvinceSearchInteractor.swift in Sources */,
+				0BD1FFAE287EF7A50020D609 /* StationSearchEntity.swift in Sources */,
 				0B3638EA286B72E900931B23 /* NotificationManager.swift in Sources */,
 				0B24DB23287AF5920053552B /* ProfileContractHelper.swift in Sources */,
 				0BEEFAB1287E0B0B00D84C8C /* StationsTableViewHelper.swift in Sources */,
@@ -918,6 +935,7 @@
 				0BD1FFA3287ECA9C0020D609 /* FilterCell.swift in Sources */,
 				0B24DB012879DA820053552B /* ProfileView.swift in Sources */,
 				0B9A35BB286ADFEF00EB07F0 /* AppDelegate.swift in Sources */,
+				0BD1FFAC287EF52F0020D609 /* StationSearchInteractor.swift in Sources */,
 				0BEEFAB9287E0FAC00D84C8C /* StationCellHelper.swift in Sources */,
 				0B58C9F528755A94006E5F7C /* AppointmentsTableViewHelper.swift in Sources */,
 				0B0B8E60287B6D1F008D39A2 /* ProvincesTableViewHelper.swift in Sources */,
@@ -941,6 +959,7 @@
 				0B24DB25287AF5F20053552B /* ProfileInteractor.swift in Sources */,
 				0B0B8E6D287C338F008D39A2 /* ProvinceSearchService.swift in Sources */,
 				0B58C99228715D43006E5F7C /* LoginPresenter.swift in Sources */,
+				0BD1FFB2287EF8C60020D609 /* StationSearchService.swift in Sources */,
 				0B58C99028715D2F006E5F7C /* LoginInteractor.swift in Sources */,
 				0B24DB21287AF5610053552B /* ProfileService.swift in Sources */,
 				0B6C548328709D590058051F /* LoginRequest.swift in Sources */,
@@ -950,6 +969,7 @@
 				0B0B8E57287B5DBD008D39A2 /* ProvinceSearchContract.swift in Sources */,
 				0B58C98C28715CBC006E5F7C /* LoginContractHelper.swift in Sources */,
 				0B58CA062875E803006E5F7C /* PreviousAppointmentCellHelper.swift in Sources */,
+				0BD1FFB0287EF8220020D609 /* StationSearchRouter.swift in Sources */,
 				0B58CA0928760096006E5F7C /* AppointmentsTableViewHeader.swift in Sources */,
 				0B58C9E62874B54B006E5F7C /* HomePresenter.swift in Sources */,
 				0B24DB27287AF6140053552B /* ProfilePresenter.swift in Sources */,
