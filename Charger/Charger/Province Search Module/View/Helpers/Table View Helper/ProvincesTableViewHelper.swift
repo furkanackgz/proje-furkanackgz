@@ -68,11 +68,6 @@ extension ProvincesTableViewHelper: UITableViewDelegate {
                                                   provinceSearchView!)
     }
     
-    // Disable table view's highlighting feature when the row is selected
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        false
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 46
     }

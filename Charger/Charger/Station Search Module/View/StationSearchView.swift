@@ -64,6 +64,9 @@ extension StationSearchView {
     // MARK: - setupUI
     private func setupUI() {
         
+        // Set background views
+        setBackgroundViews()
+        
         // Set navigation bar
         setNavigationBar()
         
@@ -84,13 +87,38 @@ extension StationSearchView {
         
     }
     
+    // MARK: - setBackgroundViews
+    private func setBackgroundViews() {
+        // Set super view's background color
+        superView.backgroundColor = ThemeManager.color.navigationBackground
+        
+        // Set container view's background color
+        containerView.backgroundColor = ThemeManager.color.background
+        
+        // Set table view's backgorund color
+        stationsTableView.backgroundColor = ThemeManager.color.background
+    }
+    
     // MARK: - setNavigationBar
     private func setNavigationBar() {
+        
+        // Set navigation back bar button
+        setNavigationBackBarButton()
+        
         // Set navigation title
         setNavigationTitle()
         
         // Set navigation filer bar button
         setNavigationFilterBarButton()
+    }
+    
+    // MARK: - setNavigationBackBarButton
+    private func setNavigationBackBarButton() {
+        
+        // Set navigation back bar button
+        navigationController?.navigationBar.tintColor = ThemeManager.color.title
+        navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
+        
     }
     
     // MARK: - setNavigationTitle
@@ -102,17 +130,10 @@ extension StationSearchView {
             .foregroundColor: ThemeManager.color.title!
         ]
         
-        // Create navigation bar's appearance
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = ThemeManager.color.navigationBackground
-        appearance.titleTextAttributes = attributes
-        
-        // Set navigation bar appearance
-        navigationController?.navigationBar.standardAppearance = appearance
-        
         // Set navigation bar title
+        navigationController?.navigationBar.titleTextAttributes = attributes
         title = "İstasyon Seçin"
+        
     }
     
     // MARK: - setNavigationFilterBarButton
