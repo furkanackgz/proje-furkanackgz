@@ -21,13 +21,11 @@ class StationSearchView: UIViewController {
     
     var stationsInProvince = [Station]()
     
-    var filterChoices = [Filter]()
-    
-    var isFilterChoicesEmpty: Bool!
-    
     var stationSearchPresenter: StationSearchContract.stationSearchPresenter?
     
     var stationsTableViewHelper: StationsTableViewHelper!
+    
+    var filtersCollectionViewHelper: FiltersCollectionViewHelper!
     
     // Filter bar button initialized as global property
     // to be able to change it's color later on
@@ -81,7 +79,8 @@ extension StationSearchView {
                                         self)
         
         // Initialize filters collection view helper
-        
+        filtersCollectionViewHelper = .init(filtersCollectionView,
+                                            stationSearchPresenter!)
         
     }
     
@@ -208,6 +207,15 @@ extension StationSearchView: StationSearchContract.stationSearchView {
         stationsTableViewHelper.set(stationsInProvince: stationsInProvince)
     }
     
+    // MARK: updateFiltersCollectionView
+    func updateFiltersCollectionView(with filterChoices: [Filter]) {
+        
+        // Call filters collection view helper to show filter on
+        // collection view
+        filtersCollectionViewHelper.set(filterChoices: filterChoices)
+        
+    }
+    
     // MARK: - displayFiltersCollectionView
     func displayFiltersCollectionView() {
         
@@ -220,11 +228,8 @@ extension StationSearchView: StationSearchContract.stationSearchView {
             
         }
         
-        // If filter choices array is empty, assign green color to
-        // filter bar button
-        if !isFilterChoicesEmpty {
-            filterBarButton?.tintColor = ThemeManager.color.chosenCellBorder
-        }
+        // Assign green color to filter bar button
+        filterBarButton?.tintColor = ThemeManager.color.chosenCellBorder
         
     }
     
@@ -240,11 +245,8 @@ extension StationSearchView: StationSearchContract.stationSearchView {
             
         }
         
-        // If filter choices array is not empty, assign default color
-        // to filter bar button
-        if isFilterChoicesEmpty {
-            filterBarButton?.tintColor = ThemeManager.color.searchBarBorder
-        }
+        // Assign default color to filter bar button
+        filterBarButton?.tintColor = ThemeManager.color.searchBarBorder
         
     }
     
@@ -269,7 +271,7 @@ extension StationSearchView {
     // MARK: - didPressFilterBarButton
     @objc private func didPressFilterBarButton() {
         // Call didPressFilterBarButton in presenter to navigate to the page
-        stationSearchPresenter?.didPressFilterBarButton(self, filterChoices)
+        stationSearchPresenter?.didPressFilterBarButton(self)
     }
     
 }

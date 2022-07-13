@@ -20,9 +20,8 @@ struct StationSearchContract {
 protocol StationSearchViewProtocol: AnyObject {
     // Self related
     var province: String? { get set }
-    var filterChoices: [Filter] { get set }
-    var isFilterChoicesEmpty: Bool! { get }
     func updateStationsTableView(_ stationsInProvince: [Station])
+    func updateFiltersCollectionView(with filterChoices: [Filter])
     func displayFiltersCollectionView()
     func hideFiltersCollectionView()
     
@@ -36,12 +35,14 @@ protocol StationSearchInteractorProtocol: AnyObject {
     var allStations: [Station] { get set }
     var stationsInProvince: [Station] { get set }
     var filteredStationsInProvince: [Station] { get set }
+    var filterChoices: [Filter] { get set }
     func fetchAllStations()
     
     // Presenter related
     var stationSearchPresenter: StationSearchContract.stationSearchPresenter? { get set }
     func setStationsInProvince(with stationsInProvince: [Station])
     func setFilteredStationsInProvince(with filteredStationsInProvince: [Station])
+    func setFilterChoices(with filterChoices: [Filter])
     
     // Entity related
     var stationsSearchEntity: StationSearchContract.stationSearchEntity! { get set }
@@ -58,17 +59,18 @@ protocol StationSearchPresenterProtocol: AnyObject {
     func didEditSearchText(with searchText: String)
     func didSelectStation(_ stationSearchView: StationSearchView,
                           with stationID: Int)
+    func didPressCancelFilterButton(with filterChoice: Filter)
+    func didPressFilterBarButton(_ stationSearchView: StationSearchView)
     
     // Interactor related
     var stationSearchInteractor: StationSearchContract.stationSearchInteractor! { get set }
     func didFetchAllStations()
     func didSetStationsInProvince()
     func didSetFilteredStationsInProvince()
+    func didSetFilterChoices()
     
     // Router related
     var stationSearchRouter: StationSearchContract.stationSearchRouter! { get set }
-    func didPressFilterBarButton(_ stationSearchView: StationSearchView,
-                                 _ filterChoices: [Filter])
     
 }
 
