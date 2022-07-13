@@ -15,11 +15,19 @@ class StationSearchView: UIViewController {
     @IBOutlet private weak var filtersCollectionView: UICollectionView!
     @IBOutlet private weak var stationsInfoLabel: UILabel!
     @IBOutlet private weak var stationsTableView: UITableView!
+    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     
     // MARK: - Properties
     var province: String?
     
-    var stationsInProvince = [Station]()
+    // Add property observer for stations info label
+    // to be able to get set number of stations without
+    // error
+    var stationsInProvince = [Station]() {
+        didSet {
+            setStationsInfoLabel()
+        }
+    }
     
     var stationSearchPresenter: StationSearchContract.stationSearchPresenter?
     
@@ -247,6 +255,9 @@ extension StationSearchView: StationSearchContract.stationSearchView {
             // Display filters collection view
             self?.filtersCollectionView.isHidden = false
             
+            // Set collection view height constraint back to 50
+            self?.collectionViewHeightConstraint.constant = 50
+            
         }
         
         // Assign green color to filter bar button
@@ -263,6 +274,9 @@ extension StationSearchView: StationSearchContract.stationSearchView {
             
             // Hide filters collection view
             self?.filtersCollectionView.isHidden = true
+            
+            // Set collection view height constraint to 0
+            self?.collectionViewHeightConstraint.constant = 0
             
         }
         

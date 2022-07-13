@@ -89,6 +89,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionViewHeightConstraint" destination="fqG-Qb-olQ" id="lAQ-87-6gq"/>
                         <outlet property="containerView" destination="nC8-hz-aeK" id="19M-SF-AQo"/>
                         <outlet property="filtersCollectionView" destination="hUd-sQ-GoH" id="cjk-gc-vxK"/>
                         <outlet property="searchBar" destination="3PN-Hc-cC7" id="Mpo-0M-s2X"/>

@@ -63,6 +63,9 @@ extension ProvincesTableViewHelper: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        // Deselect row after selecting it
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         // Send selected province to presenter in string format
         provinceSearchPresenter.didSelectProvince(provinces[indexPath.row],
                                                   provinceSearchView!)

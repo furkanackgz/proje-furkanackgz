@@ -160,7 +160,7 @@ extension StationCellHelper {
         // Fetch socket count
         guard let socketCount = stationsInProvince[indexPath.row].socketCount else { return }
         
-        let secondPartString = "\(occupiedSocketCount)/\(socketCount)"
+        let secondPartString = "\(occupiedSocketCount) / \(socketCount)"
         
         // Create second part of attributed string
         let secondPart = NSAttributedString(string: secondPartString,
