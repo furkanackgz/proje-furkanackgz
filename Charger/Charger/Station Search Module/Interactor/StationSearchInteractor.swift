@@ -58,6 +58,17 @@ extension StationSearchInteractor {
         
     }
     
+    // MARK: - setFilteredStationsInProvince
+    func setFilteredStationsInProvince(with filteredStationsInProvince: [Station]) {
+        
+        // Set filtered stations in province
+        self.filteredStationsInProvince = filteredStationsInProvince
+        
+        // Let presenter know that filteredStationsInProvince is set
+        self.stationSearchPresenter?.didSetFilteredStationsInProvince()
+        
+    }
+    
     // MARK: - setFilterChoices
     func setFilterChoices(with filterChoices: [Filter]) {
         

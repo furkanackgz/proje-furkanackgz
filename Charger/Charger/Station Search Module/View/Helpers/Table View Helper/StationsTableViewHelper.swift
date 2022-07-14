@@ -69,6 +69,9 @@ extension StationsTableViewHelper: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        // Deselect selected row
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         // Get the station id of selected station
         guard let stationID = stationsInProvince[indexPath.row].id else { return }
         

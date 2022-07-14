@@ -298,6 +298,12 @@ extension StationSearchView: UISearchBarDelegate {
         stationSearchPresenter?.didEditSearchText(with: searchText)
     }
     
+    // MARK: - searchBarSearchButtonClicked
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // Dismiss the keyboard
+        searchBar.resignFirstResponder()
+    }
+    
 }
 
 // @objc methods

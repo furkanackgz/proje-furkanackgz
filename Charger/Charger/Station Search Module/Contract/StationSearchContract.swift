@@ -41,6 +41,7 @@ protocol StationSearchInteractorProtocol: AnyObject {
     // Presenter related
     var stationSearchPresenter: StationSearchContract.stationSearchPresenter? { get set }
     func setStationsInProvince(with stationsInProvince: [Station])
+    func setFilteredStationsInProvince(with filteredStationsInProvince: [Station])
     func setFilterChoices(with filterChoices: [Filter])
     
     // Entity related
@@ -65,6 +66,7 @@ protocol StationSearchPresenterProtocol: AnyObject {
     var stationSearchInteractor: StationSearchContract.stationSearchInteractor! { get set }
     func didFetchAllStations()
     func didSetStationsInProvince()
+    func didSetFilteredStationsInProvince()
     func didSetFilterChoices()
     
     // Router related

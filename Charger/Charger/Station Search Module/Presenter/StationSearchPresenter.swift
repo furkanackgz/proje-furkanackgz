@@ -126,7 +126,7 @@ extension StationSearchPresenter {
             // Assign stations which contains search text in its
             // province name to the filtered stations in province
             filteredStationsInProvince = stationsInProvince.filter({ station in
-                station.geoLocation!.province!.lowercased().contains(searchText.lowercased())
+                station.stationName!.localizedLowercase.contains(searchText.localizedLowercase)
             })
             
         }
@@ -191,7 +191,7 @@ extension StationSearchPresenter {
         let filteredStationsInProvince = filterStationsInProvince(with: searchText)
         
         // Send filtered stations in province to interactor layer
-        stationSearchInteractor.setStationsInProvince(with: filteredStationsInProvince)
+        stationSearchInteractor.setFilteredStationsInProvince(with: filteredStationsInProvince)
         
     }
     
@@ -250,10 +250,33 @@ extension StationSearchPresenter {
         // Take stations in province from interactor layer
         let stationsInProvince = stationSearchInteractor.stationsInProvince
         
+        // If stations in province are more than 3 only take 3 of them, otherwise
+        // take all whatever inside
+        let restrictedStationsInProvince = Array(stationsInProvince.prefix(3))
+        
         DispatchQueue.main.async { [weak self] in
             
-            // Update station table view
-            self?.stationSearchView.updateStationsTableView(stationsInProvince)
+            // Update station table view with restricted stations in province
+            self?.stationSearchView.updateStationsTableView(restrictedStationsInProvince)
+            
+        }
+        
+    }
+    
+    // MARK: - didSetFilteredStationsInProvince
+    func didSetFilteredStationsInProvince() {
+        
+        // Take filtered stations in province from interactor layer
+        let filteredStationsInProvince = stationSearchInteractor.filteredStationsInProvince
+        
+        // If filtered stations in province are more than 3 only take 3 of them,
+        // otherwise take all whatever inside
+        let restrictedFilteredStationsInProvince = Array(filteredStationsInProvince.prefix(3))
+        
+        DispatchQueue.main.async { [weak self] in
+            
+            // Update station table view with restricted filtered stations in province
+            self?.stationSearchView.updateStationsTableView(restrictedFilteredStationsInProvince)
             
         }
         
