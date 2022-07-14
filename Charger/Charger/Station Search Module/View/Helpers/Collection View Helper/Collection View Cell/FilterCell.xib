@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FilterCell" customModule="Charger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaT-bn-erD" userLabel="Container View">
+                        <rect key="frame" x="5" y="5" width="140" height="40"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aJd-94-Vsq">
+                                <rect key="frame" x="16" y="8" width="108" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOZ-ui-hpc" userLabel="Filter Choice">
+                                        <rect key="frame" x="0.0" y="0.0" width="45.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kR0-eA-mkI">
+                                        <rect key="frame" x="50.5" y="0.0" width="6" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es2-2F-moc">
+                                        <rect key="frame" x="61.5" y="0.0" width="46.5" height="24"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="didPressCancelFilterButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="OFz-CM-Gfy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="aJd-94-Vsq" secondAttribute="bottom" constant="8" id="PfC-pG-Bta"/>
+                            <constraint firstItem="aJd-94-Vsq" firstAttribute="leading" secondItem="VaT-bn-erD" secondAttribute="leading" constant="16" id="eiS-Ra-wfF"/>
+                            <constraint firstAttribute="trailing" secondItem="aJd-94-Vsq" secondAttribute="trailing" constant="16" id="wrt-s1-0Uu"/>
+                            <constraint firstItem="aJd-94-Vsq" firstAttribute="top" secondItem="VaT-bn-erD" secondAttribute="top" constant="8" id="yit-ZH-64r"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VaT-bn-erD" secondAttribute="trailing" constant="5" id="94L-MD-dno"/>
+                <constraint firstItem="VaT-bn-erD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="K8m-5b-1Wd"/>
+                <constraint firstAttribute="bottom" secondItem="VaT-bn-erD" secondAttribute="bottom" constant="5" id="Mmw-sa-13Z"/>
+                <constraint firstItem="VaT-bn-erD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="az4-lx-f4T"/>
+            </constraints>
+            <size key="customSize" width="242" height="138"/>
+            <connections>
+                <outlet property="cancelFilterButton" destination="Es2-2F-moc" id="q9U-4g-8fL"/>
+                <outlet property="containerView" destination="VaT-bn-erD" id="FjE-e4-qIK"/>
+                <outlet property="filterChoiceLabel" destination="QOZ-ui-hpc" id="HPx-r3-qYy"/>
+                <outlet property="separatorLabel" destination="kR0-eA-mkI" id="lIa-Ru-Ye1"/>
+            </connections>
+            <point key="canvasLocation" x="234.78260869565219" y="122.54464285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

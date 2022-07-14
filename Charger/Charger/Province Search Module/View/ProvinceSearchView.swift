@@ -35,6 +35,14 @@ class ProvinceSearchView: UIViewController {
         // Call viewDidLoad in province search presenter
         provinceSearchPresenter?.viewDidLoad()
     }
+    
+    // MARK: - viewWillDisappear
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Prepare seach bar for later usage
+        prepareSearchBar()
+    }
 
 }
 
@@ -122,6 +130,22 @@ extension ProvinceSearchView {
         
     }
     
+    // MARK: - prepareSearchBar
+    private func prepareSearchBar() {
+        
+        // Set search bar text to empty
+        searchBar.text = ""
+        
+        // Call did edit search text for clearing out
+        // the previously showing filtered provinces
+        provinceSearchPresenter?.didEditSearchText("")
+        
+        // Hide keyboard after moving to station page
+        // if it is used
+        searchBar.resignFirstResponder()
+        
+    }
+    
 }
 
 // Search bar related methods
@@ -133,6 +157,12 @@ extension ProvinceSearchView: UISearchBarDelegate {
         // Call didEditSearchText method in presenter for notifying
         // that search text was changed by the user
         provinceSearchPresenter?.didEditSearchText(searchText)
+    }
+    
+    // MARK: - searchBarSearchButtonClicked
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // Dismiss the keyboard
+        searchBar.resignFirstResponder()
     }
     
 }
