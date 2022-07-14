@@ -17,6 +17,8 @@ class FilteringView: UIViewController, FilteringContract.filteringView {
     // MARK: - Properties
     var filteringPresenter: FilteringContract.filteringPresenter?
     
+    var filterTypesTableViewHelper: FilterTypesTableViewHelper!
+    
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +59,8 @@ extension FilteringView {
         setFiltreleButton()
         
         // Initialize filter types table view helper
-        
+        filterTypesTableViewHelper = .init(filterTypesTableView,
+                                           filteringPresenter!)
         
     }
     
@@ -139,7 +142,9 @@ extension FilteringView {
     
     // MARK: - setFilterTypesTableView
     func setFilterTypesTableView(with filterTypes: [FilterType]) {
-        
+        // Send filter types to filter types table view helper
+        // to show them in table view
+        filterTypesTableViewHelper.set(filterTypes)
     }
     
     // MARK: - reloadFilterTypesTableView
