@@ -48,7 +48,7 @@ extension ProvinceSearchPresenter {
             
             // Assign provinces which contains search text in it
             // to the filtered provinces
-            filteredProvinces = provinces.filter { $0.lowercased().contains(searchText.lowercased())
+            filteredProvinces = provinces.filter { $0.localizedLowercase.contains(searchText.localizedLowercase)
             }
             
             // Call interactor to send filtered provinces for show them
