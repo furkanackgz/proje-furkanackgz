@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Filtering View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="FilteringView" id="Y6W-OH-hqX" customClass="FilteringView" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ap9-SE-OT0" userLabel="Container View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cDM-oW-xv7" userLabel="Filter Types Table View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFm-tq-8XG" userLabel="Filtrele Button">
+                                        <rect key="frame" x="172" y="728" width="70" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="SLp-E3-pJt"/>
+                                            <constraint firstAttribute="width" constant="70" id="n4Y-FG-HKI"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="didPressFiltreleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cjx-IZ-Wwv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="cDM-oW-xv7" firstAttribute="top" secondItem="Ap9-SE-OT0" secondAttribute="top" id="0Ee-KF-ILO"/>
+                                    <constraint firstAttribute="trailing" secondItem="cDM-oW-xv7" secondAttribute="trailing" id="5gH-Id-kaA"/>
+                                    <constraint firstItem="TFm-tq-8XG" firstAttribute="centerX" secondItem="Ap9-SE-OT0" secondAttribute="centerX" id="bJF-5w-mRX"/>
+                                    <constraint firstItem="cDM-oW-xv7" firstAttribute="leading" secondItem="Ap9-SE-OT0" secondAttribute="leading" id="gOT-ZO-Bne"/>
+                                    <constraint firstItem="TFm-tq-8XG" firstAttribute="top" secondItem="cDM-oW-xv7" secondAttribute="bottom" constant="40" id="iZb-Sj-Jo5"/>
+                                    <constraint firstAttribute="bottom" secondItem="TFm-tq-8XG" secondAttribute="bottom" constant="40" id="maa-w9-YiW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ap9-SE-OT0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="73g-AK-VbF"/>
+                            <constraint firstItem="Ap9-SE-OT0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LgV-97-gJj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ap9-SE-OT0" secondAttribute="trailing" id="YV0-CG-fOi"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ap9-SE-OT0" secondAttribute="bottom" id="nWp-fv-lEB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="Ap9-SE-OT0" id="742-H7-Oop"/>
+                        <outlet property="filterTypesTableView" destination="cDM-oW-xv7" id="g8o-wu-5gG"/>
+                        <outlet property="filtreleButton" destination="TFm-tq-8XG" id="wSq-l1-Rxa"/>
+                        <outlet property="superView" destination="5EZ-qb-Rvc" id="JVb-F1-Wi7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
