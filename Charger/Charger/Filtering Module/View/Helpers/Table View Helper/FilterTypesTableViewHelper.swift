@@ -45,10 +45,10 @@ extension FilterTypesTableViewHelper {
     private func registerCells() {
         
         // Register collection table view cell
-        
+        filterTypesTableView?.register(.init(nibName: "CollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "CollectionTableViewCell")
         
         // Register slider table view cell
-        
+        filterTypesTableView?.register(.init(nibName: "SliderTableViewCell", bundle: nil), forCellReuseIdentifier: "SliderTableViewCell")
         
     }
     
@@ -56,7 +56,7 @@ extension FilterTypesTableViewHelper {
     private func registerHeaderView() {
         
         // Register filter types table view header to the table view
-        
+        filterTypesTableView?.register(FilterTypesTableViewHeader.self, forHeaderFooterViewReuseIdentifier: "FilterTypesTableViewHeader")
         
     }
     
@@ -77,10 +77,20 @@ extension FilterTypesTableViewHelper {
 // MARK: TABLE VIEW DELEGATE
 extension FilterTypesTableViewHelper: UITableViewDelegate {
     
-    // viewForHeaderInSection
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        // Dequeue filter types table header view
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "FilterTypesTableViewHeader") as! FilterTypesTableViewHeader
+        
+        // Assign section name
+        headerView.headerTitle.text = filterTypes[section].type
+        
+        return headerView
+        
+    }
     
-    
-    // heightForHeaderInSection
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
     
 }
 
@@ -104,16 +114,47 @@ extension FilterTypesTableViewHelper: UITableViewDataSource {
         if filterTypes[indexPath.section].type == "Uzaklık (km)" {
             
             // Dequeue slider table view cell
-            
+            let sliderTableViewCell = dequeueSliderTableViewCell(tableView,
+                                                                 indexPath)
+            return sliderTableViewCell
             
         } else {
             
             // Dequeue collection table view cell
-            
+            let collectionTableViewCell = dequeueCollectionTableViewCell(tableView,
+                                                                         indexPath)
+            return collectionTableViewCell
             
         }
         
-        return UITableViewCell()
+    }
+    
+}
+
+// MARK: - Dequeue Slider Table View Cell
+extension FilterTypesTableViewHelper {
+    
+    private func dequeueSliderTableViewCell(_ tableView: UITableView,
+                                            _ indexPath: IndexPath) -> SliderTableViewCell {
+        
+        var sliderTableViewCell: SliderTableViewCell?
+        
+        if let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "SliderTableViewCell") as? SliderTableViewCell {
+            
+            // Assign filtering presenter
+            tableViewCell.filteringPresenter = filteringPresenter
+            
+            // Set filter type to slider table view cell
+            tableViewCell.filterType = filterTypes[indexPath.section].type
+            
+            // Set filter choice to slider table view cell
+            tableViewCell.filterChoice = filterTypes[indexPath.section].filters[indexPath.row]
+            
+            sliderTableViewCell = tableViewCell
+        }
+        
+        // To prevent application crashing add the default initializer
+        return sliderTableViewCell ?? SliderTableViewCell()
     }
     
 }
@@ -121,13 +162,27 @@ extension FilterTypesTableViewHelper: UITableViewDataSource {
 // MARK: - Dequeue Collection Table View Cell
 extension FilterTypesTableViewHelper {
     
-    
-    
-}
-
-// MARK: - Dequeue Slider Table View Cell
-extension FilterTypesTableViewHelper {
-    
-    
+    private func dequeueCollectionTableViewCell(_ tableView: UITableView,
+                                                _ indexPath: IndexPath) -> CollectionTableViewCell {
+        
+        var collectionTableViewCell: CollectionTableViewCell?
+        
+        if let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "CollectionTableViewCell") as? CollectionTableViewCell {
+            
+            // Assign filtering presenter
+            tableViewCell.filteringPresenter = filteringPresenter
+            
+            // Take filter type out of filter types
+            let filterType = filterTypes[indexPath.section]
+            
+            // Set filter type to the collection view cell
+            tableViewCell.set(filterType)
+            
+            collectionTableViewCell = tableViewCell
+        }
+        
+        // To prevent application crashing add the default initializer
+        return collectionTableViewCell ?? CollectionTableViewCell()
+    }
     
 }
