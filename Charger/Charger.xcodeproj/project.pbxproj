@@ -53,6 +53,10 @@
 		0B58CA062875E803006E5F7C /* PreviousAppointmentCellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58CA052875E803006E5F7C /* PreviousAppointmentCellHelper.swift */; };
 		0B58CA0928760096006E5F7C /* AppointmentsTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B58CA0828760096006E5F7C /* AppointmentsTableViewHeader.swift */; };
 		0B59064128780A91006D7E21 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B59064028780A91006D7E21 /* PlaceholderView.swift */; };
+		0B5A99C92881256E000E10D4 /* FilteringPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A99C82881256E000E10D4 /* FilteringPresenter.swift */; };
+		0B5A99CB288126C2000E10D4 /* FilteringInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A99CA288126C2000E10D4 /* FilteringInteractor.swift */; };
+		0B5A99CD28812762000E10D4 /* FilteringRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A99CC28812762000E10D4 /* FilteringRouter.swift */; };
+		0B5A99CF288143B2000E10D4 /* FilteringContractHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A99CE288143B2000E10D4 /* FilteringContractHelper.swift */; };
 		0B6C548028709C610058051F /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C547F28709C610058051F /* LoginContract.swift */; };
 		0B6C548328709D590058051F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C548228709D590058051F /* LoginRequest.swift */; };
 		0B6C548528709D810058051F /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C548428709D810058051F /* LoginResponse.swift */; };
@@ -74,6 +78,18 @@
 		0BD1FFB0287EF8220020D609 /* StationSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFAF287EF8220020D609 /* StationSearchRouter.swift */; };
 		0BD1FFB2287EF8C60020D609 /* StationSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFB1287EF8C60020D609 /* StationSearchService.swift */; };
 		0BD1FFB4287F290A0020D609 /* StationSearchContractHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFB3287F290A0020D609 /* StationSearchContractHelper.swift */; };
+		0BD1FFC528804A830020D609 /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFC428804A830020D609 /* FilterType.swift */; };
+		0BD1FFC728804B630020D609 /* FilteringContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFC628804B630020D609 /* FilteringContract.swift */; };
+		0BD1FFCA288051AE0020D609 /* Filtering.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD1FFC9288051AE0020D609 /* Filtering.storyboard */; };
+		0BD1FFCC288051D00020D609 /* FilteringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFCB288051D00020D609 /* FilteringView.swift */; };
+		0BD1FFD2288060840020D609 /* FilterTypesTableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFD1288060840020D609 /* FilterTypesTableViewHelper.swift */; };
+		0BD1FFD828806A3E0020D609 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFD628806A3E0020D609 /* CollectionTableViewCell.swift */; };
+		0BD1FFD928806A3E0020D609 /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD1FFD728806A3E0020D609 /* CollectionTableViewCell.xib */; };
+		0BD1FFDC28806A520020D609 /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFDA28806A520020D609 /* SliderTableViewCell.swift */; };
+		0BD1FFDD28806A520020D609 /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD1FFDB28806A520020D609 /* SliderTableViewCell.xib */; };
+		0BD1FFE028806D0F0020D609 /* FilterTypesTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFDF28806D0F0020D609 /* FilterTypesTableViewHeader.swift */; };
+		0BD1FFEA28809A650020D609 /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FFE828809A650020D609 /* TableCollectionViewCell.swift */; };
+		0BD1FFEB28809A650020D609 /* TableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD1FFE928809A650020D609 /* TableCollectionViewCell.xib */; };
 		0BEEFAA5287E065300D84C8C /* StationSearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEFAA4287E065300D84C8C /* StationSearchContract.swift */; };
 		0BEEFAA8287E06A800D84C8C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEFAA7287E06A800D84C8C /* Filter.swift */; };
 		0BEEFAAB287E070000D84C8C /* StationSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEEFAAA287E070000D84C8C /* StationSearch.storyboard */; };
@@ -131,6 +147,10 @@
 		0B58CA052875E803006E5F7C /* PreviousAppointmentCellHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousAppointmentCellHelper.swift; sourceTree = "<group>"; };
 		0B58CA0828760096006E5F7C /* AppointmentsTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsTableViewHeader.swift; sourceTree = "<group>"; };
 		0B59064028780A91006D7E21 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		0B5A99C82881256E000E10D4 /* FilteringPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringPresenter.swift; sourceTree = "<group>"; };
+		0B5A99CA288126C2000E10D4 /* FilteringInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringInteractor.swift; sourceTree = "<group>"; };
+		0B5A99CC28812762000E10D4 /* FilteringRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringRouter.swift; sourceTree = "<group>"; };
+		0B5A99CE288143B2000E10D4 /* FilteringContractHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringContractHelper.swift; sourceTree = "<group>"; };
 		0B6C547F28709C610058051F /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
 		0B6C548228709D590058051F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		0B6C548428709D810058051F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -154,6 +174,18 @@
 		0BD1FFAF287EF8220020D609 /* StationSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchRouter.swift; sourceTree = "<group>"; };
 		0BD1FFB1287EF8C60020D609 /* StationSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchService.swift; sourceTree = "<group>"; };
 		0BD1FFB3287F290A0020D609 /* StationSearchContractHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchContractHelper.swift; sourceTree = "<group>"; };
+		0BD1FFC428804A830020D609 /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
+		0BD1FFC628804B630020D609 /* FilteringContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringContract.swift; sourceTree = "<group>"; };
+		0BD1FFC9288051AE0020D609 /* Filtering.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filtering.storyboard; sourceTree = "<group>"; };
+		0BD1FFCB288051D00020D609 /* FilteringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringView.swift; sourceTree = "<group>"; };
+		0BD1FFD1288060840020D609 /* FilterTypesTableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTypesTableViewHelper.swift; sourceTree = "<group>"; };
+		0BD1FFD628806A3E0020D609 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		0BD1FFD728806A3E0020D609 /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
+		0BD1FFDA28806A520020D609 /* SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
+		0BD1FFDB28806A520020D609 /* SliderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderTableViewCell.xib; sourceTree = "<group>"; };
+		0BD1FFDF28806D0F0020D609 /* FilterTypesTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTypesTableViewHeader.swift; sourceTree = "<group>"; };
+		0BD1FFE828809A650020D609 /* TableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCollectionViewCell.swift; sourceTree = "<group>"; };
+		0BD1FFE928809A650020D609 /* TableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCollectionViewCell.xib; sourceTree = "<group>"; };
 		0BEEFAA4287E065300D84C8C /* StationSearchContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchContract.swift; sourceTree = "<group>"; };
 		0BEEFAA7287E06A800D84C8C /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		0BEEFAAA287E070000D84C8C /* StationSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StationSearch.storyboard; sourceTree = "<group>"; };
@@ -655,6 +687,7 @@
 				0B24DAF32879BEEE0053552B /* Profile Module */,
 				0B0B8E4F287B5D4B008D39A2 /* Province Search Module */,
 				0BEEFA9A287E05B500D84C8C /* Station Search Module */,
+				0BD1FFBD28804A130020D609 /* Filtering Module */,
 				0B9A35BA286ADFEF00EB07F0 /* AppDelegate.swift */,
 				0B9A35BC286ADFEF00EB07F0 /* SceneDelegate.swift */,
 				0B9A35C5286ADFF100EB07F0 /* LaunchScreen.storyboard */,
@@ -704,6 +737,149 @@
 			children = (
 				0BD1FFA1287ECA9C0020D609 /* FilterCell.swift */,
 				0BD1FFA2287ECA9C0020D609 /* FilterCell.xib */,
+			);
+			path = "Collection View Cell";
+			sourceTree = "<group>";
+		};
+		0BD1FFBD28804A130020D609 /* Filtering Module */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFC328804A4C0020D609 /* Contract */,
+				0BD1FFC228804A480020D609 /* View */,
+				0BD1FFC128804A420020D609 /* Interactor */,
+				0BD1FFC028804A390020D609 /* Presenter */,
+				0BD1FFBF28804A330020D609 /* Entity */,
+				0BD1FFBE28804A260020D609 /* Router */,
+			);
+			path = "Filtering Module";
+			sourceTree = "<group>";
+		};
+		0BD1FFBE28804A260020D609 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0B5A99CC28812762000E10D4 /* FilteringRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0BD1FFBF28804A330020D609 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFCD2880523C0020D609 /* Entities */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		0BD1FFC028804A390020D609 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0B5A99C82881256E000E10D4 /* FilteringPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0BD1FFC128804A420020D609 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0B5A99CA288126C2000E10D4 /* FilteringInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0BD1FFC228804A480020D609 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFC8288051930020D609 /* Filtering Storyboard */,
+				0BD1FFCB288051D00020D609 /* FilteringView.swift */,
+				0BD1FFCF2880602E0020D609 /* Helpers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0BD1FFC328804A4C0020D609 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFC628804B630020D609 /* FilteringContract.swift */,
+				0B5A99CE288143B2000E10D4 /* FilteringContractHelper.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		0BD1FFC8288051930020D609 /* Filtering Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFC9288051AE0020D609 /* Filtering.storyboard */,
+			);
+			path = "Filtering Storyboard";
+			sourceTree = "<group>";
+		};
+		0BD1FFCD2880523C0020D609 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFC428804A830020D609 /* FilterType.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		0BD1FFCF2880602E0020D609 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFD02880605E0020D609 /* Table View Helper */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0BD1FFD02880605E0020D609 /* Table View Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFD1288060840020D609 /* FilterTypesTableViewHelper.swift */,
+				0BD1FFD3288069710020D609 /* Table View Cells */,
+				0BD1FFDE28806B280020D609 /* Table View Header */,
+			);
+			path = "Table View Helper";
+			sourceTree = "<group>";
+		};
+		0BD1FFD3288069710020D609 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFD4288069920020D609 /* Collection Table View Cell */,
+				0BD1FFD5288069B10020D609 /* Slider Table View Cell */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		0BD1FFD4288069920020D609 /* Collection Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFD628806A3E0020D609 /* CollectionTableViewCell.swift */,
+				0BD1FFD728806A3E0020D609 /* CollectionTableViewCell.xib */,
+				0BD1FFE728809A3D0020D609 /* Collection View Cell */,
+			);
+			path = "Collection Table View Cell";
+			sourceTree = "<group>";
+		};
+		0BD1FFD5288069B10020D609 /* Slider Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFDA28806A520020D609 /* SliderTableViewCell.swift */,
+				0BD1FFDB28806A520020D609 /* SliderTableViewCell.xib */,
+			);
+			path = "Slider Table View Cell";
+			sourceTree = "<group>";
+		};
+		0BD1FFDE28806B280020D609 /* Table View Header */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFDF28806D0F0020D609 /* FilterTypesTableViewHeader.swift */,
+			);
+			path = "Table View Header";
+			sourceTree = "<group>";
+		};
+		0BD1FFE728809A3D0020D609 /* Collection View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0BD1FFE828809A650020D609 /* TableCollectionViewCell.swift */,
+				0BD1FFE928809A650020D609 /* TableCollectionViewCell.xib */,
 			);
 			path = "Collection View Cell";
 			sourceTree = "<group>";
@@ -897,10 +1073,14 @@
 				0BEEFAB6287E0C2F00D84C8C /* StationCell.xib in Resources */,
 				0B24DAFF2879DA450053552B /* Profile.storyboard in Resources */,
 				0B0B8E5A287B63FD008D39A2 /* ProvinceSearch.storyboard in Resources */,
+				0BD1FFCA288051AE0020D609 /* Filtering.storyboard in Resources */,
 				0B58C9E02874B250006E5F7C /* Home.storyboard in Resources */,
+				0BD1FFD928806A3E0020D609 /* CollectionTableViewCell.xib in Resources */,
 				0BC2172A286C6F4600DEB1EA /* Colors.xcassets in Resources */,
 				0B9A35C4286ADFF100EB07F0 /* Images.xcassets in Resources */,
 				0BEEFAAB287E070000D84C8C /* StationSearch.storyboard in Resources */,
+				0BD1FFEB28809A650020D609 /* TableCollectionViewCell.xib in Resources */,
+				0BD1FFDD28806A520020D609 /* SliderTableViewCell.xib in Resources */,
 				0BD1FFA4287ECA9C0020D609 /* FilterCell.xib in Resources */,
 				0B58CA0028756751006E5F7C /* CurrentAppointmentCell.xib in Resources */,
 				0B9A35C2286ADFEF00EB07F0 /* Login.storyboard in Resources */,
@@ -918,17 +1098,20 @@
 				0B58C9B1287325FC006E5F7C /* String+Extension.swift in Sources */,
 				0B58C9E82874B582006E5F7C /* HomeEntity.swift in Sources */,
 				0B9A35D0286B011100EB07F0 /* LocationManager.swift in Sources */,
+				0BD1FFE028806D0F0020D609 /* FilterTypesTableViewHeader.swift in Sources */,
 				0B0B8E69287C3001008D39A2 /* ProvinceSearchPresenter.swift in Sources */,
 				0BD1FFAA287EF2D60020D609 /* StationSearchPresenter.swift in Sources */,
 				0B9A35BF286ADFEF00EB07F0 /* LoginView.swift in Sources */,
 				0B58C9C628744A93006E5F7C /* AppointmentType.swift in Sources */,
 				0B6C548528709D810058051F /* LoginResponse.swift in Sources */,
 				0B24DAFC2879CE000053552B /* ProfileContract.swift in Sources */,
+				0BD1FFEA28809A650020D609 /* TableCollectionViewCell.swift in Sources */,
 				0B58C9E42874B50F006E5F7C /* HomeInteractor.swift in Sources */,
 				0BEEFAA5287E065300D84C8C /* StationSearchContract.swift in Sources */,
 				0B0B8E67287C2F6A008D39A2 /* ProvinceSearchInteractor.swift in Sources */,
 				0BD1FFAE287EF7A50020D609 /* StationSearchEntity.swift in Sources */,
 				0B3638EA286B72E900931B23 /* NotificationManager.swift in Sources */,
+				0B5A99CD28812762000E10D4 /* FilteringRouter.swift in Sources */,
 				0B24DB23287AF5920053552B /* ProfileContractHelper.swift in Sources */,
 				0BEEFAB1287E0B0B00D84C8C /* StationsTableViewHelper.swift in Sources */,
 				0B58C9FF28756751006E5F7C /* CurrentAppointmentCell.swift in Sources */,
@@ -939,19 +1122,24 @@
 				0B24DB012879DA820053552B /* ProfileView.swift in Sources */,
 				0B9A35BB286ADFEF00EB07F0 /* AppDelegate.swift in Sources */,
 				0BD1FFAC287EF52F0020D609 /* StationSearchInteractor.swift in Sources */,
+				0BD1FFCC288051D00020D609 /* FilteringView.swift in Sources */,
+				0B5A99CF288143B2000E10D4 /* FilteringContractHelper.swift in Sources */,
 				0BEEFAB9287E0FAC00D84C8C /* StationCellHelper.swift in Sources */,
 				0B58C9F528755A94006E5F7C /* AppointmentsTableViewHelper.swift in Sources */,
 				0B0B8E60287B6D1F008D39A2 /* ProvincesTableViewHelper.swift in Sources */,
 				0B9A35BD286ADFEF00EB07F0 /* SceneDelegate.swift in Sources */,
 				0B58C9DD2874B182006E5F7C /* Appointment.swift in Sources */,
+				0BD1FFDC28806A520020D609 /* SliderTableViewCell.swift in Sources */,
 				0BD1FFB4287F290A0020D609 /* StationSearchContractHelper.swift in Sources */,
 				0B58C9EA2874B5C7006E5F7C /* HomeRouter.swift in Sources */,
 				0BEEFAB5287E0C2F00D84C8C /* StationCell.swift in Sources */,
 				0BD1FF9B287EC2A90020D609 /* FiltersCollectionViewHelper.swift in Sources */,
 				0B58C9EE2874B632006E5F7C /* HomeContractHelper.swift in Sources */,
+				0BD1FFD2288060840020D609 /* FilterTypesTableViewHelper.swift in Sources */,
 				0B0B8E5C287B641C008D39A2 /* ProvinceSearchView.swift in Sources */,
 				0B58C9EC2874B605006E5F7C /* HomeService.swift in Sources */,
 				0B58C9992871619E006E5F7C /* LoginService.swift in Sources */,
+				0BD1FFC728804B630020D609 /* FilteringContract.swift in Sources */,
 				0B6C548028709C610058051F /* LoginContract.swift in Sources */,
 				0B59064128780A91006D7E21 /* PlaceholderView.swift in Sources */,
 				0B24DB29287AF63E0053552B /* ProfileRouter.swift in Sources */,
@@ -959,16 +1147,19 @@
 				0B58C9FB28756087006E5F7C /* PreviousAppointmentCell.swift in Sources */,
 				0B58C99628715D81006E5F7C /* LoginRouter.swift in Sources */,
 				0B0B8E6F287C3D7B008D39A2 /* ProvinceSearchContractHelper.swift in Sources */,
+				0B5A99CB288126C2000E10D4 /* FilteringInteractor.swift in Sources */,
 				0B58CA032875DBE5006E5F7C /* CurrentAppointmentCellHelper.swift in Sources */,
 				0B24DB25287AF5F20053552B /* ProfileInteractor.swift in Sources */,
 				0B0B8E6D287C338F008D39A2 /* ProvinceSearchService.swift in Sources */,
 				0B58C99228715D43006E5F7C /* LoginPresenter.swift in Sources */,
 				0BD1FFB2287EF8C60020D609 /* StationSearchService.swift in Sources */,
 				0B58C99028715D2F006E5F7C /* LoginInteractor.swift in Sources */,
+				0BD1FFC528804A830020D609 /* FilterType.swift in Sources */,
 				0B24DB21287AF5610053552B /* ProfileService.swift in Sources */,
 				0B6C548328709D590058051F /* LoginRequest.swift in Sources */,
 				0B0B8E63287C1C8D008D39A2 /* ProvinceSearchPlaceholderView.swift in Sources */,
 				0B58C99428715D68006E5F7C /* LoginEntity.swift in Sources */,
+				0BD1FFD828806A3E0020D609 /* CollectionTableViewCell.swift in Sources */,
 				0BEEFAAD287E072700D84C8C /* StationSearchView.swift in Sources */,
 				0B0B8E57287B5DBD008D39A2 /* ProvinceSearchContract.swift in Sources */,
 				0B58C98C28715CBC006E5F7C /* LoginContractHelper.swift in Sources */,
@@ -977,6 +1168,7 @@
 				0B58CA0928760096006E5F7C /* AppointmentsTableViewHeader.swift in Sources */,
 				0B58C9E62874B54B006E5F7C /* HomePresenter.swift in Sources */,
 				0B24DB27287AF6140053552B /* ProfilePresenter.swift in Sources */,
+				0B5A99C92881256E000E10D4 /* FilteringPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
