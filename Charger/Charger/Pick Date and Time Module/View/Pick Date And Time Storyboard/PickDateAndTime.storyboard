@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pick Date And Time View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PickDateAndTimeView" id="Y6W-OH-hqX" customClass="PickDateAndTimeView" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKR-5O-ed8" userLabel="Container View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YfO-U6-izM" userLabel="Date Stack View">
+                                        <rect key="frame" x="8" y="8" width="398" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9S-ra-qlC" userLabel="Date Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="256.5" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qAD-J6-weY" userLabel="Date Value Text Field">
+                                                <rect key="frame" x="266.5" y="0.0" width="131.5" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9lu-lI-Mm0"/>
+                                            <constraint firstItem="qAD-J6-weY" firstAttribute="width" secondItem="YfO-U6-izM" secondAttribute="width" multiplier="0.33" id="QNL-GC-19Y"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cNb-6A-jB6" userLabel="Sockets Stack View">
+                                        <rect key="frame" x="8" y="64" width="398" height="656"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jm7-uv-gvl" userLabel="First Socket Stack ">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="656"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="l1p-p1-VWM" userLabel="First Label Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="60"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tc-Hy-fPf" userLabel="Socket Number Label">
+                                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="1eP-gi-BpJ"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTv-21-vGh" userLabel="Charge And Socket Type Label">
+                                                                <rect key="frame" x="0.0" y="40" width="127.5" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="Rrz-JD-Dof"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kXe-Nv-8zZ" userLabel="First Socket Table View">
+                                                        <rect key="frame" x="0.0" y="68" width="127.5" height="588"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </tableView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="kXe-Nv-8zZ" secondAttribute="trailing" id="2Op-5p-MeN"/>
+                                                    <constraint firstItem="l1p-p1-VWM" firstAttribute="top" secondItem="Jm7-uv-gvl" secondAttribute="top" id="3Wt-rg-5jS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="l1p-p1-VWM" secondAttribute="trailing" id="5ZX-2y-E36"/>
+                                                    <constraint firstAttribute="bottom" secondItem="kXe-Nv-8zZ" secondAttribute="bottom" id="AYb-UM-LYx"/>
+                                                    <constraint firstItem="l1p-p1-VWM" firstAttribute="leading" secondItem="Jm7-uv-gvl" secondAttribute="leading" id="JTu-B0-zOI"/>
+                                                    <constraint firstItem="kXe-Nv-8zZ" firstAttribute="leading" secondItem="Jm7-uv-gvl" secondAttribute="leading" id="kVJ-Rl-6YY"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ahh-Ct-0XN" userLabel="Second Socket Stack">
+                                                <rect key="frame" x="135.5" y="0.0" width="127" height="656"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="R9c-2A-q22" userLabel="Second Label Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127" height="60"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUl-6W-dfT" userLabel="Socket Number Label">
+                                                                <rect key="frame" x="0.0" y="0.0" width="127" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="opb-uF-iwS"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rs1-Mx-teG" userLabel="Charge And Socket Type Label">
+                                                                <rect key="frame" x="0.0" y="40" width="127" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="BKt-R9-lCi"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Q9Y-DI-mLv" userLabel="Second Socket Table View">
+                                                        <rect key="frame" x="0.0" y="68" width="127" height="588"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </tableView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="R9c-2A-q22" secondAttribute="trailing" id="90p-ld-BRg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Q9Y-DI-mLv" secondAttribute="bottom" id="F6b-5N-cJH"/>
+                                                    <constraint firstItem="Q9Y-DI-mLv" firstAttribute="leading" secondItem="Ahh-Ct-0XN" secondAttribute="leading" id="I8k-64-kdh"/>
+                                                    <constraint firstItem="R9c-2A-q22" firstAttribute="leading" secondItem="Ahh-Ct-0XN" secondAttribute="leading" id="Ucv-DQ-L2a"/>
+                                                    <constraint firstItem="R9c-2A-q22" firstAttribute="top" secondItem="Ahh-Ct-0XN" secondAttribute="top" id="Ueg-A3-Rqb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Q9Y-DI-mLv" secondAttribute="trailing" id="pTH-KH-Bx5"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I7e-tO-Cjw" userLabel="Third Socket Stack">
+                                                <rect key="frame" x="270.5" y="0.0" width="127.5" height="656"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Kdq-XL-GMV" userLabel="Third Label Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="60"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvv-Qe-KTf" userLabel="Socket Number Label">
+                                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="XTd-ba-bDS"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bob-ND-UvY" userLabel="Charge And Socket Type Label">
+                                                                <rect key="frame" x="0.0" y="40" width="127.5" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="bP0-kj-93c"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y2u-qu-Deg" userLabel="Third Socket Table View">
+                                                        <rect key="frame" x="0.0" y="68" width="127.5" height="588"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </tableView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="y2u-qu-Deg" secondAttribute="bottom" id="6Rj-7e-AOW"/>
+                                                    <constraint firstItem="y2u-qu-Deg" firstAttribute="leading" secondItem="I7e-tO-Cjw" secondAttribute="leading" id="HMU-UU-4c4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Kdq-XL-GMV" secondAttribute="trailing" id="dYo-GY-r06"/>
+                                                    <constraint firstAttribute="trailing" secondItem="y2u-qu-Deg" secondAttribute="trailing" id="m5I-4L-bxv"/>
+                                                    <constraint firstItem="Kdq-XL-GMV" firstAttribute="top" secondItem="I7e-tO-Cjw" secondAttribute="top" id="nCV-bl-4Ho"/>
+                                                    <constraint firstItem="Kdq-XL-GMV" firstAttribute="leading" secondItem="I7e-tO-Cjw" secondAttribute="leading" id="qWj-TB-aeT"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Ahh-Ct-0XN" firstAttribute="top" secondItem="cNb-6A-jB6" secondAttribute="top" id="1rD-ZR-3bF"/>
+                                            <constraint firstItem="Jm7-uv-gvl" firstAttribute="top" secondItem="cNb-6A-jB6" secondAttribute="top" id="2JC-xN-pw4"/>
+                                            <constraint firstItem="I7e-tO-Cjw" firstAttribute="top" secondItem="cNb-6A-jB6" secondAttribute="top" id="8Pb-CK-NFp"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ahh-Ct-0XN" secondAttribute="bottom" id="VUx-Ix-hn4"/>
+                                            <constraint firstAttribute="bottom" secondItem="Jm7-uv-gvl" secondAttribute="bottom" id="i4G-0V-rNn"/>
+                                            <constraint firstAttribute="bottom" secondItem="I7e-tO-Cjw" secondAttribute="bottom" id="upf-Bh-auL"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPH-xb-sN7" userLabel="Devam Et Button">
+                                        <rect key="frame" x="157" y="728" width="100" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WZe-7B-nRR"/>
+                                            <constraint firstAttribute="width" constant="100" id="nJw-87-UEM"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="didPressDevamEtButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MbJ-bc-LIA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="cNb-6A-jB6" firstAttribute="leading" secondItem="qKR-5O-ed8" secondAttribute="leading" constant="8" id="0sW-qW-oR4"/>
+                                    <constraint firstAttribute="trailing" secondItem="cNb-6A-jB6" secondAttribute="trailing" constant="8" id="2cq-VN-CWr"/>
+                                    <constraint firstItem="UPH-xb-sN7" firstAttribute="top" secondItem="cNb-6A-jB6" secondAttribute="bottom" constant="8" id="CCP-Ci-uK1"/>
+                                    <constraint firstItem="UPH-xb-sN7" firstAttribute="centerX" secondItem="qKR-5O-ed8" secondAttribute="centerX" id="NG8-s3-fTh"/>
+                                    <constraint firstItem="YfO-U6-izM" firstAttribute="top" secondItem="qKR-5O-ed8" secondAttribute="top" constant="8" id="V6X-9q-nST"/>
+                                    <constraint firstAttribute="bottom" secondItem="UPH-xb-sN7" secondAttribute="bottom" constant="40" id="cWW-G6-Sa3"/>
+                                    <constraint firstAttribute="trailing" secondItem="YfO-U6-izM" secondAttribute="trailing" constant="8" id="eoz-8Z-lm1"/>
+                                    <constraint firstItem="YfO-U6-izM" firstAttribute="leading" secondItem="qKR-5O-ed8" secondAttribute="leading" constant="8" id="tTm-9R-qpk"/>
+                                    <constraint firstItem="cNb-6A-jB6" firstAttribute="top" secondItem="YfO-U6-izM" secondAttribute="bottom" constant="16" id="zNv-MT-b3D"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qKR-5O-ed8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1XH-FD-d20"/>
+                            <constraint firstItem="qKR-5O-ed8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="4cZ-hR-qcP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qKR-5O-ed8" secondAttribute="trailing" id="Oxy-k3-y2o"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="qKR-5O-ed8" secondAttribute="bottom" id="dXN-JV-Wgg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ThirdChargeAndSocketTypeLabel" destination="bob-ND-UvY" id="aAI-uG-8Nl"/>
+                        <outlet property="ThirdSocketNumberLabel" destination="yvv-Qe-KTf" id="ym5-zy-4pN"/>
+                        <outlet property="ThirdSocketTableView" destination="y2u-qu-Deg" id="6ab-gy-TDr"/>
+                        <outlet property="appointmentDateLabel" destination="G9S-ra-qlC" id="omb-ZU-QtB"/>
+                        <outlet property="appointmentDateValueTextField" destination="qAD-J6-weY" id="dgW-Oz-VNY"/>
+                        <outlet property="containerView" destination="qKR-5O-ed8" id="MVO-eK-pZQ"/>
+                        <outlet property="devamEtButton" destination="UPH-xb-sN7" id="Bki-dO-tLn"/>
+                        <outlet property="firstChargeAndSocketTypeLabel" destination="eTv-21-vGh" id="3cn-Z4-sSK"/>
+                        <outlet property="firstSocketNumberLabel" destination="9Tc-Hy-fPf" id="oun-ti-WNA"/>
+                        <outlet property="firstSocketStackView" destination="Jm7-uv-gvl" id="s68-TW-M89"/>
+                        <outlet property="firstSocketTableView" destination="kXe-Nv-8zZ" id="CEn-Fj-i8E"/>
+                        <outlet property="secondChargeAndSocketTypeLabel" destination="rs1-Mx-teG" id="sdO-om-aeV"/>
+                        <outlet property="secondSocketNumberLabel" destination="rUl-6W-dfT" id="kQr-Ig-XGB"/>
+                        <outlet property="secondSocketStackView" destination="Ahh-Ct-0XN" id="XUg-d6-pex"/>
+                        <outlet property="secondSocketTableView" destination="Q9Y-DI-mLv" id="0ae-mO-mnA"/>
+                        <outlet property="superView" destination="5EZ-qb-Rvc" id="hOV-wY-77e"/>
+                        <outlet property="thirdSocketStackView" destination="I7e-tO-Cjw" id="QX2-QF-9px"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
