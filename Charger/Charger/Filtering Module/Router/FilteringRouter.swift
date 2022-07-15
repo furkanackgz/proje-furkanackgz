@@ -17,6 +17,9 @@ extension FilteringRouter {
     // MARK: - navigateToStationSearchPage
     func navigateToStationSearchPage(_ filteringView: FilteringView) {
         
+        // Pop filtering view out from stack view
+        filteringView.navigationController?.popViewController(animated: true)
+        
     }
     
 }
