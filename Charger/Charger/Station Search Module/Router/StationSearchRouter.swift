@@ -5,7 +5,7 @@
 //  Created by Furkan Açıkgöz on 13.07.2022.
 //
 
-import Foundation
+import UIKit
 
 class StationSearchRouter: StationSearchContract.stationSearchRouter {
     
@@ -17,6 +17,13 @@ extension StationSearchRouter {
     // MARK: - navigateToFilteringPage
     func navigateToFilteringPage(_ stationSearchView: StationSearchView,
                                  with filterChoices: [Filter]) {
+        
+        // Instantiate filtering module
+        guard let filteringView = FilteringContract.instantiateFilteringModule(with: filterChoices) else { return }
+        
+        // Push filtering view onto station search view
+        stationSearchView.navigationController?.pushViewController(filteringView,
+                                                                   animated: true)
         
     }
     

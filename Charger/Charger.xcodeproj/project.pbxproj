@@ -56,6 +56,7 @@
 		0B5A99C92881256E000E10D4 /* FilteringPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A99C82881256E000E10D4 /* FilteringPresenter.swift */; };
 		0B5A99CB288126C2000E10D4 /* FilteringInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A99CA288126C2000E10D4 /* FilteringInteractor.swift */; };
 		0B5A99CD28812762000E10D4 /* FilteringRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A99CC28812762000E10D4 /* FilteringRouter.swift */; };
+		0B5A99CF288143B2000E10D4 /* FilteringContractHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A99CE288143B2000E10D4 /* FilteringContractHelper.swift */; };
 		0B6C548028709C610058051F /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C547F28709C610058051F /* LoginContract.swift */; };
 		0B6C548328709D590058051F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C548228709D590058051F /* LoginRequest.swift */; };
 		0B6C548528709D810058051F /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C548428709D810058051F /* LoginResponse.swift */; };
@@ -149,6 +150,7 @@
 		0B5A99C82881256E000E10D4 /* FilteringPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringPresenter.swift; sourceTree = "<group>"; };
 		0B5A99CA288126C2000E10D4 /* FilteringInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringInteractor.swift; sourceTree = "<group>"; };
 		0B5A99CC28812762000E10D4 /* FilteringRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringRouter.swift; sourceTree = "<group>"; };
+		0B5A99CE288143B2000E10D4 /* FilteringContractHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringContractHelper.swift; sourceTree = "<group>"; };
 		0B6C547F28709C610058051F /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
 		0B6C548228709D590058051F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		0B6C548428709D810058051F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -798,6 +800,7 @@
 			isa = PBXGroup;
 			children = (
 				0BD1FFC628804B630020D609 /* FilteringContract.swift */,
+				0B5A99CE288143B2000E10D4 /* FilteringContractHelper.swift */,
 			);
 			path = Contract;
 			sourceTree = "<group>";
@@ -1120,6 +1123,7 @@
 				0B9A35BB286ADFEF00EB07F0 /* AppDelegate.swift in Sources */,
 				0BD1FFAC287EF52F0020D609 /* StationSearchInteractor.swift in Sources */,
 				0BD1FFCC288051D00020D609 /* FilteringView.swift in Sources */,
+				0B5A99CF288143B2000E10D4 /* FilteringContractHelper.swift in Sources */,
 				0BEEFAB9287E0FAC00D84C8C /* StationCellHelper.swift in Sources */,
 				0B58C9F528755A94006E5F7C /* AppointmentsTableViewHelper.swift in Sources */,
 				0B0B8E60287B6D1F008D39A2 /* ProvincesTableViewHelper.swift in Sources */,
