@@ -31,10 +31,6 @@ protocol FilteringInteractorProtocol: AnyObject {
     // Self related
     var filterTypes: [FilterType] { get set}
     var filterChoices: [Filter] { get set }
-    func updateFilterChoices(with filterChoices: [Filter])
-    
-    // Presenter related
-    var filteringPresenter: FilteringContract.filteringPresenter? { get set }
 }
 
 // MARK: - Filtering Presenter Protocol
@@ -48,13 +44,12 @@ protocol FilteringPresenterProtocol: AnyObject {
                                     and filterChoice: String) -> Int?
     func appendFilterCell(with filterType: String, and filterChoice: String)
     func removeFilterCell(with filterType: String, and filterChoice: String)
-    func updateSliderValue(with filterType: String, and filterChoice: String)
+    func updateSliderValue(with filterType: String, and filterChoice: Int)
     func didPressFilterButton(_ filteringView: FilteringView)
     func didPressTemizleBarButton()
     
     // Interactor related
     var filteringInteractor: FilteringContract.filteringInteractor! { get set }
-    func didUpdateFilterChoices()
     
     // Router related
     var filteringRouter: FilteringContract.filteringRouter! { get set }

@@ -41,8 +41,12 @@ class SliderTableViewCell: UITableViewCell {
     // MARK: - didChangeSliderValue
     @IBAction func didChangeSliderValue(_ sender: Any) {
         
+        // Take the current slider value from slider
+        let currentSliderValue = Int(slider.value)
+        
         // Update slider value in filter choices
-        filteringPresenter.updateSliderValue(with: filterType, and: filterChoice)
+        filteringPresenter.updateSliderValue(with: filterType,
+                                             and: currentSliderValue)
         
     }
     
