@@ -16,19 +16,16 @@ class SliderTableViewCell: UITableViewCell {
     var filterType: String!
     var filterChoice: String!
     private var previousSliderValue: Int?
-    var filteringPresenter: FilteringContract.filteringPresenter!
+    var filteringPresenter: FilteringContract.filteringPresenter! {
+        didSet {
+            // After filtering presenter is assigned,
+            // awake slider table view cell
+            awakeSliderTableViewCell()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        // Check whether slider has previously set value
-        previousSliderValue = filteringPresenter.checkWhetherSliderValueSet(with: filterType, and: filterChoice)
-        
-        // Set ui components
-        setupUI()
-        
-        // Display slider as default or with previously set value
-        displaySliderAsDefaultOrSet()
         
     }
 
@@ -54,6 +51,20 @@ class SliderTableViewCell: UITableViewCell {
 
 // Setting up ui components
 extension SliderTableViewCell {
+    
+    // MARK: - awakeSliderTableViewCell
+    private func awakeSliderTableViewCell() {
+        
+        // Check whether slider has previously set value
+        previousSliderValue = filteringPresenter.checkWhetherSliderValueSet(with: filterType, and: filterChoice)
+        
+        // Set ui components
+        setupUI()
+        
+        // Display slider as default or with previously set value
+        displaySliderAsDefaultOrSet()
+        
+    }
     
     // MARK: - setupUI
     private func setupUI() {

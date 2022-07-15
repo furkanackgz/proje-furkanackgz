@@ -40,12 +40,12 @@ extension FilteringPresenter {
     private func checkWhetherFilterChoicesContains(_ filterType: String,
                                                    _ filterChoice: String) -> Bool {
         
-        var contains: Bool!
+        var contains: Bool = false
         
         // Take filter choices came from station seach page
         let filterChoices = filteringInteractor.filterChoices
         
-        var containsFilterType: Bool!
+        var containsFilterType: Bool = false
         
         // Check whether filter choices contains particular filter type
         filterChoices.forEach { filter in
@@ -59,7 +59,7 @@ extension FilteringPresenter {
             
         }
         
-        var containsFilterChoice: Bool!
+        var containsFilterChoice: Bool = false
         
         // Check whether filter choices contains particular filter choice
         filterChoices.forEach { filter in
@@ -80,9 +80,9 @@ extension FilteringPresenter {
     }
     
     // MARK: - checkWhetherFilterChoicesContainsSliderValue
-    private func checkWhetherFilterChoicesContainsSliderValue(with filterType: String) -> Int? {
+    private func checkWhetherFilterChoicesContainsSliderValue(with filterType: String) -> Int {
         
-        var sliderValue: Int?
+        var sliderValue: Int = 15
         
         // Take filter choices came from station seach page
         let filterChoices = filteringInteractor.filterChoices
@@ -132,7 +132,7 @@ extension FilteringPresenter {
     
     // MARK: - checkWhetherSliderValueSet
     func checkWhetherSliderValueSet(with filterType: String,
-                                    and filterChoice: String) -> Int? {
+                                    and filterChoice: String) -> Int {
         // Check whether slider value already set by checking whether
         // filter choices contains it
         let sliderValue = checkWhetherFilterChoicesContainsSliderValue(with: filterType)
@@ -201,9 +201,6 @@ extension FilteringPresenter {
             }
             
         }
-        
-        // Reload filter types table view
-        filteringView.reloadFilterTypesTableView()
         
     }
     

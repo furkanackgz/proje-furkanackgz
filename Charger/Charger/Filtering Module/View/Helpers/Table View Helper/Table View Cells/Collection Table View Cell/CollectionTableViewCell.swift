@@ -15,13 +15,17 @@ class CollectionTableViewCell: UITableViewCell {
     // MARK: - Properties
     private var filterType: FilterType?
     
-    var filteringPresenter: FilteringContract.filteringPresenter! 
+    var filteringPresenter: FilteringContract.filteringPresenter! {
+        didSet {
+            // After filtering presenter assigned,
+            // awake collection view cell
+            awakeCollectionTableViewCell()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // Set up ui components
-        setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -34,6 +38,14 @@ class CollectionTableViewCell: UITableViewCell {
 
 // Self related methods
 extension CollectionTableViewCell {
+    
+    // MARK: - awakeCollectionTableViewCell
+    private func awakeCollectionTableViewCell() {
+        
+        // Set up ui components
+        setupUI()
+        
+    }
     
     // MARK: - setupUI
     private func setupUI() {

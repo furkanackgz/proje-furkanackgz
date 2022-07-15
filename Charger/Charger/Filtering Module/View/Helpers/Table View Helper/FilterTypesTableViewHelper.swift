@@ -141,14 +141,14 @@ extension FilterTypesTableViewHelper {
         
         if let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "SliderTableViewCell") as? SliderTableViewCell {
             
-            // Assign filtering presenter
-            tableViewCell.filteringPresenter = filteringPresenter
-            
             // Set filter type to slider table view cell
             tableViewCell.filterType = filterTypes[indexPath.section].type
             
             // Set filter choice to slider table view cell
             tableViewCell.filterChoice = filterTypes[indexPath.section].filters[indexPath.row]
+            
+            // Assign filtering presenter
+            tableViewCell.filteringPresenter = filteringPresenter
             
             sliderTableViewCell = tableViewCell
         }
@@ -169,14 +169,14 @@ extension FilterTypesTableViewHelper {
         
         if let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "CollectionTableViewCell") as? CollectionTableViewCell {
             
-            // Assign filtering presenter
-            tableViewCell.filteringPresenter = filteringPresenter
-            
             // Take filter type out of filter types
             let filterType = filterTypes[indexPath.section]
             
             // Set filter type to the collection view cell
             tableViewCell.set(filterType)
+            
+            // Assign filtering presenter
+            tableViewCell.filteringPresenter = filteringPresenter
             
             collectionTableViewCell = tableViewCell
         }

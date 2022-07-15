@@ -41,7 +41,7 @@ protocol FilteringPresenterProtocol: AnyObject {
     func checkWhetherFilterCellSelected(with filterType: String,
                                         and filterChoice: String) -> Bool
     func checkWhetherSliderValueSet(with filterType: String,
-                                    and filterChoice: String) -> Int?
+                                    and filterChoice: String) -> Int
     func appendFilterCell(with filterType: String, and filterChoice: String)
     func removeFilterCell(with filterType: String, and filterChoice: String)
     func updateSliderValue(with filterType: String, and filterChoice: Int)

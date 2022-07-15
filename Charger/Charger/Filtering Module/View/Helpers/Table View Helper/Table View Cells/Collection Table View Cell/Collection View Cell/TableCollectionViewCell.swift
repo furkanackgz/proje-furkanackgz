@@ -16,10 +16,26 @@ class TableCollectionViewCell: UICollectionViewCell {
     var filterType: String!
     var filterChoice: String!
     var isFilterCellSelected: Bool?
-    var filteringPresenter: FilteringContract.filteringPresenter!
+    var filteringPresenter: FilteringContract.filteringPresenter! {
+        didSet {
+            // Awake table collection view cell,
+            // after presenter is assigned
+            awakeTableCollectionViewCell()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+    }
+
+}
+
+// Self related methods
+extension TableCollectionViewCell {
+    
+    // MARK: - awakeTableCollectionViewCell
+    private func awakeTableCollectionViewCell() {
         
         // Check whether filter cell is selected before
         isFilterCellSelected = filteringPresenter.checkWhetherFilterCellSelected(with: filterType, and: filterChoice)
@@ -31,11 +47,6 @@ class TableCollectionViewCell: UICollectionViewCell {
         addTapGestureRecognizerToContainerView()
         
     }
-
-}
-
-// Self related methods
-extension TableCollectionViewCell {
     
     // MARK: - displayAsDefaultOrSelected
     private func displayFilterCellAsDefaultOrSelected() {
