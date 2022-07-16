@@ -39,37 +39,31 @@
                                             <constraint firstItem="qAD-J6-weY" firstAttribute="width" secondItem="YfO-U6-izM" secondAttribute="width" multiplier="0.33" id="QNL-GC-19Y"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cNb-6A-jB6" userLabel="Sockets Stack View">
-                                        <rect key="frame" x="8" y="64" width="398" height="656"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cNb-6A-jB6" userLabel="Sockets Stack View">
+                                        <rect key="frame" x="4" y="64" width="406" height="656"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jm7-uv-gvl" userLabel="First Socket Stack ">
-                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="656"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="656"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="l1p-p1-VWM" userLabel="First Label Stack">
-                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="60"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="l1p-p1-VWM" userLabel="First Label Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.5" height="43"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tc-Hy-fPf" userLabel="Socket Number Label">
-                                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="40"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="1eP-gi-BpJ"/>
-                                                                </constraints>
+                                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTv-21-vGh" userLabel="Charge And Socket Type Label">
-                                                                <rect key="frame" x="0.0" y="40" width="127.5" height="20"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="Rrz-JD-Dof"/>
-                                                                </constraints>
+                                                                <rect key="frame" x="0.0" y="22.5" width="135.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kXe-Nv-8zZ" userLabel="First Socket Table View">
-                                                        <rect key="frame" x="0.0" y="68" width="127.5" height="588"/>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kXe-Nv-8zZ" userLabel="First Socket Table View">
+                                                        <rect key="frame" x="0.0" y="51" width="135.5" height="605"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </tableView>
                                                 </subviews>
@@ -83,33 +77,27 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ahh-Ct-0XN" userLabel="Second Socket Stack">
-                                                <rect key="frame" x="135.5" y="0.0" width="127" height="656"/>
+                                                <rect key="frame" x="135.5" y="0.0" width="135" height="656"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="R9c-2A-q22" userLabel="Second Label Stack">
-                                                        <rect key="frame" x="0.0" y="0.0" width="127" height="60"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="R9c-2A-q22" userLabel="Second Label Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="43"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUl-6W-dfT" userLabel="Socket Number Label">
-                                                                <rect key="frame" x="0.0" y="0.0" width="127" height="40"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="opb-uF-iwS"/>
-                                                                </constraints>
+                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rs1-Mx-teG" userLabel="Charge And Socket Type Label">
-                                                                <rect key="frame" x="0.0" y="40" width="127" height="20"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="BKt-R9-lCi"/>
-                                                                </constraints>
+                                                                <rect key="frame" x="0.0" y="22.5" width="135" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Q9Y-DI-mLv" userLabel="Second Socket Table View">
-                                                        <rect key="frame" x="0.0" y="68" width="127" height="588"/>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Q9Y-DI-mLv" userLabel="Second Socket Table View">
+                                                        <rect key="frame" x="0.0" y="51" width="135" height="605"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </tableView>
                                                 </subviews>
@@ -123,33 +111,27 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I7e-tO-Cjw" userLabel="Third Socket Stack">
-                                                <rect key="frame" x="270.5" y="0.0" width="127.5" height="656"/>
+                                                <rect key="frame" x="270.5" y="0.0" width="135.5" height="656"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Kdq-XL-GMV" userLabel="Third Label Stack">
-                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="60"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Kdq-XL-GMV" userLabel="Third Label Stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.5" height="43"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvv-Qe-KTf" userLabel="Socket Number Label">
-                                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="40"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="XTd-ba-bDS"/>
-                                                                </constraints>
+                                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bob-ND-UvY" userLabel="Charge And Socket Type Label">
-                                                                <rect key="frame" x="0.0" y="40" width="127.5" height="20"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="bP0-kj-93c"/>
-                                                                </constraints>
+                                                                <rect key="frame" x="0.0" y="22.5" width="135.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y2u-qu-Deg" userLabel="Third Socket Table View">
-                                                        <rect key="frame" x="0.0" y="68" width="127.5" height="588"/>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y2u-qu-Deg" userLabel="Third Socket Table View">
+                                                        <rect key="frame" x="0.0" y="51" width="135.5" height="605"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </tableView>
                                                 </subviews>
@@ -187,8 +169,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="cNb-6A-jB6" firstAttribute="leading" secondItem="qKR-5O-ed8" secondAttribute="leading" constant="8" id="0sW-qW-oR4"/>
-                                    <constraint firstAttribute="trailing" secondItem="cNb-6A-jB6" secondAttribute="trailing" constant="8" id="2cq-VN-CWr"/>
+                                    <constraint firstItem="cNb-6A-jB6" firstAttribute="leading" secondItem="qKR-5O-ed8" secondAttribute="leading" constant="4" id="0sW-qW-oR4"/>
+                                    <constraint firstAttribute="trailing" secondItem="cNb-6A-jB6" secondAttribute="trailing" constant="4" id="2cq-VN-CWr"/>
                                     <constraint firstItem="UPH-xb-sN7" firstAttribute="top" secondItem="cNb-6A-jB6" secondAttribute="bottom" constant="8" id="CCP-Ci-uK1"/>
                                     <constraint firstItem="UPH-xb-sN7" firstAttribute="centerX" secondItem="qKR-5O-ed8" secondAttribute="centerX" id="NG8-s3-fTh"/>
                                     <constraint firstItem="YfO-U6-izM" firstAttribute="top" secondItem="qKR-5O-ed8" secondAttribute="top" constant="8" id="V6X-9q-nST"/>

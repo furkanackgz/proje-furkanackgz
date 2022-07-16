@@ -17,6 +17,8 @@ class SocketTableViewHelper: NSObject {
     
     private var pickDateAndTimePresenter: PickDateAndTimeContract.pickDateAndTimePresenter!
     
+    private var selectedCellIndexPath: IndexPath?
+    
     init(_ socketInfo: SocketInfo,
          _ socketTableView: UITableView,
          _ pickDateAndTimePresenter: PickDateAndTimeContract.pickDateAndTimePresenter) {
@@ -68,6 +70,12 @@ extension SocketTableViewHelper: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        // Take the indexPath of selected time slot cell
+        selectedCellIndexPath = tableView.indexPathForSelectedRow
+        
+        // Reload the table view for the selected cells
+        tableView.reloadRows(at: [selectedCellIndexPath!], with: .none)
+        
         // Create user info
         let socketID = socketInfo?.socketID
         let slot = timeSlots[indexPath.row].slot
@@ -105,25 +113,42 @@ extension SocketTableViewHelper: UITableViewDataSource {
         
         let timeSlotCell = tableView.dequeueReusableCell(withIdentifier: "TimeSlotCell") as! TimeSlotCell
         
+        // Set cell properties
+        timeSlotCell.socketID = socketInfo?.socketID
+        timeSlotCell.slot = timeSlots[indexPath.row].slot
+        timeSlotCell.timeSlotLabel.text = timeSlots[indexPath.row].slot
+        
         // If cell is already occupied
         if timeSlots[indexPath.row].isOccupied! {
             
             // Set cell as disabled and label color as subtitle color
-            timeSlotCell.socketID = socketInfo?.socketID
-            timeSlotCell.slot = timeSlots[indexPath.row].slot
-            timeSlotCell.timeSlotLabel.text = timeSlots[indexPath.row].slot
-            timeSlotCell.timeSlotLabel.textColor = ThemeManager.color.subtitle
             timeSlotCell.isUserInteractionEnabled = false
+            timeSlotCell.timeSlotLabel.textColor = .gray
             
         } else {
             
             // If not, set cell as enabled and label color as title color
-            timeSlotCell.socketID = socketInfo?.socketID
-            timeSlotCell.slot = timeSlots[indexPath.row].slot
-            timeSlotCell.timeSlotLabel.text = timeSlots[indexPath.row].slot
-            timeSlotCell.timeSlotLabel.textColor = ThemeManager.color.title
             timeSlotCell.isUserInteractionEnabled = true
+            timeSlotCell.timeSlotLabel.textColor = ThemeManager.color.title
             
+        }
+        
+        // If cell is selected, change it's background and border color
+        if indexPath.row == selectedCellIndexPath?.row {
+            
+            // Set container view's background as selected
+            timeSlotCell.containerView.backgroundColor = ThemeManager.color.chosenCellBackground
+            
+            // Set container view's border color as selected
+            timeSlotCell.containerView.layer.borderColor = ThemeManager.color.chosenCellBorder?.cgColor
+            
+        } else {
+            
+            // Set container view's background as default
+            timeSlotCell.containerView.backgroundColor = ThemeManager.color.accent
+            
+            // Set container view's border color as default
+            timeSlotCell.containerView.layer.borderColor = ThemeManager.color.accent?.cgColor
         }
         
         return timeSlotCell

@@ -39,12 +39,12 @@ class PickDateAndTimeView: UIViewController, PickDateAndTimeContract.pickDateAnd
     
     // MARK: - Properties
     
-    // After station name set call set navigation title
-    // view again because it may take longer to fetch
-    // from server than expected.
+    // After station name set, call set navigation
+    // bar again because it may take longer to
+    // fetch from server than expected.
     var stationName: String? {
         didSet{
-            setNavigationTitleView()
+            setNavigationBar()
         }
     }
     
@@ -119,6 +119,11 @@ extension PickDateAndTimeView {
         // Set container view's background color
         containerView.backgroundColor = ThemeManager.color.background
         
+        // Set table views background colors
+        firstSocketTableView.backgroundColor = ThemeManager.color.background
+        secondSocketTableView.backgroundColor = ThemeManager.color.background
+        thirdSocketTableView.backgroundColor = ThemeManager.color.background
+        
     }
     
     // MARK: - setNavigationBar
@@ -127,8 +132,8 @@ extension PickDateAndTimeView {
         // Set navigation back bar button
         setNavigationBackBarButton()
         
-        // Set navigation title
-        setNavigationTitle()
+        // Set navigation title stack view
+        setNavigationTitleStackView()
         
     }
     
@@ -141,26 +146,15 @@ extension PickDateAndTimeView {
         
     }
     
-    // MARK: - setNavigationTitle
-    private func setNavigationTitle() {
-        
-        // Create navigation title's in uiview
-        setNavigationTitleView()
-        
-    }
-    
-    // MARK: - setNavigationTitleView
-    private func setNavigationTitleView() {
-        
-        // Create navigation view
-        let navigationView = UIView()
+    // MARK: - setNavigationTitleStackView
+    private func setNavigationTitleStackView() {
         
         // Create navigation title label
         let titleLabel = UILabel()
         
         // Create navigation title's attributes
         let titleAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 20, weight: .bold),
+            .font: UIFont.systemFont(ofSize: 18, weight: .bold),
             .foregroundColor: ThemeManager.color.title!
         ]
         // Create navigation title attributed string
@@ -175,7 +169,7 @@ extension PickDateAndTimeView {
         
         // Create navigation subtitle's attributes
         let subTitleAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 16, weight: .regular),
+            .font: UIFont.systemFont(ofSize: 12, weight: .regular),
             .foregroundColor: ThemeManager.color.subtitle!
         ]
         // Create navigation title attributed string
@@ -191,15 +185,25 @@ extension PickDateAndTimeView {
         
         // Crete stack view with title and subtitle labels
         let stackView = UIStackView(arrangedSubviews: arrangedSubViews)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         
-        // Assign it to navigation view
-        navigationView.addSubview(stackView)
-        stackView.center = navigationView.center
+        // Unwrap navigation bar
+        guard let navigationBar = navigationController?.navigationBar else { return }
+        
+        // Add stack view to navigation bar and add constraints
+        navigationBar.addSubview(stackView)
+        NSLayoutConstraint.activate([
+            stackView.centerXAnchor.constraint(
+                equalTo: navigationBar.centerXAnchor
+            ),
+            stackView.centerYAnchor.constraint(
+                equalTo: navigationBar.centerYAnchor
+            )
+        ])
         
         // Assign navigation view as subview of navigation item
-        navigationItem.titleView = navigationView
-        navigationView.sizeToFit()
+        navigationItem.titleView = stackView
         
     }
     
@@ -208,7 +212,7 @@ extension PickDateAndTimeView {
         
         // Create label attributes
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 20, weight: .bold),
+            .font: UIFont.systemFont(ofSize: 17, weight: .bold),
             .foregroundColor: ThemeManager.color.title!
         ]
         
@@ -319,8 +323,6 @@ extension PickDateAndTimeView {
             // Set third socket's time slots
             thirdSocketTableViewHelper?.set(thirdSocketTimeSlots!)
             
-            
-            
         default:
             
             // Hide all of the stack views
@@ -341,13 +343,13 @@ extension PickDateAndTimeView {
         let socketType = sockets[0].socketType
         
         // Set socket number label
-        firstSocketNumberLabel.font = .systemFont(ofSize: 22, weight: .bold)
+        firstSocketNumberLabel.font = .systemFont(ofSize: 18, weight: .bold)
         firstSocketNumberLabel.text = "Soket \(socketNumber ?? 1)"
         firstSocketNumberLabel.textAlignment = .center
         firstSocketNumberLabel.textColor = ThemeManager.color.title!
         
         // Set charge and socket type label
-        firstChargeAndSocketTypeLabel.font = .systemFont(ofSize: 16, weight: .regular)
+        firstChargeAndSocketTypeLabel.font = .systemFont(ofSize: 12, weight: .regular)
         firstChargeAndSocketTypeLabel.text = (chargeType ?? "") + " • " + (socketType ?? "")
         firstChargeAndSocketTypeLabel.textAlignment = .center
         firstChargeAndSocketTypeLabel.textColor = ThemeManager.color.subtitle!
@@ -363,13 +365,13 @@ extension PickDateAndTimeView {
         let socketType = sockets[1].socketType
         
         // Set socket number label
-        secondSocketNumberLabel.font = .systemFont(ofSize: 22, weight: .bold)
+        secondSocketNumberLabel.font = .systemFont(ofSize: 18, weight: .bold)
         secondSocketNumberLabel.text = "Soket \(socketNumber ?? 2)"
         secondSocketNumberLabel.textAlignment = .center
         secondSocketNumberLabel.textColor = ThemeManager.color.title!
         
         // Set charge and socket type label
-        secondChargeAndSocketTypeLabel.font = .systemFont(ofSize: 16, weight: .regular)
+        secondChargeAndSocketTypeLabel.font = .systemFont(ofSize: 12, weight: .regular)
         secondChargeAndSocketTypeLabel.text = (chargeType ?? "") + " • " + (socketType ?? "")
         secondChargeAndSocketTypeLabel.textAlignment = .center
         secondChargeAndSocketTypeLabel.textColor = ThemeManager.color.subtitle!
@@ -385,13 +387,13 @@ extension PickDateAndTimeView {
         let socketType = sockets[2].socketType
         
         // Set socket number label
-        thirdSocketNumberLabel.font = .systemFont(ofSize: 22, weight: .bold)
+        thirdSocketNumberLabel.font = .systemFont(ofSize: 18, weight: .bold)
         thirdSocketNumberLabel.text = "Soket \(socketNumber ?? 3)"
         thirdSocketNumberLabel.textAlignment = .center
         thirdSocketNumberLabel.textColor = ThemeManager.color.title!
         
         // Set charge and socket type label
-        thirdChargeAndSocketTypeLabel.font = .systemFont(ofSize: 16, weight: .regular)
+        thirdChargeAndSocketTypeLabel.font = .systemFont(ofSize: 12, weight: .regular)
         thirdChargeAndSocketTypeLabel.text = (chargeType ?? "") + " • " + (socketType ?? "")
         thirdChargeAndSocketTypeLabel.textAlignment = .center
         thirdChargeAndSocketTypeLabel.textColor = ThemeManager.color.subtitle!

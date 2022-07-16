@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93T-Xd-zvQ" userLabel="Container View">
-                        <rect key="frame" x="8" y="8" width="304" height="151"/>
+                        <rect key="frame" x="4" y="4" width="312" height="159"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJu-qk-CBz">
-                                <rect key="frame" x="91" y="38" width="122" height="75.5"/>
+                                <rect key="frame" x="93.5" y="40" width="125" height="79.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,10 +37,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="93T-Xd-zvQ" secondAttribute="trailing" constant="8" id="VyY-hP-Pd6"/>
-                    <constraint firstAttribute="bottom" secondItem="93T-Xd-zvQ" secondAttribute="bottom" constant="8" id="g5j-s4-IJq"/>
-                    <constraint firstItem="93T-Xd-zvQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="uDg-2f-m4g"/>
-                    <constraint firstItem="93T-Xd-zvQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ujw-6N-Twh"/>
+                    <constraint firstAttribute="trailing" secondItem="93T-Xd-zvQ" secondAttribute="trailing" constant="4" id="VyY-hP-Pd6"/>
+                    <constraint firstAttribute="bottom" secondItem="93T-Xd-zvQ" secondAttribute="bottom" constant="4" id="g5j-s4-IJq"/>
+                    <constraint firstItem="93T-Xd-zvQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="uDg-2f-m4g"/>
+                    <constraint firstItem="93T-Xd-zvQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="ujw-6N-Twh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

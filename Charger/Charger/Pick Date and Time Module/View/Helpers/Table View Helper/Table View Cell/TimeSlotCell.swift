@@ -34,9 +34,6 @@ class TimeSlotCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Change container view's background and cell color
-        containerView.backgroundColor = ThemeManager.color.chosenCellBackground
-        containerView.layer.borderColor = ThemeManager.color.chosenCellBorder?.cgColor
     }
     
 }
@@ -51,8 +48,11 @@ extension TimeSlotCell {
         contentView.backgroundColor = ThemeManager.color.background
         
         // Set container view
-        containerView.backgroundColor = ThemeManager.color.accent
-        containerView.layer.cornerRadius = 8
+        containerView.layer.borderWidth = 1
+        containerView.layer.cornerRadius = 4
+        
+        // Set time slot label
+        timeSlotLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         
     }
     
@@ -89,6 +89,7 @@ extension TimeSlotCell {
             // Change container view's background and cell color
             // back to default
             containerView.backgroundColor = ThemeManager.color.accent
+            containerView.layer.borderWidth = 1
             containerView.layer.borderColor = ThemeManager.color.accent?.cgColor
             
         }
