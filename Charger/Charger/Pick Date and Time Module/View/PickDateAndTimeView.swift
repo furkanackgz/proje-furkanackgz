@@ -48,6 +48,11 @@ class PickDateAndTimeView: UIViewController, PickDateAndTimeContract.pickDateAnd
     
     var pickDateAndTimePresenter: PickDateAndTimeContract.pickDateAndTimePresenter?
     
+    // Table view helpers
+    var firstSocketTableViewHelper: SocketTableViewHelper?
+    var secondSocketTableViewHelper: SocketTableViewHelper?
+    var thirdSocketTableViewHelper: SocketTableViewHelper?
+    
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -221,6 +226,15 @@ extension PickDateAndTimeView {
             setFirstLabelStackView()
             
             // Initialize first socket table view helper
+            firstSocketTableViewHelper = .init(sockets[0],
+                                               firstSocketTableView,
+                                               pickDateAndTimePresenter!)
+            
+            // Get first socket's time slots
+            let firstSocketTimeSlots = sockets[0].day?.timeSlots
+            
+            // Set first socket's time slots
+            firstSocketTableViewHelper?.set(firstSocketTimeSlots!)
             
             // Hide rest of the stack views
             secondSocketStackView.isHidden = true
@@ -232,7 +246,27 @@ extension PickDateAndTimeView {
             setFirstLabelStackView()
             setSecondLabelStackView()
             
-            // Initialize first and second socket table view helpers
+            // Initialize first socket table view helper
+            firstSocketTableViewHelper = .init(sockets[0],
+                                               firstSocketTableView,
+                                               pickDateAndTimePresenter!)
+            
+            // Get first socket's time slots
+            let firstSocketTimeSlots = sockets[0].day?.timeSlots
+            
+            // Set first socket's time slots
+            firstSocketTableViewHelper?.set(firstSocketTimeSlots!)
+            
+            // Initialize second socket table view helper
+            secondSocketTableViewHelper = .init(sockets[1],
+                                                secondSocketTableView,
+                                                pickDateAndTimePresenter!)
+            
+            // Get second socket's time slots
+            let secondSocketTimeSlots = sockets[1].day?.timeSlots
+            
+            // Set second socket's time slots
+            secondSocketTableViewHelper?.set(secondSocketTimeSlots!)
             
             // Hide rest of the stack views
             thirdSocketStackView.isHidden = true
@@ -244,7 +278,40 @@ extension PickDateAndTimeView {
             setSecondLabelStackView()
             setThirdLabelStackView()
             
-            // Initialize first, second and third socket table view helper
+            // Initialize first socket table view helper
+            firstSocketTableViewHelper = .init(sockets[0],
+                                               firstSocketTableView,
+                                               pickDateAndTimePresenter!)
+            
+            // Get first socket's time slots
+            let firstSocketTimeSlots = sockets[0].day?.timeSlots
+            
+            // Set first socket's time slots
+            firstSocketTableViewHelper?.set(firstSocketTimeSlots!)
+            
+            // Initialize second socket table view helper
+            secondSocketTableViewHelper = .init(sockets[1],
+                                                secondSocketTableView,
+                                                pickDateAndTimePresenter!)
+            
+            // Get second socket's time slots
+            let secondSocketTimeSlots = sockets[1].day?.timeSlots
+            
+            // Set second socket's time slots
+            secondSocketTableViewHelper?.set(secondSocketTimeSlots!)
+            
+            // Initialize third socket table view helper
+            thirdSocketTableViewHelper = .init(sockets[2],
+                                               thirdSocketTableView,
+                                               pickDateAndTimePresenter!)
+            
+            // Get third socket's time slots
+            let thirdSocketTimeSlots = sockets[2].day?.timeSlots
+            
+            // Set third socket's time slots
+            thirdSocketTableViewHelper?.set(thirdSocketTimeSlots!)
+            
+            
             
         default:
             
