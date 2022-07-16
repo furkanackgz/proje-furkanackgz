@@ -81,6 +81,7 @@
 		0BBB0C062882FB5500BD4DA2 /* PickDateAndTimeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB0C052882FB5500BD4DA2 /* PickDateAndTimeEntity.swift */; };
 		0BBB0C082882FBAE00BD4DA2 /* PickDateAndTimeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB0C072882FBAE00BD4DA2 /* PickDateAndTimeService.swift */; };
 		0BBB0C0A2882FBCD00BD4DA2 /* PickDateAndTimeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB0C092882FBCD00BD4DA2 /* PickDateAndTimeRouter.swift */; };
+		0BBB0C0C2883088C00BD4DA2 /* PickDateAndTimeContractHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB0C0B2883088C00BD4DA2 /* PickDateAndTimeContractHelper.swift */; };
 		0BC2172A286C6F4600DEB1EA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BC21729286C6F4600DEB1EA /* Colors.xcassets */; };
 		0BC21730286C9B2000DEB1EA /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC2172F286C9B2000DEB1EA /* ThemeManager.swift */; };
 		0BD1FF9B287EC2A90020D609 /* FiltersCollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FF9A287EC2A90020D609 /* FiltersCollectionViewHelper.swift */; };
@@ -191,6 +192,7 @@
 		0BBB0C052882FB5500BD4DA2 /* PickDateAndTimeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDateAndTimeEntity.swift; sourceTree = "<group>"; };
 		0BBB0C072882FBAE00BD4DA2 /* PickDateAndTimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDateAndTimeService.swift; sourceTree = "<group>"; };
 		0BBB0C092882FBCD00BD4DA2 /* PickDateAndTimeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDateAndTimeRouter.swift; sourceTree = "<group>"; };
+		0BBB0C0B2883088C00BD4DA2 /* PickDateAndTimeContractHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDateAndTimeContractHelper.swift; sourceTree = "<group>"; };
 		0BC21729286C6F4600DEB1EA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0BC2172F286C9B2000DEB1EA /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		0BD1FF9A287EC2A90020D609 /* FiltersCollectionViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCollectionViewHelper.swift; sourceTree = "<group>"; };
@@ -660,6 +662,7 @@
 			isa = PBXGroup;
 			children = (
 				0B5A99DE2881DCE6000E10D4 /* PickDateAndTimeContract.swift */,
+				0BBB0C0B2883088C00BD4DA2 /* PickDateAndTimeContractHelper.swift */,
 			);
 			path = Contract;
 			sourceTree = "<group>";
@@ -1261,6 +1264,7 @@
 				0BD1FFAA287EF2D60020D609 /* StationSearchPresenter.swift in Sources */,
 				0BBB0C062882FB5500BD4DA2 /* PickDateAndTimeEntity.swift in Sources */,
 				0B9A35BF286ADFEF00EB07F0 /* LoginView.swift in Sources */,
+				0BBB0C0C2883088C00BD4DA2 /* PickDateAndTimeContractHelper.swift in Sources */,
 				0B58C9C628744A93006E5F7C /* AppointmentType.swift in Sources */,
 				0B6C548528709D810058051F /* LoginResponse.swift in Sources */,
 				0BBB0C002882DCD700BD4DA2 /* Notification.Name+Extension.swift in Sources */,

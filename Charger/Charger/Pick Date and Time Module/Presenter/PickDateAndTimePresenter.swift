@@ -76,15 +76,24 @@ extension PickDateAndTimePresenter {
         // Take station info from interactor layer
         guard let stationInfo = pickDateAndTimeInteractor.stationInfo else { return }
         
-        // Take out the station name property inside station info and assign it to
-        // station info property in view layer
+        // Take out the station name property inside station info
         guard let stationName = stationInfo.stationName else { return }
-        pickDateAndTimeView.stationName = stationName
         
         // Take out sockets property inside station info and call set sockets method
         // in view layer
         guard let sockets = stationInfo.sockets else { return }
-        pickDateAndTimeView.set(sockets: sockets)
+        
+        // Call in main queue since current thread is global
+        // due to fetching data from server
+        DispatchQueue.main.async { [weak self] in
+            
+            // Assign station name to station name property in view layer
+            self?.pickDateAndTimeView.stationName = stationName
+            
+            // Assign sockets to table views in view layer
+            self?.pickDateAndTimeView.set(sockets: sockets)
+            
+        }
         
     }
     

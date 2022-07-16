@@ -38,7 +38,15 @@ class PickDateAndTimeView: UIViewController, PickDateAndTimeContract.pickDateAnd
     @IBOutlet weak var devamEtButton: UIButton!
     
     // MARK: - Properties
-    var stationName: String?
+    
+    // After station name set call set navigation title
+    // view again because it may take longer to fetch
+    // from server than expected.
+    var stationName: String? {
+        didSet{
+            setNavigationTitleView()
+        }
+    }
     
     var sockets = [SocketInfo]()
     
@@ -171,7 +179,7 @@ extension PickDateAndTimeView {
             .foregroundColor: ThemeManager.color.subtitle!
         ]
         // Create navigation title attributed string
-        let subtitleAttributedText = NSAttributedString(string: stationName!,
+        let subtitleAttributedText = NSAttributedString(string: stationName ?? "",
                                                         attributes: subTitleAttributes)
         subtitleLabel.attributedText = subtitleAttributedText
         subtitleLabel.sizeToFit()
