@@ -50,8 +50,7 @@ protocol PickDateAndTimePresenterProtocol: AnyObject {
     // View related
     var pickDateAndTimeView: PickDateAndTimeContract.pickDateAndTimeView! { get set }
     func viewDidLoad()
-    func didSelectTimeSlot(_ stationID: Int, _ socketID: Int,
-                           _ timeSlot: String, _ appointmentDate: String)
+    func didSelectTimeSlot(_ socketID: Int, _ timeSlot: String, _ appointmentDate: String)
     func didPressDevamEtButton(_ pickDateAndTimeView: PickDateAndTimeView)
     
     // Interactor related

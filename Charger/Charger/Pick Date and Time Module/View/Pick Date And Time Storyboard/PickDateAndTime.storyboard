@@ -209,9 +209,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ThirdChargeAndSocketTypeLabel" destination="bob-ND-UvY" id="aAI-uG-8Nl"/>
-                        <outlet property="ThirdSocketNumberLabel" destination="yvv-Qe-KTf" id="ym5-zy-4pN"/>
-                        <outlet property="ThirdSocketTableView" destination="y2u-qu-Deg" id="6ab-gy-TDr"/>
                         <outlet property="appointmentDateLabel" destination="G9S-ra-qlC" id="omb-ZU-QtB"/>
                         <outlet property="appointmentDateValueTextField" destination="qAD-J6-weY" id="dgW-Oz-VNY"/>
                         <outlet property="containerView" destination="qKR-5O-ed8" id="MVO-eK-pZQ"/>
@@ -225,7 +222,10 @@
                         <outlet property="secondSocketStackView" destination="Ahh-Ct-0XN" id="XUg-d6-pex"/>
                         <outlet property="secondSocketTableView" destination="Q9Y-DI-mLv" id="0ae-mO-mnA"/>
                         <outlet property="superView" destination="5EZ-qb-Rvc" id="hOV-wY-77e"/>
-                        <outlet property="thirdSocketStackView" destination="I7e-tO-Cjw" id="QX2-QF-9px"/>
+                        <outlet property="thirdChargeAndSocketTypeLabel" destination="bob-ND-UvY" id="oxe-vP-2jm"/>
+                        <outlet property="thirdSocketNumberLabel" destination="yvv-Qe-KTf" id="Ngd-jK-OSI"/>
+                        <outlet property="thirdSocketStackView" destination="I7e-tO-Cjw" id="pYu-1c-XaS"/>
+                        <outlet property="thirdSocketTableView" destination="y2u-qu-Deg" id="f7C-VR-TZv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
