@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="303" id="KGk-i7-Jjw" customClass="SocketInformationsCell" customModule="Charger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="303"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="416" height="303"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7w-Bf-Kko" userLabel="Container View">
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="303"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VTl-Za-8kg" userLabel="Socket Informations Stack View">
+                                <rect key="frame" x="8" y="16" width="400" height="271"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="KcD-xW-z8t" userLabel="Socket Number Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06g-KQ-V68" userLabel="Socket Number Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qD1-kI-nsc" userLabel="Socket Number Value Label">
+                                                <rect key="frame" x="200" y="0.0" width="200" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ePi-hq-3a2" userLabel="Charge Type Stack View">
+                                        <rect key="frame" x="0.0" y="69" width="400" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcL-oG-uJP" userLabel="Charge Type Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxb-aG-jcq" userLabel="Charge Type Value Label">
+                                                <rect key="frame" x="200" y="0.0" width="200" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ZqC-8w-cAj" userLabel="Socket Type Stack View">
+                                        <rect key="frame" x="0.0" y="138" width="400" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFj-69-Ywx" userLabel="Socket Type Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fch-UF-Jf6" userLabel="Socket Type Value Label">
+                                                <rect key="frame" x="200" y="0.0" width="200" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0Y2-BP-4HN" userLabel="Power And Power Unit Stack View">
+                                        <rect key="frame" x="0.0" y="207" width="400" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pd-np-lrb" userLabel="Power And Power Unit Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zou-Yy-EKS" userLabel="Power And Power Unit Value Label">
+                                                <rect key="frame" x="200" y="0.0" width="200" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="VTl-Za-8kg" secondAttribute="bottom" constant="16" id="DHw-Tn-IMU"/>
+                            <constraint firstItem="VTl-Za-8kg" firstAttribute="leading" secondItem="X7w-Bf-Kko" secondAttribute="leading" constant="8" id="Sxc-oF-nkd"/>
+                            <constraint firstItem="VTl-Za-8kg" firstAttribute="top" secondItem="X7w-Bf-Kko" secondAttribute="top" constant="16" id="bU1-Zj-xjz"/>
+                            <constraint firstAttribute="trailing" secondItem="VTl-Za-8kg" secondAttribute="trailing" constant="8" id="f1y-te-fmZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="X7w-Bf-Kko" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="10W-zK-VOl"/>
+                    <constraint firstItem="X7w-Bf-Kko" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="16C-Wj-GUv"/>
+                    <constraint firstAttribute="trailing" secondItem="X7w-Bf-Kko" secondAttribute="trailing" id="3Kq-3i-s5W"/>
+                    <constraint firstAttribute="bottom" secondItem="X7w-Bf-Kko" secondAttribute="bottom" id="CvC-LX-bWO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="chargeTypeTitleLabel" destination="HcL-oG-uJP" id="uU2-bO-Z6O"/>
+                <outlet property="chargeTypeValueLabel" destination="zxb-aG-jcq" id="mwE-sC-vDN"/>
+                <outlet property="containerView" destination="X7w-Bf-Kko" id="4yB-Qq-gZ6"/>
+                <outlet property="powerAndPowerUnitTitleLabel" destination="3pd-np-lrb" id="wKc-VI-ZcN"/>
+                <outlet property="powerAndPowerUnitValueLabel" destination="Zou-Yy-EKS" id="bdS-rQ-s3W"/>
+                <outlet property="socketNumberTitleLabel" destination="06g-KQ-V68" id="hrc-3q-bXQ"/>
+                <outlet property="socketNumberValueLabel" destination="qD1-kI-nsc" id="2S2-Zo-Bkm"/>
+                <outlet property="socketTypeTitleLabel" destination="rFj-69-Ywx" id="ROx-Gw-7pO"/>
+                <outlet property="socketTypeValueLabel" destination="fch-UF-Jf6" id="MoB-1N-nQi"/>
+            </connections>
+            <point key="canvasLocation" x="201.44927536231884" y="190.51339285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

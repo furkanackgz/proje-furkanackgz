@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="279" id="KGk-i7-Jjw" customClass="StationInformationsCell" customModule="Charger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="279"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="435" height="279"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnN-fJ-rpi" userLabel="Container View">
+                        <rect key="frame" x="0.0" y="0.0" width="435" height="279"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="flb-me-abS" userLabel="Station Informations Stack View">
+                                <rect key="frame" x="8" y="16" width="419" height="247"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sN0-E0-5qP" userLabel="Address Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="419" height="45.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLa-yL-Esz" userLabel="Address Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="419" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bme-Gu-sUu" userLabel="Address Value Label">
+                                                <rect key="frame" x="0.0" y="23.5" width="419" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="uYE-y8-OPq" userLabel="Service Hours Stack View">
+                                        <rect key="frame" x="0.0" y="50.5" width="419" height="45.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9j-Qv-uiA" userLabel="Service Hours Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="209.5" height="45.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Myx-oa-Eou" userLabel="Service Hours Value Label">
+                                                <rect key="frame" x="209.5" y="0.0" width="209.5" height="45.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ZqG-ez-RwA" userLabel="Distance Stack View">
+                                        <rect key="frame" x="0.0" y="101" width="419" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyB-9z-OdS" userLabel="Distance Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="209.5" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFq-0c-cbD" userLabel="Distance Value Label">
+                                                <rect key="frame" x="209.5" y="0.0" width="209.5" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1E8-1y-gqV" userLabel="Station Code Stack View">
+                                        <rect key="frame" x="0.0" y="151" width="419" height="45.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cq-2M-Azz" userLabel="Station Code Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="209.5" height="45.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lf8-H2-ocD" userLabel="Station Code Value Label">
+                                                <rect key="frame" x="209.5" y="0.0" width="209.5" height="45.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="LEx-ah-Sfd" userLabel="Services Stack View">
+                                        <rect key="frame" x="0.0" y="201.5" width="419" height="45.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ab1-xu-zot" userLabel="Services Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="209.5" height="45.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsx-ef-Bn9" userLabel="Services Value Label">
+                                                <rect key="frame" x="209.5" y="0.0" width="209.5" height="45.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZqG-ez-RwA" secondAttribute="trailing" id="9Cs-CM-Sga"/>
+                                    <constraint firstItem="1E8-1y-gqV" firstAttribute="leading" secondItem="flb-me-abS" secondAttribute="leading" id="CDW-6V-a5a"/>
+                                    <constraint firstAttribute="trailing" secondItem="1E8-1y-gqV" secondAttribute="trailing" id="FFm-yE-FVH"/>
+                                    <constraint firstItem="ZqG-ez-RwA" firstAttribute="leading" secondItem="flb-me-abS" secondAttribute="leading" id="OVN-ib-mrb"/>
+                                    <constraint firstAttribute="trailing" secondItem="sN0-E0-5qP" secondAttribute="trailing" id="SI3-jq-8hT"/>
+                                    <constraint firstAttribute="trailing" secondItem="uYE-y8-OPq" secondAttribute="trailing" id="fN7-Q2-5f4"/>
+                                    <constraint firstAttribute="trailing" secondItem="LEx-ah-Sfd" secondAttribute="trailing" id="orf-Vs-VgF"/>
+                                    <constraint firstItem="uYE-y8-OPq" firstAttribute="leading" secondItem="flb-me-abS" secondAttribute="leading" id="qPO-VJ-Xef"/>
+                                    <constraint firstItem="LEx-ah-Sfd" firstAttribute="leading" secondItem="flb-me-abS" secondAttribute="leading" id="uFZ-10-jmV"/>
+                                    <constraint firstItem="sN0-E0-5qP" firstAttribute="leading" secondItem="flb-me-abS" secondAttribute="leading" id="wdp-Cs-al2"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="flb-me-abS" secondAttribute="trailing" constant="8" id="D6R-32-dij"/>
+                            <constraint firstItem="flb-me-abS" firstAttribute="top" secondItem="VnN-fJ-rpi" secondAttribute="top" constant="16" id="hhK-Zt-CnS"/>
+                            <constraint firstAttribute="bottom" secondItem="flb-me-abS" secondAttribute="bottom" constant="16" id="s0J-jS-TOn"/>
+                            <constraint firstItem="flb-me-abS" firstAttribute="leading" secondItem="VnN-fJ-rpi" secondAttribute="leading" constant="8" id="wAq-0h-EWC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VnN-fJ-rpi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0oc-HS-igr"/>
+                    <constraint firstItem="VnN-fJ-rpi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Oxv-aA-znd"/>
+                    <constraint firstAttribute="bottom" secondItem="VnN-fJ-rpi" secondAttribute="bottom" id="igE-qo-fai"/>
+                    <constraint firstAttribute="trailing" secondItem="VnN-fJ-rpi" secondAttribute="trailing" id="mJK-pG-ykT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressTitleLabel" destination="bLa-yL-Esz" id="CFD-h3-hKq"/>
+                <outlet property="addressValueLabel" destination="bme-Gu-sUu" id="ue7-eU-ZCr"/>
+                <outlet property="containerView" destination="VnN-fJ-rpi" id="Gq8-P4-VyW"/>
+                <outlet property="distanceTitleLabel" destination="NyB-9z-OdS" id="ag2-92-bLR"/>
+                <outlet property="distanceValueLabel" destination="IFq-0c-cbD" id="a5D-wp-K7m"/>
+                <outlet property="serviceHoursTitleLabel" destination="p9j-Qv-uiA" id="H0g-yc-LZp"/>
+                <outlet property="serviceHoursValueLabel" destination="Myx-oa-Eou" id="LuM-82-X9T"/>
+                <outlet property="servicesTitleLabel" destination="Ab1-xu-zot" id="ycB-iF-q6L"/>
+                <outlet property="servicesValueLabel" destination="lsx-ef-Bn9" id="iD1-5a-HXJ"/>
+                <outlet property="stationCodeTitleLabel" destination="0Cq-2M-Azz" id="s1P-CI-Pqh"/>
+                <outlet property="stationCodeValueLabel" destination="lf8-H2-ocD" id="ePc-Uo-phh"/>
+            </connections>
+            <point key="canvasLocation" x="215.21739130434784" y="181.80803571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

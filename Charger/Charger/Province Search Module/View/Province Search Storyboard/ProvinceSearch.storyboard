@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Province Search View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ProvinceSearchView" id="Y6W-OH-hqX" customClass="ProvinceSearchView" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ge-cn-CVF" userLabel="Container View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cBL-c3-Uae">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tvx-Ks-O3m" userLabel="Provinces Table View">
+                                        <rect key="frame" x="0.0" y="51" width="414" height="767"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="separatorColor" name="Search Bar Border Color"/>
+                                        <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="cBL-c3-Uae" firstAttribute="leading" secondItem="1ge-cn-CVF" secondAttribute="leading" id="3J1-Yf-DiA"/>
+                                    <constraint firstAttribute="trailing" secondItem="cBL-c3-Uae" secondAttribute="trailing" id="T2e-wB-dAJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="tvx-Ks-O3m" secondAttribute="bottom" id="ZYS-ax-Y7K"/>
+                                    <constraint firstItem="tvx-Ks-O3m" firstAttribute="leading" secondItem="1ge-cn-CVF" secondAttribute="leading" id="bpY-lh-0R1"/>
+                                    <constraint firstItem="cBL-c3-Uae" firstAttribute="top" secondItem="1ge-cn-CVF" secondAttribute="top" id="iti-Dr-sto"/>
+                                    <constraint firstItem="tvx-Ks-O3m" firstAttribute="top" secondItem="cBL-c3-Uae" secondAttribute="bottom" id="my8-Ir-mc4"/>
+                                    <constraint firstAttribute="trailing" secondItem="tvx-Ks-O3m" secondAttribute="trailing" id="wvq-Bb-Pzc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1ge-cn-CVF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="3qG-pG-9Hi"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1ge-cn-CVF" secondAttribute="bottom" id="XCy-mJ-8Wg"/>
+                            <constraint firstItem="1ge-cn-CVF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XbA-ae-cZe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1ge-cn-CVF" secondAttribute="trailing" id="bQw-5W-huT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="1ge-cn-CVF" id="2q8-Lc-juf"/>
+                        <outlet property="provincesTableView" destination="tvx-Ks-O3m" id="lYx-H1-ZM6"/>
+                        <outlet property="searchBar" destination="cBL-c3-Uae" id="GdS-6q-qzl"/>
+                        <outlet property="superView" destination="5EZ-qb-Rvc" id="GOB-1q-0cV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128" y="53"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Search Bar Border Color">
+            <color red="0.71764705882352942" green="0.74117647058823533" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
