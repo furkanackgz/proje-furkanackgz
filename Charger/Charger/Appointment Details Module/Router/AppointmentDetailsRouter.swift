@@ -10,6 +10,8 @@ import UIKit
 class AppointmentDetailsRouter: AppointmentDetailsContract.appointmentDetailsRouter {
     
     // MARK: - Properties
+    var homeView: HomeView?
+    
     var appointmentDetailsView: AppointmentDetailsView?
     
 }
@@ -23,11 +25,14 @@ extension AppointmentDetailsRouter {
         // Unwrap appointment details view
         guard let appointmentDetailsView = appointmentDetailsView else { return }
         
-        // Instantiate home view
-        guard let homeView = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeView") as? HomeView else { return }
-        
-        // Navigate back to home page
-        appointmentDetailsView.navigationController?.popToViewController(homeView, animated: true)
+        // Call it in main queue since it is called from background thread
+        DispatchQueue.main.async { [weak self] in
+            
+            // Navigate back to home page
+            appointmentDetailsView.navigationController?.popToViewController((self?.homeView)!,
+                                                                             animated: true)
+            
+        }
         
     }
     

@@ -18,7 +18,7 @@ extension StationSearchContract {
      will be displayed in table view.
      returns: View layer of station search module.
     */
-    static func instantiateStationSearchModule(with province: String) -> UIViewController? {
+    static func instantiateStationSearchModule(with province: String, and  homeView: HomeView) -> UIViewController? {
         
         if let stationSearchView = UIStoryboard(name: "StationSearch", bundle: nil).instantiateViewController(withIdentifier: "StationSearchView") as? StationSearchView {
             
@@ -30,6 +30,9 @@ extension StationSearchContract {
             let stationSearchPresenter = StationSearchPresenter()
             let stationSearchEntity = StationSearchEntity()
             let stationSearchRouter = StationSearchRouter()
+            
+            // Assign home view to router layer
+            stationSearchRouter.homeView = homeView
             
             // View - Presenter Binding
             stationSearchView.stationSearchPresenter = stationSearchPresenter

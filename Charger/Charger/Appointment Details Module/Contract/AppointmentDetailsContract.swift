@@ -73,6 +73,7 @@ protocol AppointmentDetailsEntityProtocol: AnyObject {
 // MARK: - Appointment Details Router Protocol
 protocol AppointmentDetailsRouterProtocol: AnyObject {
     // Self related
+    var homeView: HomeView? { get set }
     var appointmentDetailsView: AppointmentDetailsView? { get set }
     func navigateBackToHomePage()
 }

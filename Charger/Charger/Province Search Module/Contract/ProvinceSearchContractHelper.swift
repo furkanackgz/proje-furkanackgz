@@ -14,7 +14,7 @@ extension ProvinceSearchContract {
      together and send it back to where it is called. Without this binding
      VIPER design pattern would not work.
     */
-    static func instantiateProvinceSearchModule() -> UIViewController? {
+    static func instantiateProvinceSearchModule(_ homeView: HomeView) -> UIViewController? {
         
         if let provinceSearchView = UIStoryboard(name: "ProvinceSearch", bundle: nil).instantiateViewController(withIdentifier: "ProvinceSearchView") as? ProvinceSearchView {
             
@@ -22,6 +22,9 @@ extension ProvinceSearchContract {
             let provinceSearchInteractor = ProvinceSearchInteractor()
             let provinceSearchPresenter = ProvinceSearchPresenter()
             let provinceSearchRouter = ProvinceSearchRouter()
+            
+            // Assign home view to router layer
+            provinceSearchRouter.homeView = homeView
             
             // View - Presenter Binding
             provinceSearchView.provinceSearchPresenter = provinceSearchPresenter

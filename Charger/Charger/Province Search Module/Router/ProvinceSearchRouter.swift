@@ -8,6 +8,9 @@
 import UIKit
 
 class ProvinceSearchRouter: ProvinceSearchContract.provinceSearchRouter {
+    
+    // MARK: Properties
+    var homeView: HomeView?
 
 }
 
@@ -18,7 +21,7 @@ extension ProvinceSearchRouter {
     func navigateToStationSearchPage(_ provinceName: String, _ provinceSearchView: ProvinceSearchView) {
         
         // Instantiate station search module
-        guard let stationSearchView = StationSearchContract.instantiateStationSearchModule(with: provinceName) else { return }
+        guard let stationSearchView = StationSearchContract.instantiateStationSearchModule(with: provinceName, and: homeView!) else { return }
         
         // Push station search view onto province search view
         provinceSearchView.navigationController?.pushViewController(stationSearchView, animated: true)

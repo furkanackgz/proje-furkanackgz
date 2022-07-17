@@ -87,6 +87,7 @@ protocol StationSearchEntityProtocol: AnyObject {
 // MARK: - STATION SEARCH ROUTER PROTOCOL
 protocol StationSearchRouterProtocol: AnyObject {
     // Self related
+    var homeView: HomeView? { get set }
     func navigateToFilteringPage(_ stationSearchView: StationSearchView,
                                  with filterChoices: [Filter])
     func navigateToStationSocketsInfoPage(_ stationSearchView: StationSearchView,

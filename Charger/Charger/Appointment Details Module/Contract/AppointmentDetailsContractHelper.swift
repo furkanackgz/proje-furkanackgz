@@ -24,7 +24,8 @@ extension AppointmentDetailsContract {
      returns: View layer of station search module.
     */
     static func instantiateAppointmentDetailsModule(_ stationInfo: StationInfo,
-                                                    _ appointmentRequest: AppointmentRequest) -> UIViewController? {
+                                                    _ appointmentRequest: AppointmentRequest,
+                                                    _ homeView: HomeView) -> UIViewController? {
         
         if let appointmentDetailsView = UIStoryboard(name: "AppointmentDetails", bundle: nil).instantiateViewController(withIdentifier: "AppointmentDetailsView") as? AppointmentDetailsView {
             
@@ -37,6 +38,9 @@ extension AppointmentDetailsContract {
             // Assign station info and appointment request to interactor
             appointmentDetailsInteractor.stationInfo = stationInfo
             appointmentDetailsInteractor.appointmentRequest = appointmentRequest
+            
+            // Assign homeView to router layer
+            appointmentDetailsRouter.homeView = homeView
             
             // View - Presenter Binding
             appointmentDetailsView.appointmentDetailsPresenter = appointmentDetailsPresenter
