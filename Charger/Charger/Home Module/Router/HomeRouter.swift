@@ -27,7 +27,7 @@ extension HomeRouter {
     func navigateToProvinceSearchPage(_ homeView: HomeView) {
         
         // Instantiate province search module
-        guard let provinceSearchView = ProvinceSearchContract.instantiateProvinceSearchModule() else { return }
+        guard let provinceSearchView = ProvinceSearchContract.instantiateProvinceSearchModule(homeView) else { return }
         
         // Push province search view onto home view
         homeView.navigationController?.pushViewController(provinceSearchView, animated: true)

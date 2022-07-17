@@ -21,7 +21,7 @@ extension PickDateAndTimeContract {
      returns: View layer of station search module.
     */
     static func instantiatePickDateAndTimeModule(with stationID: Int,
-                                                 and date: String) -> UIViewController? {
+                                                 and date: String, _ homeView: HomeView) -> UIViewController? {
         
         if let pickDateAndTimeView = UIStoryboard(name: "PickDateAndTime", bundle: nil).instantiateViewController(withIdentifier: "PickDateAndTimeView") as? PickDateAndTimeView {
             
@@ -30,6 +30,9 @@ extension PickDateAndTimeContract {
             let pickDateAndTimePresenter = PickDateAndTimePresenter()
             let pickDateAndTimeEntity = PickDateAndTimeEntity()
             let pickDateAndTimeRouter = PickDateAndTimeRouter()
+            
+            // Assign homeView to router layer
+            pickDateAndTimeRouter.homeView = homeView
             
             // Assign stationID and date parameters to interactor layer
             pickDateAndTimeInteractor.stationID = stationID

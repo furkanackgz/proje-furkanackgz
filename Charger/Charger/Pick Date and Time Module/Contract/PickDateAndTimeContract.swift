@@ -74,6 +74,7 @@ protocol PickDateAndTimeEntityProtocol: AnyObject {
 // MARK: - PickDateAndTimeRouterProtocol
 protocol PickDateAndTimeRouterProtocol: AnyObject {
     // Self related
+    var homeView: HomeView? { get set }
     func navigateToAppointmentDetailsPage(_ pickDateAndTimeView: PickDateAndTimeView,
                                           _ stationInfo: StationInfo,
                                           _ appointmentRequest: AppointmentRequest)
