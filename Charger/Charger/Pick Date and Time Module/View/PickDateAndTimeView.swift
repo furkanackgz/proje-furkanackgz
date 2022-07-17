@@ -404,6 +404,10 @@ extension PickDateAndTimeView {
     private func setDevamEtButton() {
         
         // Set devam et button image
+        devamEtButton.titleLabel?.isHidden = true
+        devamEtButton.configuration = .plain()
+        devamEtButton.setImage(ThemeManager.image.buttonTarihiVeSaatiOnayla,
+                               for: .normal)
         
     }
     
