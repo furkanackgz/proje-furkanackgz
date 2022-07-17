@@ -63,7 +63,7 @@ protocol AppointmentDetailsPresenterProtocol: AnyObject {
 // MARK: - Appointment Details Entity Protocol
 protocol AppointmentDetailsEntityProtocol: AnyObject {
     // Self related
-    var encodedAppointmentRequest: AppointmentRequest? { get set }
+    var encodedAppointmentRequest: Data? { get set }
     func encodeAppointmentRequest(_ appointmentRequest: AppointmentRequest)
     
     // Interactor related
