@@ -31,6 +31,13 @@ extension StationSearchRouter {
     func navigateToStationSocketsInfoPage(_ stationSearchView: StationSearchView,
                                           with stationID: Int, and date: String) {
         
+        // Instantiate pick date and time module
+        guard let pickDateAndTimeView = PickDateAndTimeContract.instantiatePickDateAndTimeModule(with: stationID, and: date) else { return }
+        
+        // Push pick date and time view onto station search view
+        stationSearchView.navigationController?.pushViewController(pickDateAndTimeView, animated: true)
+                
+    
     }
     
 }
