@@ -19,6 +19,12 @@ extension PickDateAndTimeRouter {
                                           _ stationInfo: StationInfo,
                                           _ appointmentRequest: AppointmentRequest) {
         
+        // Instantiate appointment details page
+        guard let appointmentDetailsView = AppointmentDetailsContract.instantiateAppointmentDetailsModule(stationInfo, appointmentRequest) else { return }
+        
+        // Push appointment details view onto pick date and time view
+        pickDateAndTimeView.navigationController?.pushViewController(appointmentDetailsView, animated: true)
+        
     }
     
 }

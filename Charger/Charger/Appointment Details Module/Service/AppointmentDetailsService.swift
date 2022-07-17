@@ -58,6 +58,7 @@ extension AppointmentDetailsService {
             
             // Add token value to token key in header
             urlRequest.setValue(token, forHTTPHeaderField: "token")
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             
             // Set http method as post
             urlRequest.httpMethod = "POST"
