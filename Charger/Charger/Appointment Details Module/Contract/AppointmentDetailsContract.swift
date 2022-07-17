@@ -21,8 +21,7 @@ protocol AppointmentDetailsViewProtocol: AnyObject {
     // Self related
     var stationName: String?  { get set }
     func updateAppointmentDetailsTableView(with appointmentDetails: [AppointmentDetail])
-    func displayDropDownLabel()
-    func hideDropDownLabel()
+    func reloadAppointmentDetailsTableView()
     
     // Presenter related
     var appointmentDetailsPresenter: AppointmentDetailsContract.appointmentDetailsPresenter? { get set }
@@ -49,8 +48,7 @@ protocol AppointmentDetailsPresenterProtocol: AnyObject {
     // View related
     var appointmentDetailsView: AppointmentDetailsContract.appointmentDetailsView! { get set }
     func viewDidLoad()
-    func didSwitchBildirimAlButtonToOn()
-    func didSwitchBildirimAlButtonToOff()
+    func didChangeSwitchState()
     func didSelectTimer(value: String)
     func didPressRandevuyuOnaylaButton(_ appointmentDetailsView: AppointmentDetailsView)
     

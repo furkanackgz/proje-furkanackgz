@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="325" id="KGk-i7-Jjw" customClass="AppointmentInformationsCell" customModule="Charger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uub-Ep-SG1" userLabel="Container View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Y2-DJ-XEE" userLabel="Appointment Informations Stack View">
+                                <rect key="frame" x="8" y="16" width="398" height="293"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="q9f-td-ivQ" userLabel="Date Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="54.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWa-Nb-CNS" userLabel="Date Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="54.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yX7-Mu-s5T" userLabel="Date Value Label">
+                                                <rect key="frame" x="199" y="0.0" width="199" height="54.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SYU-G2-HL8" userLabel="Hour Stack View">
+                                        <rect key="frame" x="0.0" y="59.5" width="398" height="54.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8a7-VH-b8J" userLabel="Hour Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="54.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aG-Sg-buL" userLabel="Hour Value Label">
+                                                <rect key="frame" x="199" y="0.0" width="199" height="54.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="u9b-f7-ZqD" userLabel="Appointment Duration Stack View">
+                                        <rect key="frame" x="0.0" y="119" width="398" height="55"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tP-U8-lag" userLabel="Appointment Duration Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLH-Fw-Ud6" userLabel="Appointment Duration Value Label">
+                                                <rect key="frame" x="199" y="0.0" width="199" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-oW-syp" userLabel="Get Notification Stack View">
+                                        <rect key="frame" x="0.0" y="179" width="398" height="54.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5U-UG-5IE" userLabel="Get Notification Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="349" height="54.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8x-34-SX5">
+                                                <rect key="frame" x="349" y="0.0" width="51" height="54.5"/>
+                                                <connections>
+                                                    <action selector="didChangeSwitchState:" destination="KGk-i7-Jjw" eventType="valueChanged" id="zxv-8n-uTs"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="wwv-xo-2t1" userLabel="Drop Down Stack View">
+                                        <rect key="frame" x="0.0" y="238.5" width="398" height="54.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yol-Rd-Iik" userLabel="Time Picker Value Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="54.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="667-x3-0SO" userLabel="Down Arrow Label">
+                                                <rect key="frame" x="199" y="0.0" width="199" height="54.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9Y2-DJ-XEE" secondAttribute="trailing" constant="8" id="0ey-RB-T4I"/>
+                            <constraint firstAttribute="bottom" secondItem="9Y2-DJ-XEE" secondAttribute="bottom" constant="16" id="YC6-1w-ffk"/>
+                            <constraint firstItem="9Y2-DJ-XEE" firstAttribute="leading" secondItem="uub-Ep-SG1" secondAttribute="leading" constant="8" id="ciW-Km-fca"/>
+                            <constraint firstItem="9Y2-DJ-XEE" firstAttribute="top" secondItem="uub-Ep-SG1" secondAttribute="top" constant="16" id="xoL-fK-PP4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="uub-Ep-SG1" secondAttribute="trailing" id="ZZg-ci-mxX"/>
+                    <constraint firstItem="uub-Ep-SG1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="c3M-mS-uhn"/>
+                    <constraint firstItem="uub-Ep-SG1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="czo-KZ-dHH"/>
+                    <constraint firstAttribute="bottom" secondItem="uub-Ep-SG1" secondAttribute="bottom" id="idy-BU-fe1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="appointmentDurationTitleLabel" destination="1tP-U8-lag" id="dpZ-n7-CF7"/>
+                <outlet property="appointmentDurationValueLabel" destination="xLH-Fw-Ud6" id="1Fb-O4-Ynq"/>
+                <outlet property="containerView" destination="uub-Ep-SG1" id="8xT-hk-270"/>
+                <outlet property="dateTitleLabel" destination="HWa-Nb-CNS" id="JAe-kG-Kvg"/>
+                <outlet property="dateValueLabel" destination="yX7-Mu-s5T" id="NtT-4d-oG0"/>
+                <outlet property="downArrowLabel" destination="667-x3-0SO" id="iAy-lu-O2f"/>
+                <outlet property="dropDownStackView" destination="wwv-xo-2t1" id="Fp6-gc-rrM"/>
+                <outlet property="getNotificationTitleLabel" destination="a5U-UG-5IE" id="hqK-cD-Ggw"/>
+                <outlet property="hourTitleLabel" destination="8a7-VH-b8J" id="BNM-Ey-qUB"/>
+                <outlet property="hourValueLabel" destination="7aG-Sg-buL" id="bPc-Mr-eSd"/>
+                <outlet property="notificationSwitch" destination="E8x-34-SX5" id="egY-Q7-vmu"/>
+                <outlet property="timePickerValueLabel" destination="yol-Rd-Iik" id="qSc-Se-PxV"/>
+            </connections>
+            <point key="canvasLocation" x="200.00000000000003" y="197.87946428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

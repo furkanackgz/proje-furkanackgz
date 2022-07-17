@@ -18,6 +18,8 @@ class AppointmentDetailsView: UIViewController {
     var stationName: String?
     
     var appointmentDetailsPresenter: AppointmentDetailsContract.appointmentDetailsPresenter?
+    
+    var appointmentDetailsTableViewHelper: AppointmentDetailsTableViewHelper!
 
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -57,6 +59,10 @@ extension AppointmentDetailsView {
         
         // Set randevuyu onayla button
         setRandevuyuOnaylaButton()
+        
+        // Initialize table view helper
+        appointmentDetailsTableViewHelper = .init(appointmentDetailsTableView,
+                                                  appointmentDetailsPresenter!)
         
     }
     
@@ -171,21 +177,16 @@ extension AppointmentDetailsView: AppointmentDetailsContract.appointmentDetailsV
     // MARK: - updateAppointmentDetailsTableView
     func updateAppointmentDetailsTableView(with appointmentDetails: [AppointmentDetail]) {
         
-        
-        
-    }
-    
-    // MARK: - displayDropDownLabel
-    func displayDropDownLabel() {
-        
-        
+        // Set appointment details to table view
+        appointmentDetailsTableViewHelper.set(appointmentDetails: appointmentDetails)
         
     }
     
-    // MARK: - hideDropDownLabel
-    func hideDropDownLabel() {
+    // MARK: - reloadAppointmentDetailsTableView
+    func reloadAppointmentDetailsTableView() {
         
-        
+        // Reload appointment details table view
+        appointmentDetailsTableView.reloadData()
         
     }
     
