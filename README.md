@@ -7,7 +7,7 @@
 - High Order functions (Filter, ForEach, Sorted, RemoveAll)
 - Custom View
 - UIView Animation
-- UI Compositional Layout
+- UI Collection View Compositional Layout
 
 ## Screens 
 
